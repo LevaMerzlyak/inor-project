@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>INOR</title>
+	<!-- Fonts -->
+	<link rel="stylesheet" type="text/css" href="css/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="#" class="logo__link">INOR</a>
+		</div>
+		<div class="nav__wrap">
+			<ul class="nav">
+				<li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+				<li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+				<li class="nav__item"><a href="#" class="nav__link">Аренда</a></li>
+				<li class="nav__item"><a href="#" class="nav__link">Готовые объекты</a></li>
+				<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+			</ul>
+		</div>
+	</header>
+	
+	<main id="videoPlay">
+		<div class="main__video">
+			<div class="video__container">
+				<div class="video__wrap">
+					<iframe id="player" width="560" height="349" src="" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="close__btn fa fa-times"></div>
+		</div>
+		<div class="container">
+			<div class="main__bg">
+				<div class="playBtn__wrap">
+					<a href="#" class="playBtn">
+						<div class="play__btn"></div>
+						<h3 class="playBtn__txt">Смотреть</h3>
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script src="js/videoPlay.js" type="text/javascript"></script>
+	<script>
+		var v1 = new VideoStart('#videoPlay');
+	</script>
+</body>
+</html>
