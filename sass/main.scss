@@ -12,6 +12,7 @@
 }
 $red: #cc2a3a;
 $bg: #f4f3f3;
+$txtMain: #fff;
 
 
 body {
@@ -22,25 +23,29 @@ body {
 
 header {
 	
-  	height: 10vh;
+  	height: 15vh;
 }
 .logo {
 	display: inline-block;
+	margin-top: 5vh;
+	margin-left: 5%;
 }
 .logo__link {
 	display: inline-block;
-	width: 17.8vh;
-	height: 5vh;
+	width: 24vh;
+	height: 6vh;
 	background-image: url("../images/logos/InorRuBlk.png");
-	background-position: center;
-	background-size: cover;
+	background-position: center left;
+	background-size: contain;
+	background-repeat: no-repeat;
 	text-indent: -1000px;
 }
 .nav__wrap {
 	display: inline-block;
 	float: right;
 	width: 50%;
-	height: 10vh;
+	height: 9vh;
+	padding-top: 6vh;
 	background-color: $red;
 }
 .nav{
@@ -49,20 +54,62 @@ header {
 	padding: 0;
 }
 .nav__item{
-	display: inline-block;
+	display: inline-flex;
+	justify-content: space-around;
+	margin-left: 3%;
 }
 .nav__link {
 	text-decoration: none;
 	text-transform: uppercase;
-	color: #ffffff;
+	color: $txtMain;
 	font-weight: 700;
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	&:before {
+		content: "";
+  		position: absolute;
+  		top: 0px;
+  		left: -100%;
+  		width: 100%;
+  		height: 100%;
+  		background: $txtMain;
+  		/*z-index: 99;*/
+  		transition: all .4s cubic-bezier(0.7, 0, 0.3, 1);
+	}
+	&:after {
+		content: "";
+  		position: absolute;
+  		bottom: 0;
+  		left: 100%;
+  		width: 40%;
+  		height: 3px;
+  		background: $txtMain;
+  		transition: all .3s;
+  		transition-delay: .4s;
+	}
+	&:hover {
+		&:before {
+			left: 100%;
+		}
+		&:after {
+			left: 60%;
+		}
+	}
+}
+.nav__link_active {
+	&:after {
+		left: 60%;
+	}
 }
 main {
-	height: 90vh;
+	height: 75vh;
 	overflow: hidden;
 }
 .container {
-	max-width: 1000px;
+	width: 90%;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 .main__video {
@@ -105,67 +152,101 @@ main {
 }
 
 .main__bg {
-	@include boxShadow;
 	background-image: url("../images/bud5.jpg");
 	background-size: cover;
-	background-position: center center;
-	height: 90vh;
+	background-position: top left;
+	height: 75vh;
 	width: 100%;
-}
-.playBtn__wrap {
-	margin-left: 10%;
-	
 }
 .playBtn {
 	color: #fff;
 	text-decoration: none;
+	margin-left: 10%;
+	
 }
 .playBtn__txt {
 	display: inline-block;
-	padding-left: 35px;
+	position: absolute;
+ 	top: 50%;
+  	left: 28%;
+  	transform: translateX(-50%) translateY(-50%);
+  	margin: 0;
 	font-size: 1.89em;
+	line-height: 44px;
 	font-weight: 800;
 	text-transform: uppercase;
 }
 .play__btn {
-	position: relative;
-	display: inline-block;
-	width: 1px;
-  	height: 1px;
-  	top: -5px;
-  	left: 6px;
+	position: absolute;
+	z-index: 10;
+ 	top: 50%;
+  	left: 15%;
+  	transform: translateX(-50%) translateY(-50%);
+  	box-sizing: content-box;
+  	display: block;
+  	width: 18px;
+  	height: 24px;
+  	border-radius: 50%;
+  	padding: 28px 28px 28px 34px;
 	&:before {
-		position: absolute;		
-		transform: translate(-50%,-50%);
-		@include triangle(right,#f2f2f2,6px);
+		content: "";
+  		position: absolute;
+  		z-index: 0;
+  		left: 50%;
+  		top: 50%;
+  		transform: translateX(-50%) translateY(-50%);
+  		display: block;
+  		width: 80px;
+  		height: 80px;
+  		background-color: $red;
+  		border-radius: 50%;
+  		animation: pulse-border 1500ms ease-out infinite;
 	}
 	&:after {
-		content: '';
-		position: absolute;
-		opacity: 0.7;
-		border-radius: 100%;		
- 		border: 2px solid #f2f2f2;
-		width: 2px;
-		height: 2px;
-		transform: translate(-50%,-50%);
-		animation: pulse 2.5s cubic-bezier(0.075, 0.820, 0.165, 1.000) infinite;
+		content: "";
+  		position: absolute;
+  		z-index: 1;
+  		left: 50%;
+  		top: 50%;
+  		transform: translateX(-50%) translateY(-50%);
+  		display: block;
+  		width: 80px;
+  		height: 80px;
+  		background-color: $red;
+  		border-radius: 50%;
+  		transition: all 200ms;
+	}
+	span {
+		display: block;
+  		position: relative;
+  		z-index: 3;
+  		width: 0;
+  		height: 0;
+  		border-left: 18px solid #fff;
+		border-top: 12px solid transparent;
+		border-bottom: 12px solid transparent;
+		transition: all 200ms;
 	}
 }
-@keyframes pulse {
-  0% {
-    width: inherit;
-    height: inherit;
-  }
-  40% {
-    opacity: 0;
-    width: 60px;
-    height: 60px;
-  }
-  100% {
-    opacity: 0;
-    width: 60px;
-    height: 60px;
-  }
+.playBtn:hover {
+	.play__btn {
+		span {
+			border-left: 18px solid $red;
+		}
+		&:after {
+			background-color: #fff;
+		}
+	}
+}
+@keyframes pulse-border {
+  	0% {
+    	transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    	opacity: 1;
+  	}
+  	100% {
+    	transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    	opacity: 0;
+  	}
 }
 .close__btn {
 	width: 40px;
@@ -177,8 +258,8 @@ main {
 	position: absolute;
 	right: 0;
 	top: 0;	
-	margin-right: 1%;
-	margin-top: 12vh;
+	margin-right: 5%;
+	margin-top: 20vh;
 	cursor: pointer;
 	font-size: 30px;
 	border: 2px solid $red;
