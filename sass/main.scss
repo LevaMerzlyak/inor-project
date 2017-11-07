@@ -139,7 +139,7 @@ body {
 
 /*----- Langueges -----*/
 .langueges {
-	position: fixed;
+	position: absolute;
 	width: 7%;
 	height: 75vh;
 }
@@ -175,6 +175,43 @@ body {
 	color: $txt;
 }
 /*----- /Langueges -----*/
+
+/*----- Pagination -----*/
+.pagination{
+	position: absolute;
+	width: 7%;
+	height: 75vh;
+	right: 0;
+}
+.navPag {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.pag__item {
+	height: 44px;
+	width: 44px;
+	margin-bottom: 8px;
+}
+.pag__item:last-child {
+	margin-bottom: 0;
+}
+.pag__link {
+	display: inline-block;
+	font-size: 1em;
+	color: $txtSub;
+	font-weight: 700;
+	text-decoration: none;
+	text-transform: uppercase;
+	line-height: 44px;
+	width: 44px;
+	text-align: center;
+}
+/*----- /Pagination -----*/
 
 .container {
 	width: 86%;
