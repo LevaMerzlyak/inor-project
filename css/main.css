@@ -1,10 +1,17 @@
+/*----- Variables -----*/
+/*----- /Variables -----*/
 body {
   background-color: #f4f3f3;
   font-family: 'ProximaNova';
   font-size: 18px; }
 
-header {
-  height: 15vh; }
+/*----- Header -----*/
+.header {
+  height: 15vh;
+  width: 100%;
+  margin-top: -15vh;
+  background-color: #f4f3f3;
+  position: fixed; }
 
 .logo {
   display: inline-block;
@@ -21,13 +28,14 @@ header {
   background-repeat: no-repeat;
   text-indent: -1000px; }
 
+/*----- Menu -----*/
 .nav__wrap {
   display: inline-block;
   float: right;
   width: 50%;
   height: 9vh;
   padding-top: 6vh;
-  background-color: #cc2a3a; }
+  background-color: transparent; }
 
 .nav {
   list-style: none;
@@ -47,7 +55,7 @@ header {
 .nav__link {
   text-decoration: none;
   text-transform: uppercase;
-  color: #fff;
+  color: #9b9b9b;
   font-weight: 700;
   position: relative;
   overflow: hidden;
@@ -60,8 +68,7 @@ header {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: #fff;
-    /*z-index: 99;*/
+    background: #cc2a3a;
     -webkit-transition: all 0.4s cubic-bezier(0.7, 0, 0.3, 1);
     -o-transition: all 0.4s cubic-bezier(0.7, 0, 0.3, 1);
     transition: all 0.4s cubic-bezier(0.7, 0, 0.3, 1); }
@@ -72,7 +79,7 @@ header {
     left: 100%;
     width: 40%;
     height: 3px;
-    background: #fff;
+    background: #cc2a3a;
     -webkit-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s;
@@ -84,18 +91,78 @@ header {
   .nav__link:hover:after {
     left: 60%; }
 
-.nav__link_active:after {
-  left: 60%; }
+.nav__link_active {
+  color: #333333; }
+  .nav__link_active:after {
+    left: 60%; }
 
-.main {
-  height: 75vh;
-  overflow: hidden; }
+/*----- Main Menu -----*/
+.nav__wrap_main {
+  background-color: #cc2a3a; }
+  .nav__wrap_main .nav__link {
+    color: #fff; }
+    .nav__wrap_main .nav__link:before {
+      background: #fff; }
+    .nav__wrap_main .nav__link:after {
+      background: #fff; }
+  .nav__wrap_main .nav__link_active {
+    color: #fff; }
 
+/*----- /Main Menu -----*/
+/*----- /Menu -----*/
+/*----- /Header -----*/
+/*----- Langueges -----*/
+.langueges {
+  position: fixed;
+  width: 7%;
+  height: 75vh; }
+
+.navLang {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.lang__item {
+  height: 44px;
+  width: 44px;
+  margin-bottom: 8px; }
+
+.lang__item:last-child {
+  margin-bottom: 0; }
+
+.lang__link {
+  display: inline-block;
+  font-size: 1em;
+  color: #9b9b9b;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 44px;
+  width: 44px;
+  text-align: center; }
+
+.lang__link_active {
+  color: #333333; }
+
+/*----- /Langueges -----*/
 .container {
-  width: 90%;
+  width: 86%;
   max-width: 1200px;
   margin: 0 auto; }
 
+/*----- Main -----*/
+.main {
+  height: 75vh;
+  margin-top: 15vh;
+  overflow: hidden; }
+
+/*----- Video -----*/
 .main__video {
   z-index: -100;
   opacity: 0;
@@ -136,12 +203,31 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    /*display: none;*/
     opacity: 0;
     -webkit-transition: opacity 1s ease-in 0.5s;
     -o-transition: opacity 1s ease-in 0.5s;
     transition: opacity 1s ease-in 0.5s; }
 
+.close__btn {
+  width: 40px;
+  height: 40px;
+  color: #cc2a3a;
+  opacity: 0.7;
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 5%;
+  margin-top: 20vh;
+  cursor: pointer;
+  font-size: 30px;
+  border: 2px solid #cc2a3a;
+  border-radius: 50%; }
+  .close__btn:hover {
+    opacity: 1; }
+
+/*----- /Video -----*/
 .main__bg {
   background-image: url("../images/bud5.jpg");
   background-size: cover;
@@ -149,6 +235,7 @@ header {
   height: 75vh;
   width: 100%; }
 
+/*----- Play Button ------*/
 .playBtn {
   color: #fff;
   text-decoration: none; }
@@ -163,7 +250,8 @@ header {
   font-size: 1.89em;
   line-height: 80px;
   font-weight: 800;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-shadow: 0px 0px 5px #9b9b9b; }
 
 .play__btn {
   position: absolute;
@@ -249,25 +337,8 @@ header {
     transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
     opacity: 0; } }
 
-.close__btn {
-  width: 40px;
-  height: 40px;
-  color: #cc2a3a;
-  opacity: 0.7;
-  text-align: center;
-  line-height: 40px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin-right: 5%;
-  margin-top: 20vh;
-  cursor: pointer;
-  font-size: 30px;
-  border: 2px solid #cc2a3a;
-  border-radius: 50%; }
-  .close__btn:hover {
-    opacity: 1; }
-
+/*----- /Play Button ------*/
+/*----- Play Start Animation -----*/
 .main.play__start .main__video {
   z-index: 100;
   opacity: 1;
@@ -283,3 +354,6 @@ header {
 
 .main.play__start .video__wrap iframe {
   opacity: 1; }
+
+/*----- /Play Start Animation -----*/
+/*----- /Main -----*/

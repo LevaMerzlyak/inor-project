@@ -10,9 +10,14 @@
 @mixin boxShadow() {
 	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
 }
+
+/*----- Variables -----*/
 $red: #cc2a3a;
 $bg: #f4f3f3;
 $txtMain: #fff;
+$txt: #333333;
+$txtSub: #9b9b9b;
+/*----- /Variables -----*/
 
 
 body {
@@ -21,9 +26,13 @@ body {
 	font-size: 18px;
 }
 
-header {
-	
+/*----- Header -----*/
+.header {	
   	height: 15vh;
+  	width: 100%;
+  	margin-top: -15vh;
+  	background-color: $bg;
+  	position: fixed;
 }
 .logo {
 	display: inline-block;
@@ -40,13 +49,15 @@ header {
 	background-repeat: no-repeat;
 	text-indent: -1000px;
 }
+
+/*----- Menu -----*/
 .nav__wrap {
 	display: inline-block;
 	float: right;
 	width: 50%;
 	height: 9vh;
 	padding-top: 6vh;
-	background-color: $red;
+	background-color: transparent;
 }
 .nav{
 	list-style: none;
@@ -61,7 +72,7 @@ header {
 .nav__link {
 	text-decoration: none;
 	text-transform: uppercase;
-	color: $txtMain;
+	color: $txtSub;
 	font-weight: 700;
 	position: relative;
 	overflow: hidden;
@@ -74,8 +85,7 @@ header {
   		left: -100%;
   		width: 100%;
   		height: 100%;
-  		background: $txtMain;
-  		/*z-index: 99;*/
+  		background: $red;
   		transition: all .4s cubic-bezier(0.7, 0, 0.3, 1);
 	}
 	&:after {
@@ -85,7 +95,7 @@ header {
   		left: 100%;
   		width: 40%;
   		height: 3px;
-  		background: $txtMain;
+  		background: $red;
   		transition: all .3s;
   		transition-delay: .4s;
 	}
@@ -99,19 +109,87 @@ header {
 	}
 }
 .nav__link_active {
+	color: $txt;
 	&:after {
 		left: 60%;
 	}
 }
-.main {
-	height: 75vh;
-	overflow: hidden;
+
+/*----- Main Menu -----*/
+.nav__wrap_main {
+	background-color: $red;
+	.nav__link {
+		color: $txtMain;
+		&:before {
+	  		background: $txtMain;
+		}
+		&:after {
+	  		background: $txtMain;
+		}
+	}
+	.nav__link_active {
+		color: $txtMain;
+	}
 }
+/*----- /Main Menu -----*/
+
+/*----- /Menu -----*/
+
+/*----- /Header -----*/
+
+/*----- Langueges -----*/
+.langueges {
+	position: fixed;
+	width: 7%;
+	height: 75vh;
+}
+.navLang {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.lang__item {	
+	height: 44px;
+	width: 44px;
+	margin-bottom: 8px;
+}
+.lang__item:last-child {
+	margin-bottom: 0;
+}
+.lang__link {
+	display: inline-block;
+	font-size: 1em;
+	color: $txtSub;
+	font-weight: 700;
+	text-decoration: none;
+	text-transform: uppercase;
+	line-height: 44px;
+	width: 44px;
+	text-align: center;
+}
+.lang__link_active {
+	color: $txt;
+}
+/*----- /Langueges -----*/
+
 .container {
-	width: 90%;
+	width: 86%;
 	max-width: 1200px;
 	margin: 0 auto;
 }
+
+/*----- Main -----*/
+.main {
+	height: 75vh;
+	margin-top: 15vh;
+	overflow: hidden;
+}
+
+/*----- Video -----*/
 .main__video {
 	z-index: -100;
 	opacity: 0;
@@ -145,11 +223,31 @@ header {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		/*display: none;*/
 		opacity: 0;
 		transition: opacity 1s ease-in 0.5s;
 	}
 }
+.close__btn {
+	width: 40px;
+	height: 40px;
+	color: $red;
+	opacity: 0.7;
+	text-align: center;
+	line-height: 40px;
+	position: absolute;
+	right: 0;
+	top: 0;	
+	margin-right: 5%;
+	margin-top: 20vh;
+	cursor: pointer;
+	font-size: 30px;
+	border: 2px solid $red;
+	border-radius: 50%;
+	&:hover {
+		opacity: 1;
+	}
+}
+/*----- /Video -----*/
 
 .main__bg {
 	background-image: url("../images/bud5.jpg");
@@ -158,6 +256,8 @@ header {
 	height: 75vh;
 	width: 100%;
 }
+
+/*----- Play Button ------*/
 .playBtn {
 	color: #fff;
 	text-decoration: none;	
@@ -173,6 +273,7 @@ header {
 	line-height: 80px;
 	font-weight: 800;
 	text-transform: uppercase;
+	text-shadow: 0px 0px 5px $txtSub;
 }
 .play__btn {
 	position: absolute;
@@ -245,26 +346,9 @@ header {
     	opacity: 0;
   	}
 }
-.close__btn {
-	width: 40px;
-	height: 40px;
-	color: $red;
-	opacity: 0.7;
-	text-align: center;
-	line-height: 40px;
-	position: absolute;
-	right: 0;
-	top: 0;	
-	margin-right: 5%;
-	margin-top: 20vh;
-	cursor: pointer;
-	font-size: 30px;
-	border: 2px solid $red;
-	border-radius: 50%;
-	&:hover {
-		opacity: 1;
-	}
-}
+/*----- /Play Button ------*/
+
+/*----- Play Start Animation -----*/
 .main.play__start {
 	.main__video {
 		z-index: 100;
@@ -281,3 +365,6 @@ header {
 		}
 	}
 }
+/*----- /Play Start Animation -----*/
+
+/*----- /Main -----*/
