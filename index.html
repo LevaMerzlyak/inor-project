@@ -11,6 +11,10 @@
 	<!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 
+	<!-- Owl -->
+	<link rel="stylesheet" type="text/css" href="js/OwlCarousel2-2.2.1/dist/assets/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="js/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.css">
+
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
@@ -53,7 +57,8 @@
 		</ul>
 	</nav>
 	
-	<nav class="pagination">
+	<nav class="pagination pagination_main">
+		<div class="pag__bg"></div>
 		<ul class="navPag">
 			<li class="pag__item">
 				<a href="#" class="pag__link pag__link_active">01</a>
@@ -69,17 +74,18 @@
 			</li>
 		</ul>
 	</nav>
+	
+	<div class="container">
 
-	<section class="main" id="videoPlay">
-		<div class="main__video">
-			<div class="video__container">
-				<div class="video__wrap">
-					<iframe id="player" width="560" height="349" src="" frameborder="0" allowfullscreen></iframe>
+		<section class="main" id="videoPlay">
+			<div class="main__video">
+				<div class="video__container">
+					<div class="video__wrap">
+						<iframe id="player" width="560" height="349" src="" frameborder="0" allowfullscreen></iframe>
+					</div>
 				</div>
+				<div class="close__btn fa fa-times"></div>
 			</div>
-			<div class="close__btn fa fa-times"></div>
-		</div>
-		<div class="container">
 			<div class="main__bg">
 				<a href="#" class="playBtn">
 					<div class="play__btn">
@@ -88,13 +94,158 @@
 					<h3 class="playBtn__txt">Смотреть</h3>
 				</a>
 			</div>
-		</div>
-	</section>
+		</section>
+
+		<section class="objects" id="objects">
+			<div class="back__btn">
+				<a class="backBtn" href="#objects"><span class="fa fa-long-arrow-left"></span>&nbsp; Назад</a>
+			</div>
+			<div class="object__slides">
+				<article class="slide__article" id="grandPrix">
+					<div class="container">
+						<h2 class="slideArt__head">Фитнес клуб Grand-Prix</h2>
+						<p class="slide__txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ante massa. Integer at congue tortor, a hendrerit turpis. Aenean placerat dapibus odio ut maximus. Suspendisse potenti. Maecenas facilisis urna sed laoreet eleifend. Phasellus in dolor rutrum, tincidunt enim non, iaculis velit. Integer sed iaculis libero, ac consequat urna.</p>
+						<p class="slide__txt">Nullam sit amet euismod diam. Duis a libero in sapien fringilla aliquet eget id nisi. Nam aliquet congue interdum. Nullam eu massa lorem. Donec viverra consequat volutpat. Sed accumsan est imperdiet tincidunt vulputate. Aliquam erat volutpat. Etiam gravida a eros quis vehicula.</p>
+						<div class="slideImg__wrap">
+							<img class="slide__img" alt="" src="images/bud1.jpg">
+						</div>
+						<p class="slide__txt">Maecenas dictum sagittis ante, ac volutpat libero. In auctor arcu nec mollis iaculis. Vestibulum vehicula sodales metus eu lacinia. Mauris non nisi et quam accumsan elementum. Sed dapibus neque eget tellus hendrerit porttitor. Phasellus dapibus lacinia risus, vitae molestie lacus congue at. Sed et scelerisque enim, sit amet dignissim diam. Vestibulum sapien eros, vestibulum a efficitur id, semper quis felis. Proin eu venenatis orci, at auctor sem. Donec pharetra dapibus dui, et pellentesque diam feugiat non. Morbi dui ligula, hendrerit sit amet odio eget, ultrices mattis velit. Phasellus bibendum urna id est viverra consectetur. In hac habitasse platea dictumst.</p>
+						<p class="slide__txt">Integer leo justo, congue lacinia lectus quis, sollicitudin tristique ipsum. Suspendisse faucibus, eros a dapibus consectetur, enim felis dapibus quam, ut dictum nibh mauris vitae orci. Aenean tempus finibus rutrum. Vestibulum tempor suscipit libero at aliquet. Nam eu leo lacus. Donec at rhoncus enim. Cras ultricies sollicitudin nisl eget scelerisque. Aliquam et risus egestas, dictum nibh vel, convallis diam.</p>
+						<p class="slide__txt">Pellentesque leo odio, auctor rutrum rutrum eu, ultricies non neque. Sed ultrices, sapien sit amet pulvinar molestie, ligula ex consectetur enim, ac vehicula ipsum arcu sit amet nulla. Pellentesque hendrerit felis vel magna posuere accumsan. Donec rhoncus massa eget elit lobortis sollicitudin. Maecenas a urna vulputate, tincidunt orci id, venenatis urna. Etiam libero est, malesuada luctus arcu sed, facilisis vehicula mauris. Nulla a rutrum erat. Sed ut fermentum dui.</p>
+					</div>
+				</article>
+				<article class="slide__article"  id="pankovsky">
+					<h2 class="slideArt__head">Бизнес-центр Паньковский</h2>
+					<p class="slide__txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ante massa. Integer at congue tortor, a hendrerit turpis. Aenean placerat dapibus odio ut maximus. Suspendisse potenti. Maecenas facilisis urna sed laoreet eleifend. Phasellus in dolor rutrum, tincidunt enim non, iaculis velit. Integer sed iaculis libero, ac consequat urna.</p>
+					<p class="slide__txt">Nullam sit amet euismod diam. Duis a libero in sapien fringilla aliquet eget id nisi. Nam aliquet congue interdum. Nullam eu massa lorem. Donec viverra consequat volutpat. Sed accumsan est imperdiet tincidunt vulputate. Aliquam erat volutpat. Etiam gravida a eros quis vehicula.</p>
+					<div class="slideImg__wrap">
+						<img class="slide__img" alt="" src="images/bud2.jpg">
+					</div>
+					<p class="slide__txt">Maecenas dictum sagittis ante, ac volutpat libero. In auctor arcu nec mollis iaculis. Vestibulum vehicula sodales metus eu lacinia. Mauris non nisi et quam accumsan elementum. Sed dapibus neque eget tellus hendrerit porttitor. Phasellus dapibus lacinia risus, vitae molestie lacus congue at. Sed et scelerisque enim, sit amet dignissim diam. Vestibulum sapien eros, vestibulum a efficitur id, semper quis felis. Proin eu venenatis orci, at auctor sem. Donec pharetra dapibus dui, et pellentesque diam feugiat non. Morbi dui ligula, hendrerit sit amet odio eget, ultrices mattis velit. Phasellus bibendum urna id est viverra consectetur. In hac habitasse platea dictumst.</p>
+					<p class="slide__txt">Integer leo justo, congue lacinia lectus quis, sollicitudin tristique ipsum. Suspendisse faucibus, eros a dapibus consectetur, enim felis dapibus quam, ut dictum nibh mauris vitae orci. Aenean tempus finibus rutrum. Vestibulum tempor suscipit libero at aliquet. Nam eu leo lacus. Donec at rhoncus enim. Cras ultricies sollicitudin nisl eget scelerisque. Aliquam et risus egestas, dictum nibh vel, convallis diam.</p>
+					<p class="slide__txt">Pellentesque leo odio, auctor rutrum rutrum eu, ultricies non neque. Sed ultrices, sapien sit amet pulvinar molestie, ligula ex consectetur enim, ac vehicula ipsum arcu sit amet nulla. Pellentesque hendrerit felis vel magna posuere accumsan. Donec rhoncus massa eget elit lobortis sollicitudin. Maecenas a urna vulputate, tincidunt orci id, venenatis urna. Etiam libero est, malesuada luctus arcu sed, facilisis vehicula mauris. Nulla a rutrum erat. Sed ut fermentum dui.</p>
+				</article>
+				<article class="slide__article" id="dynasty">
+					<h2 class="slideArt__head">Бизнес-центр Династия</h2>
+					<p class="slide__txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ante massa. Integer at congue tortor, a hendrerit turpis. Aenean placerat dapibus odio ut maximus. Suspendisse potenti. Maecenas facilisis urna sed laoreet eleifend. Phasellus in dolor rutrum, tincidunt enim non, iaculis velit. Integer sed iaculis libero, ac consequat urna.</p>
+					<p class="slide__txt">Nullam sit amet euismod diam. Duis a libero in sapien fringilla aliquet eget id nisi. Nam aliquet congue interdum. Nullam eu massa lorem. Donec viverra consequat volutpat. Sed accumsan est imperdiet tincidunt vulputate. Aliquam erat volutpat. Etiam gravida a eros quis vehicula.</p>
+					<div class="slideImg__wrap">
+						<img class="slide__img" alt="" src="images/bud3.jpg">
+					</div>
+					<p class="slide__txt">Maecenas dictum sagittis ante, ac volutpat libero. In auctor arcu nec mollis iaculis. Vestibulum vehicula sodales metus eu lacinia. Mauris non nisi et quam accumsan elementum. Sed dapibus neque eget tellus hendrerit porttitor. Phasellus dapibus lacinia risus, vitae molestie lacus congue at. Sed et scelerisque enim, sit amet dignissim diam. Vestibulum sapien eros, vestibulum a efficitur id, semper quis felis. Proin eu venenatis orci, at auctor sem. Donec pharetra dapibus dui, et pellentesque diam feugiat non. Morbi dui ligula, hendrerit sit amet odio eget, ultrices mattis velit. Phasellus bibendum urna id est viverra consectetur. In hac habitasse platea dictumst.</p>
+					<p class="slide__txt">Integer leo justo, congue lacinia lectus quis, sollicitudin tristique ipsum. Suspendisse faucibus, eros a dapibus consectetur, enim felis dapibus quam, ut dictum nibh mauris vitae orci. Aenean tempus finibus rutrum. Vestibulum tempor suscipit libero at aliquet. Nam eu leo lacus. Donec at rhoncus enim. Cras ultricies sollicitudin nisl eget scelerisque. Aliquam et risus egestas, dictum nibh vel, convallis diam.</p>
+					<p class="slide__txt">Pellentesque leo odio, auctor rutrum rutrum eu, ultricies non neque. Sed ultrices, sapien sit amet pulvinar molestie, ligula ex consectetur enim, ac vehicula ipsum arcu sit amet nulla. Pellentesque hendrerit felis vel magna posuere accumsan. Donec rhoncus massa eget elit lobortis sollicitudin. Maecenas a urna vulputate, tincidunt orci id, venenatis urna. Etiam libero est, malesuada luctus arcu sed, facilisis vehicula mauris. Nulla a rutrum erat. Sed ut fermentum dui.</p>
+				</article>
+				<article class="slide__article" id="aquamarine">
+					<h2 class="slideArt__head">Бизнес-центр Аквамарин</h2>
+					<p class="slide__txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ante massa. Integer at congue tortor, a hendrerit turpis. Aenean placerat dapibus odio ut maximus. Suspendisse potenti. Maecenas facilisis urna sed laoreet eleifend. Phasellus in dolor rutrum, tincidunt enim non, iaculis velit. Integer sed iaculis libero, ac consequat urna.</p>
+					<p class="slide__txt">Nullam sit amet euismod diam. Duis a libero in sapien fringilla aliquet eget id nisi. Nam aliquet congue interdum. Nullam eu massa lorem. Donec viverra consequat volutpat. Sed accumsan est imperdiet tincidunt vulputate. Aliquam erat volutpat. Etiam gravida a eros quis vehicula.</p>
+					<div class="slideImg__wrap">
+						<img class="slide__img" alt="" src="images/bud4.jpg">
+					</div>
+					<p class="slide__txt">Maecenas dictum sagittis ante, ac volutpat libero. In auctor arcu nec mollis iaculis. Vestibulum vehicula sodales metus eu lacinia. Mauris non nisi et quam accumsan elementum. Sed dapibus neque eget tellus hendrerit porttitor. Phasellus dapibus lacinia risus, vitae molestie lacus congue at. Sed et scelerisque enim, sit amet dignissim diam. Vestibulum sapien eros, vestibulum a efficitur id, semper quis felis. Proin eu venenatis orci, at auctor sem. Donec pharetra dapibus dui, et pellentesque diam feugiat non. Morbi dui ligula, hendrerit sit amet odio eget, ultrices mattis velit. Phasellus bibendum urna id est viverra consectetur. In hac habitasse platea dictumst.</p>
+					<p class="slide__txt">Integer leo justo, congue lacinia lectus quis, sollicitudin tristique ipsum. Suspendisse faucibus, eros a dapibus consectetur, enim felis dapibus quam, ut dictum nibh mauris vitae orci. Aenean tempus finibus rutrum. Vestibulum tempor suscipit libero at aliquet. Nam eu leo lacus. Donec at rhoncus enim. Cras ultricies sollicitudin nisl eget scelerisque. Aliquam et risus egestas, dictum nibh vel, convallis diam.</p>
+					<p class="slide__txt">Pellentesque leo odio, auctor rutrum rutrum eu, ultricies non neque. Sed ultrices, sapien sit amet pulvinar molestie, ligula ex consectetur enim, ac vehicula ipsum arcu sit amet nulla. Pellentesque hendrerit felis vel magna posuere accumsan. Donec rhoncus massa eget elit lobortis sollicitudin. Maecenas a urna vulputate, tincidunt orci id, venenatis urna. Etiam libero est, malesuada luctus arcu sed, facilisis vehicula mauris. Nulla a rutrum erat. Sed ut fermentum dui.</p>
+				</article>
+				<article class="slide__article" id="eurocom">
+					<h2 class="slideArt__head">Здание Еврокомиссии</h2>
+					<p class="slide__txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ante massa. Integer at congue tortor, a hendrerit turpis. Aenean placerat dapibus odio ut maximus. Suspendisse potenti. Maecenas facilisis urna sed laoreet eleifend. Phasellus in dolor rutrum, tincidunt enim non, iaculis velit. Integer sed iaculis libero, ac consequat urna.</p>
+					<p class="slide__txt">Nullam sit amet euismod diam. Duis a libero in sapien fringilla aliquet eget id nisi. Nam aliquet congue interdum. Nullam eu massa lorem. Donec viverra consequat volutpat. Sed accumsan est imperdiet tincidunt vulputate. Aliquam erat volutpat. Etiam gravida a eros quis vehicula.</p>
+					<div class="slideImg__wrap">
+						<img class="slide__img" alt="" src="images/bud1.jpg">
+					</div>
+					<p class="slide__txt">Maecenas dictum sagittis ante, ac volutpat libero. In auctor arcu nec mollis iaculis. Vestibulum vehicula sodales metus eu lacinia. Mauris non nisi et quam accumsan elementum. Sed dapibus neque eget tellus hendrerit porttitor. Phasellus dapibus lacinia risus, vitae molestie lacus congue at. Sed et scelerisque enim, sit amet dignissim diam. Vestibulum sapien eros, vestibulum a efficitur id, semper quis felis. Proin eu venenatis orci, at auctor sem. Donec pharetra dapibus dui, et pellentesque diam feugiat non. Morbi dui ligula, hendrerit sit amet odio eget, ultrices mattis velit. Phasellus bibendum urna id est viverra consectetur. In hac habitasse platea dictumst.</p>
+					<p class="slide__txt">Integer leo justo, congue lacinia lectus quis, sollicitudin tristique ipsum. Suspendisse faucibus, eros a dapibus consectetur, enim felis dapibus quam, ut dictum nibh mauris vitae orci. Aenean tempus finibus rutrum. Vestibulum tempor suscipit libero at aliquet. Nam eu leo lacus. Donec at rhoncus enim. Cras ultricies sollicitudin nisl eget scelerisque. Aliquam et risus egestas, dictum nibh vel, convallis diam.</p>
+					<p class="slide__txt">Pellentesque leo odio, auctor rutrum rutrum eu, ultricies non neque. Sed ultrices, sapien sit amet pulvinar molestie, ligula ex consectetur enim, ac vehicula ipsum arcu sit amet nulla. Pellentesque hendrerit felis vel magna posuere accumsan. Donec rhoncus massa eget elit lobortis sollicitudin. Maecenas a urna vulputate, tincidunt orci id, venenatis urna. Etiam libero est, malesuada luctus arcu sed, facilisis vehicula mauris. Nulla a rutrum erat. Sed ut fermentum dui.</p>
+				</article>
+			</div>
+			<div class="objectSlider owl-carousel">
+				<div class="objectSlider__item">
+					<div class="slide__cover">
+						<div class="slide__bg"></div>
+						<a class="slide__head" href="#grandPrix">
+							<h2 class="slideHead"></h2>
+						</a>
+					</div>
+				</div>
+				<div class="objectSlider__item">
+					<div class="slide__cover">
+						<div class="slide__bg"></div>
+						<a class="slide__head" href="#pankovsky">
+							<h2 class="slideHead"></h2>
+						</a>
+					</div>
+				</div>
+				<div class="objectSlider__item">
+					<div class="slide__cover">
+						<div class="slide__bg"></div>
+						<a class="slide__head" href="#dynasty">
+							<h2 class="slideHead"></h2>
+						</a>
+					</div>
+				</div>
+				<div class="objectSlider__item">
+					<div class="slide__cover">
+						<div class="slide__bg"></div>
+						<a class="slide__head" href="#aquamarine">
+							<h2 class="slideHead"></h2>
+						</a>
+					</div>
+				</div>
+				<div class="objectSlider__item">
+					<div class="slide__cover">
+						<div class="slide__bg"></div>
+						<a class="slide__head" href="#eurocom">
+							<h2 class="slideHead"></h2>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="slider__nav">
+				<a href="#" class="slideNav__btn objects__other">Другие объекты</a>
+				<a href="#" class="slideNav__btn slideNav__btn_prev"><span class="fa fa-angle-left"></span></a>
+				<a href="#" class="slideNav__btn slideNav__btn_next"><span class="fa fa-angle-right"></span></a>
+			</div>
+		</section>
+	</div>
 
 	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 	<script src="js/videoPlay.js" type="text/javascript"></script>
 	<script>
 		var v1 = new VideoStart('#videoPlay');
+	</script>
+	<script type="text/javascript" src="js/SliderInit.js"></script>
+	<script>
+		var i = new SliderInit("#objects");
+	</script>
+	<script src="js/OwlCarousel2-2.2.1/dist/owl.carousel.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var owl = $(".objectSlider");
+		$(document).ready(function(){
+			owl.owlCarousel({
+				loop: true,
+				center: true,
+				items: 1,
+				margin: 150,
+				stagePadding: 250,
+				smartSpeed: 1500,
+				onInitialize: i.init
+			});
+		});
+		i.prev.click(function(event) {
+			event.preventDefault();
+			owl.trigger('prev.owl.carousel');
+		});
+		i.next.click(function(event) {
+			event.preventDefault();
+			owl.trigger('next.owl.carousel');
+		});
+		owl.on('click', '.slide__head', function () {
+
+			i.opened = $(this).attr('href');
+			i.showSlide();
+
+		});
 	</script>
 </body>
 </html>
