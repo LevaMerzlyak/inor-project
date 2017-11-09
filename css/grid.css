@@ -1,0 +1,98 @@
+/*grid sistem*/
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 0%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF 14  */
+.span_14_of_14 {
+	width: 100%;
+}
+
+.span_14_of_14 {
+	width: 92.86%;
+}
+
+.span_12_of_14 {
+  	width: 85.71%;
+}
+
+.span_11_of_14 {
+  	width: 78.57%;
+}
+
+.span_10_of_14 {
+  	width: 71.42%;
+}
+
+.span_9_of_14 {
+  	width: 64.29%;
+}
+
+.span_8_of_14 {
+  	width: 57.14%;
+}
+
+.span_7_of_14 {
+  	width: 50%;
+}
+
+.span_6_of_14 {
+  	width: 42.85%;
+}
+
+.span_5_of_14 {
+  	width: 35.71%;
+}
+
+.span_4_of_14 {
+  	width: 28.57%;
+}
+
+.span_3_of_14 {
+  	width: 21.43%;
+}
+
+.span_2_of_14 {
+  	width: 14.28%;
+}
+
+.span_1_of_14 {
+  	width: 7.14%;
+}
+
+/*  GO FULL WIDTH BELOW 800 PIXELS */
+@media only screen and (max-width: 800px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_14,
+  .span_2_of_14,
+  .span_3_of_14,
+  .span_4_of_14,
+  .span_5_of_14,
+  .span_6_of_14,
+  .span_7_of_14,
+  .span_8_of_14,
+  .span_9_of_14,
+  .span_10_of_14,
+  .span_11_of_14,
+  .span_12_of_14,
+  .span_13_of_14,
+  .span_14_of_14 { width: 100%; }
+}
