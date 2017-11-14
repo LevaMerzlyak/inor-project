@@ -543,4 +543,14 @@
   /*----- Company -----*/
   .company {
     background-size: 100%; }
-  /*----- /Company -----*/ }
+  /*----- /Company -----*/
+  /*----- Reputation -----*/
+  .main__txt_reputation {
+    width: 100%;
+    background-size: 90%;
+    padding-top: 25%; }
+  .reputation__logos {
+    position: relative;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  /*----- /Reputation -----*/ }
