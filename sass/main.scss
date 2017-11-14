@@ -492,6 +492,20 @@
 
 /*----- Mobile -----*/
 @media only screen and (max-width: 800px) {
+	/*----- Objects -----*/
+		/*----- Slider -----*/
+	.slide__cover {
+		padding-bottom: 100%;
+	}
+	.slide__head {
+		left: 0;
+		right: 45%;
+	}
+
+		/*----- /Slider -----*/
+
+	/*----- /Objects -----*/
+
 	/*----- Company -----*/
 	.company {
 		background-size: 100%;
