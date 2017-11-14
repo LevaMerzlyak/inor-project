@@ -283,10 +283,21 @@
 				loop: true,
 				center: true,
 				items: 1,
-				margin: 150,
-				stagePadding: 250,
+				//margin: 150,
+				//stagePadding: 250,
 				smartSpeed: 1500,
-				onInitialize: i.init
+				onInitialize: i.init,
+				responsiveClass: true,
+				responsive: {
+					0: {
+						margin: 0,
+						stagePadding: 0
+					},
+					800: {
+						margin: 150,
+						stagePadding: 250
+					}
+				}
 			});
 		});
 		i.prev.click(function(event) {
