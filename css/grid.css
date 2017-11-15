@@ -78,7 +78,11 @@
 
 /*  GO FULL WIDTH BELOW 800 PIXELS */
 @media only screen and (max-width: 800px) {
-	.col {  margin-bottom: 1%; }
+	.col {
+    margin-bottom: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
 	.span_1_of_14,
   .span_2_of_14,
   .span_3_of_14,
@@ -92,5 +96,5 @@
   .span_11_of_14,
   .span_12_of_14,
   .span_13_of_14,
-  .span_14_of_14 { width: 100%; }
+  .span_14_of_14 { width: 94%; }
 }
