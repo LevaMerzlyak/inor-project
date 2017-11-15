@@ -519,6 +519,9 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   right: 0;
   margin-top: 6%;
   padding: 5% 3%;
@@ -529,8 +532,8 @@
   box-shadow: 0px 0px 15px 0px rgba(0, 1, 2, 0.12); }
 
 .reputationLogo__wrap {
-  width: 15%;
-  margin: 5%; }
+  width: 21%;
+  margin: 5% 0; }
 
 .reputation__logo {
   width: 100%;
@@ -538,6 +541,13 @@
 
 /*----- /Reputation -----*/
 /*----- Mobile -----*/
+@media only screen and (max-width: 1200px) {
+  /*----- Reputation -----*/
+  .reputationLogo__wrap {
+    width: 30%;
+    margin: 3% 0; }
+  /*----- /Reputation -----*/ }
+
 @media only screen and (max-width: 800px) {
   /*----- Objects -----*/
   /*----- Slider -----*/
@@ -561,4 +571,11 @@
     position: relative;
     -webkit-box-shadow: none;
     box-shadow: none; }
+  /*----- /Reputation -----*/ }
+
+@media only screen and (max-width: 760px) {
+  /*----- Reputation -----*/
+  .reputationLogo__wrap {
+    width: 40%;
+    margin: 3% 0; }
   /*----- /Reputation -----*/ }
