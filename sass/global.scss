@@ -24,7 +24,8 @@ body {
   	width: 100%;
   	margin-top: -15vh;
   	background-color: $bg;
-  	position: absolute;
+  	position: fixed;
+  	z-index: 100;
 }
 .logo {
 	display: inline-block;
@@ -130,7 +131,7 @@ body {
 
 /*----- Langueges -----*/
 .langueges {
-	position: absolute;
+	position: fixed;
 	width: 7%;
 	height: 75vh;
 }
@@ -169,7 +170,7 @@ body {
 
 /*----- Pagination -----*/
 .pagination{
-	position: absolute;
+	position: fixed;
 	width: 7%;
 	height: 75vh;
 	right: 0;
