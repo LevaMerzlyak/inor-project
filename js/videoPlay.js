@@ -5,15 +5,16 @@ function VideoStart(sSelector) {
 
 	v.container = $(sSelector);
 	v.playBtn 	= v.container.find(".playBtn");
-	v.closeBtn	= v.container.find(".close__btn");
-	v.player	= v.container.find("#player");
+	v.video = $('.main__video');
+	v.closeBtn	= v.video.find(".close__btn");
+	v.player	= v.video.find("#player");
 
 
 	
 	v.startVideo = function(event) {
 		
 		event.preventDefault();
-		v.container.addClass(mainClass);
+		v.video.addClass(mainClass);
 		setTimeout(function() {
 			v.player.attr("src", "https://www.youtube.com/embed//PE-QOjc1Z5w?autoplay=1&showinfo=0&controls=0");
 		}, 1000);
@@ -23,7 +24,7 @@ function VideoStart(sSelector) {
 	
 	v.stopVideo = function() {
 
-		v.container.removeClass(mainClass);
+		v.video.removeClass(mainClass);
 		v.player.attr("src", "");
 
 	}
