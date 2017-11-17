@@ -393,12 +393,28 @@
 	position: relative;
 	top: 15vh;
 	margin-bottom: 10vh;
-	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxNDUwIDE2OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTQ1MCAxNjg7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojREVEREREO30KPC9zdHlsZT4KPGc+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTMzLjcsMTMzLjRjLTE0LjEsMTMuNS0zMS44LDIwLjMtNTMuMywyMC4zYy0yMS41LDAtMzkuMy02LjgtNTMuNC0yMC4zQzEyLjksMTE5LjksNS44LDEwMi42LDUuOCw4MS42CgkJYzAtMjEsNy4xLTM4LjMsMjEuMi01MS44QzQxLjIsMTYuMiw1OSw5LjUsODAuNCw5LjVjMjEuNSwwLDM5LjIsNi44LDUzLjMsMjAuM2MxNC4xLDEzLjUsMjEuMSwzMC44LDIxLjEsNTEuOAoJCUMxNTQuOSwxMDIuNiwxNDcuOCwxMTkuOSwxMzMuNywxMzMuNHogTTgwLjQsMTIxLjljMTEuMywwLDIwLjQtMy44LDI3LjQtMTEuNWM3LTcuNywxMC41LTE3LjMsMTAuNS0yOC44CgkJYzAtMTEuNi0zLjUtMjEuMi0xMC41LTI4LjhjLTctNy43LTE2LjEtMTEuNS0yNy40LTExLjVjLTExLjQsMC0yMC42LDMuOC0yNy42LDExLjVjLTcsNy43LTEwLjUsMTcuMy0xMC41LDI4LjgKCQljMCwxMS42LDMuNSwyMS4yLDEwLjUsMjguOEM1OS44LDExOC4xLDY5LDEyMS45LDgwLjQsMTIxLjl6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzUyLjYsMTUxLjJoLTQ0LjFsLTM2LjYtNTIuNWwtOS40LDExLjd2NDAuOGgtMzUuOVYxMS44aDM1LjlWNjlsNDIuOC01Ny4zaDQ0LjNMMjk1LjUsNzdMMzUyLjYsMTUxLjJ6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDc0LjgsMTMzLjRjLTE0LjEsMTMuNS0zMS44LDIwLjMtNTMuMywyMC4zYy0yMS41LDAtMzkuMy02LjgtNTMuNC0yMC4zYy0xNC4xLTEzLjUtMjEuMi0zMC44LTIxLjItNTEuOAoJCWMwLTIxLDcuMS0zOC4zLDIxLjItNTEuOGMxNC4xLTEzLjUsMzEuOS0yMC4zLDUzLjQtMjAuM2MyMS41LDAsMzkuMiw2LjgsNTMuMywyMC4zYzE0LjEsMTMuNSwyMS4xLDMwLjgsMjEuMSw1MS44CgkJQzQ5NS45LDEwMi42LDQ4OC45LDExOS45LDQ3NC44LDEzMy40eiBNNDIxLjUsMTIxLjljMTEuMywwLDIwLjQtMy44LDI3LjQtMTEuNWM3LTcuNywxMC41LTE3LjMsMTAuNS0yOC44CgkJYzAtMTEuNi0zLjUtMjEuMi0xMC41LTI4LjhjLTctNy43LTE2LjEtMTEuNS0yNy40LTExLjVjLTExLjQsMC0yMC42LDMuOC0yNy42LDExLjVjLTcsNy43LTEwLjUsMTcuMy0xMC41LDI4LjgKCQljMCwxMS42LDMuNSwyMS4yLDEwLjUsMjguOEM0MDAuOSwxMTguMSw0MTAuMSwxMjEuOSw0MjEuNSwxMjEuOXoiLz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik02NzIuMywxNTEuMmgtMzUuOVY2MC41bC0zNS4zLDkwLjdoLTE1LjlsLTM1LjEtOTAuN3Y5MC43aC0zNS45VjExLjhoNTBsMjkuMSw3NS43bDI5LjMtNzUuN2g1MFYxNTEuMnoiLz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik04MjcuMiwxNTEuMmgtMzUuOVY0My4xaC01Ny45djEwOC4xaC0zNS45VjExLjhoMTI5LjhWMTUxLjJ6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNOTg3LjcsMTUxLjJIOTQ3bC02LjktMjAuMWgtNTVsLTYuOSwyMC4xaC00MC44bDUyLjUtMTM5LjRIOTM1TDk4Ny43LDE1MS4yeiBNOTMwLjIsOTkuOGwtMTcuOC01Mi41CgkJbC0xNy44LDUyLjVIOTMwLjJ6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTEyNy43LDE1MS4yaC0zNS45di01NmgtNTcuOXY1Nkg5OThWMTEuOGgzNS45djUyaDU3Ljl2LTUyaDM1LjlWMTUxLjJ6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTE4Ny41LDE1MS4yaC0zNC43VjExLjhoMzUuOXY4Mi4xbDU2LjQtODIuMWgzNy4ydjEzOS40aC0zNi4yVjY1LjFMMTE4Ny41LDE1MS4yeiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTEzNDIuMiwxNTEuMmgtMzQuN1YxMS44aDM1Ljl2ODIuMWw1Ni40LTgyLjFoMzcuMnYxMzkuNGgtMzYuMlY2NS4xTDEzNDIuMiwxNTEuMnoiLz4KPC9nPgo8L3N2Zz4=);
-	background-repeat: no-repeat;
-	background-size: 85%;
+}
+.companySvg__wrap {
+	position: relative;
+	width: 90%;
+	height: 0;
+	padding-bottom: 20%;
+}
+.company__svg {
+	position: absolute;
+	top: -50%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.companySvg__txt {
+	font-family: 'ProximaNova';
+	font-weight: 800;
+	font-size: 209px;
+	fill: $svgTxt;
 }
 .company__txt {
-	margin-top: 8%;
+	margin-top: -12%;
 }
 .companyTxt {	
 	padding: 3% 5%;
@@ -435,7 +451,7 @@
 }
 .company__video {
 	position: relative;
-	margin-top: 8%;
+	margin-top: -12%;
 }
 .companyVideo__cover {
 	width: 100%;
@@ -475,14 +491,12 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-
 }
 .reputationSvg__txt {
 	font-family: 'ProximaNova';
 	font-weight: 800;
 	font-size: 70px;
 	fill: $txt;
-	text-anchor: start;
 }
 .main__txt_reputation {
 	width: 33%;
@@ -535,8 +549,11 @@
 	/*----- /Objects -----*/
 
 	/*----- Company -----*/
-	.company {
-		background-size: 100%;
+	.companySvg__wrap {
+		margin: 0 auto;
+	}
+	.company__video {
+		margin-top: 1%;
 	}
 	/*----- /Company -----*/
 
