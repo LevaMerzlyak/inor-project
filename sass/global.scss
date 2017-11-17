@@ -22,9 +22,9 @@ body {
 .header {	
   	height: 15vh;
   	width: 100%;
-  	margin-top: -15vh;
   	background-color: $bg;
   	position: fixed;
+	top: 0;
   	z-index: 100;
 }
 .logo {
@@ -134,6 +134,7 @@ body {
 /*----- Langueges -----*/
 .langueges {
 	position: fixed;
+	top: 15vh;
 	width: 7%;
 	height: 75vh;
 }
@@ -173,6 +174,7 @@ body {
 /*----- Pagination -----*/
 .pagination{
 	position: fixed;
+	top: 15vh;
 	width: 7%;
 	height: 75vh;
 	right: 0;
