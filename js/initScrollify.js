@@ -14,6 +14,7 @@ $(function() {
 		,reputationWht = reputation.find('.reputation__logos')
 		,reputationLogos = reputation.find('.reputationLogo__wrap')
 		;
+
 	$.scrollify({
 		section : ".scrollifyClass",
 		scrollbars: true,
@@ -30,9 +31,6 @@ $(function() {
     		if(ref === 'main') {
     			$('.pagination').addClass('pagination_main');
     			$('.nav__wrap').addClass('nav__wrap_main');
-    		} else {
-    			$('.pagination').removeClass('pagination_main');
-    			$('.nav__wrap').removeClass('nav__wrap_main');
 
     			objectSvg.removeClass('animated').removeClass('fadeInUp');
     			objectSlider.removeClass('animated2').removeClass('fadeInUp');
@@ -46,6 +44,9 @@ $(function() {
     			reputationWht.removeClass('animated3').removeClass('fadeInUpBig');
     			reputationSvg.removeClass('animated-d').removeClass('fadeIn');
     			reputationTxt.removeClass('animated-d').removeClass('fadeIn');
+    		} else {
+    			$('.pagination').removeClass('pagination_main');
+    			$('.nav__wrap').removeClass('nav__wrap_main');
     		}
 
     		if((ref === 'main') || (ref === 'objects') || (ref === 'company')) {
@@ -99,13 +100,30 @@ $(function() {
     			companyTxt.removeClass('animated2').removeClass('fadeInUp');
     			companyVid.removeClass('animated3').removeClass('fadeInRightBig');
     		}
+    		if(ref === 'footer') {
+    			$('.pagination a.pag__link[href=\\#reputation]').addClass('pag__link_active');
+
+    			objectSvg.removeClass('animated').removeClass('fadeInUp');
+    			objectSlider.removeClass('animated2').removeClass('fadeInUp');
+    			objectNav.removeClass('animated2').removeClass('fadeInUpBig');
+
+    			companySvg.removeClass('animated3').removeClass('fadeInLeftBig');
+    			companyTxt.removeClass('animated2').removeClass('fadeInUp');
+    			companyVid.removeClass('animated3').removeClass('fadeInRightBig');
+
+    			reputationGrey.removeClass('animated2').removeClass('fadeInLeftBig');
+    			reputationWht.removeClass('animated3').removeClass('fadeInUpBig');
+    			reputationSvg.removeClass('animated-d').removeClass('fadeIn');
+    			reputationTxt.removeClass('animated-d').removeClass('fadeIn');
+    		}
     		
     	},
     	after: function(i,panels) {
 
-    	}
-		//offset: hOffset
-		//interstitialSection:".footer"
+    	},
+		afterResize:offMobile,
+    	afterRender:offMobile,
+		interstitialSection:".footer"
 	});
 	
 	
@@ -120,4 +138,12 @@ $(function() {
 		e.preventDefault();
 		$.scrollify.move('#main');
 	});
+	function offMobile() {
+		var width = $(window).width();
+		if(width < 1200 && !$.scrollify.isDisabled()) {
+			$.scrollify.disable();
+		} else if(width >= 1200 && $.scrollify.isDisabled()) {
+			$.scrollify.enable();
+		}
+	}
 });
