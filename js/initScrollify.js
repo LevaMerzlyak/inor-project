@@ -111,10 +111,6 @@ $(function() {
     			companyTxt.removeClass('animated2').removeClass('fadeInUp');
     			companyVid.removeClass('animated3').removeClass('fadeInRightBig');
 
-    			reputationGrey.removeClass('animated2').removeClass('fadeInLeftBig');
-    			reputationWht.removeClass('animated3').removeClass('fadeInUpBig');
-    			reputationSvg.removeClass('animated-d').removeClass('fadeIn');
-    			reputationTxt.removeClass('animated-d').removeClass('fadeIn');
     		}
     		
     	},
@@ -140,9 +136,9 @@ $(function() {
 	});
 	function offMobile() {
 		var width = $(window).width();
-		if(width < 1200 && !$.scrollify.isDisabled()) {
+		if(width < 1199 && !$.scrollify.isDisabled()) {
 			$.scrollify.disable();
-		} else if(width >= 1200 && $.scrollify.isDisabled()) {
+		} else if(width >= 1199 && $.scrollify.isDisabled()) {
 			$.scrollify.enable();
 		}
 	}
