@@ -547,6 +547,16 @@
 /*----- /Reputation -----*/
 
 /*----- Mobile -----*/
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (orientation: portrait)  {
+	.objects,
+	.company,
+	.reputation {
+		height: 40vh;
+	}
+	.footer {
+		margin-top: 10vh;
+	}
+}
 @media only screen and (max-width: 1200px) {
 	/*----- Reputation -----*/
 	.reputation__logos {
@@ -558,12 +568,10 @@
 	}
 	/*----- /Reputation -----*/
 }
+
 @media only screen and (max-width: 800px) {
 	/*----- Objects -----*/
 		/*----- Slider -----*/
-	.slide__cover {
-		padding-bottom: 100%;
-	}
 	.slide__head {
 		left: 0;
 		top: 45%;
@@ -596,6 +604,29 @@
 	}
 	/*----- /Reputation -----*/
 }
+@media only screen and (max-width: 800px) and (orientation: portrait) {
+	/*----- Objects -----*/
+		/*----- Slider -----*/
+	.slide__cover {
+		padding-bottom: 100%;
+	}
+}
+@media only screen and (max-width: 769px) {
+	.slide__head {
+		left: -40px;
+	}
+	.company,
+	.reputation,
+	.objects {
+		height: 90vh;
+	}
+	.objects {
+		margin-bottom: 15vh;
+	}
+	.slideArt__head {
+		margin-top: 8%;
+	}
+}
 @media only screen and (max-width: 760px) {
 	/*----- Reputation -----*/
 	.reputationLogo__wrap {
@@ -603,4 +634,14 @@
 		margin: 3% 0;
 	}
 	/*----- /Reputation -----*/
+}
+@media only screen and (max-width: 650px) {
+	.slideHead {
+		font-size: 1.6em;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.slideHead {
+		font-size: 1.3em;
+	}
 }
