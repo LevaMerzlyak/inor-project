@@ -777,3 +777,11 @@ body {
     margin-bottom: 10vh; }
   .footer__nav {
     display: none; } }
+
+@media only screen and (max-width: 1050px) {
+  .footer {
+    margin-top: 20vh; } }
+
+@media only screen and (max-width: 950px) {
+  .footer {
+    margin-top: 15vh; } }
