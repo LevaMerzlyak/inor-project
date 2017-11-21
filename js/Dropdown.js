@@ -27,7 +27,7 @@ function DropDown(sSelector) {
 	}
 	d.show = function () {
 
-		$('.nav').find('.nav__dropdown_opened').removeClass(opened);
+		$('.header').find('.nav__dropdown_opened').removeClass(opened);
 		d.drowdown.addClass(opened);
 
 	}
