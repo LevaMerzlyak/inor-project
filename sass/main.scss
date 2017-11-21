@@ -162,6 +162,7 @@
 
 	/*----- Back Button -----*/
 .back__btn {
+	visibility: hidden;
 	position: fixed;
 	right: 4%;
 	top: 4%;
@@ -199,6 +200,7 @@
 		}
 	}
 	&.opened {
+		visibility: visible;
 		.backBtn {
 			transform: translateX(0);
 			transition: transform 0.25s $timing-one 1.5s;
