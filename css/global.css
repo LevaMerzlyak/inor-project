@@ -217,6 +217,26 @@ body {
       -webkit-transition-delay: 0.99s;
       -o-transition-delay: 0.99s;
       transition-delay: 0.99s; }
+    .nav__dropdown_opened .navDropdown__item:nth-of-type(8) {
+      -webkit-transition-delay: 1.06s;
+      -o-transition-delay: 1.06s;
+      transition-delay: 1.06s; }
+    .nav__dropdown_opened .navDropdown__item:nth-of-type(9) {
+      -webkit-transition-delay: 1.13s;
+      -o-transition-delay: 1.13s;
+      transition-delay: 1.13s; }
+    .nav__dropdown_opened .navDropdown__item:nth-of-type(10) {
+      -webkit-transition-delay: 1.2s;
+      -o-transition-delay: 1.2s;
+      transition-delay: 1.2s; }
+    .nav__dropdown_opened .navDropdown__item:nth-of-type(11) {
+      -webkit-transition-delay: 1.27s;
+      -o-transition-delay: 1.27s;
+      transition-delay: 1.27s; }
+    .nav__dropdown_opened .navDropdown__item:nth-of-type(12) {
+      -webkit-transition-delay: 1.34s;
+      -o-transition-delay: 1.34s;
+      transition-delay: 1.34s; }
 
 /*----- /DropDown Menu -----*/
 /*----- Main Menu -----*/
@@ -550,6 +570,8 @@ body {
 @media only screen and (max-width: 1199px) {
   .container {
     width: 100%; }
+  .header {
+    position: absolute; }
   .nav__wrap,
   .langueges,
   .pagination {
@@ -559,14 +581,19 @@ body {
     display: block;
     position: absolute;
     top: 0;
-    right: 0; }
+    right: 0;
+    height: 15vh;
+    margin-right: 5%; }
   .sandwich__btn {
     display: block;
     width: 44px;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-top: 5vh;
-    margin-right: 5vh; }
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
   .sandwich__line {
     display: block;
     position: relative;
@@ -610,12 +637,16 @@ body {
       -ms-transform: rotate(-45deg);
       transform: rotate(-45deg); }
   .mobile__menu {
+    visibility: hidden;
     position: absolute;
     top: 15vh;
-    width: 100%; }
+    width: 100%;
+    -webkit-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    transition: all 0.1s; }
   .menuMobile__wrap {
     background-color: #f4f3f3;
-    padding: 10%;
+    padding-top: 5%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -628,21 +659,48 @@ body {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    flex-direction: column; }
+    flex-direction: column;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: all 1s 0.25s;
+    -o-transition: all 1s 0.25s;
+    transition: all 1s 0.25s; }
   .menuMobile,
   .mobile__lang {
     list-style: none;
     padding: 0;
-    margin: 0; }
-  .menuMobile__link {
-    display: block;
-    font-weight: 700;
-    text-decoration: none;
-    color: #9b9b9b;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    line-height: 2em;
-    text-align: center; }
+    margin: 0 auto; }
+  .nav__item_mobile {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-left: 0;
+    margin-top: 0.8em;
+    opacity: 0;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s; }
+    .nav__item_mobile .nav__dropdown {
+      position: relative;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      height: 0;
+      -webkit-transition: all .4s;
+      -o-transition: all .4s;
+      transition: all .4s; }
+      .nav__item_mobile .nav__dropdown:before {
+        width: 0; }
+    .nav__item_mobile .nav__dropdown_opened {
+      height: 100%; }
+  .nav__link_mobile {
+    margin: 0 auto; }
   .mobile__lang {
     display: -webkit-box;
     display: -webkit-flex;
@@ -652,14 +710,54 @@ body {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    margin: 5% auto; }
-  .menuLang__link {
-    font-weight: 700;
-    text-decoration: none;
-    color: #9b9b9b;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    line-height: 2em; }
+    margin: 5% auto;
+    opacity: 0;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s; }
+  .mobile__menu_opened {
+    visibility: visible;
+    -webkit-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s; }
+    .mobile__menu_opened .menuMobile__wrap {
+      -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+      transform: translateY(0%);
+      -webkit-transition-delay: 0.5s;
+      -o-transition-delay: 0.5s;
+      transition-delay: 0.5s; }
+    .mobile__menu_opened .nav__item_mobile {
+      opacity: 1; }
+      .mobile__menu_opened .nav__item_mobile:nth-of-type(1) {
+        -webkit-transition-delay: 0.57s;
+        -o-transition-delay: 0.57s;
+        transition-delay: 0.57s; }
+      .mobile__menu_opened .nav__item_mobile:nth-of-type(2) {
+        -webkit-transition-delay: 0.64s;
+        -o-transition-delay: 0.64s;
+        transition-delay: 0.64s; }
+      .mobile__menu_opened .nav__item_mobile:nth-of-type(3) {
+        -webkit-transition-delay: 0.71s;
+        -o-transition-delay: 0.71s;
+        transition-delay: 0.71s; }
+      .mobile__menu_opened .nav__item_mobile:nth-of-type(4) {
+        -webkit-transition-delay: 0.78s;
+        -o-transition-delay: 0.78s;
+        transition-delay: 0.78s; }
+      .mobile__menu_opened .nav__item_mobile:nth-of-type(5) {
+        -webkit-transition-delay: 0.85s;
+        -o-transition-delay: 0.85s;
+        transition-delay: 0.85s; }
+      .mobile__menu_opened .nav__item_mobile:nth-of-type(6) {
+        -webkit-transition-delay: 0.92s;
+        -o-transition-delay: 0.92s;
+        transition-delay: 0.92s; }
+    .mobile__menu_opened .mobile__lang {
+      opacity: 1;
+      -webkit-transition-delay: 1s;
+      -o-transition-delay: 1s;
+      transition-delay: 1s; }
   /*----- /Mobile Menu -----*/
   .contacts,
   .footer__nav {
