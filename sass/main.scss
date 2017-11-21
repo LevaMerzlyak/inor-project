@@ -530,6 +530,7 @@
 	justify-content: space-around;
 	right: 0;
 	margin-top: 5%;
+	margin-right: 15px;
 	padding: 3%;
 	box-sizing: border-box;
 	background-color: $bg;
@@ -548,6 +549,9 @@
 /*----- Mobile -----*/
 @media only screen and (max-width: 1200px) {
 	/*----- Reputation -----*/
+	.reputation__logos {
+		margin-right: 0;
+	}
 	.reputationLogo__wrap {
 		width: 30%;
 		margin: 3% 0;
