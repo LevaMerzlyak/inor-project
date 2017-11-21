@@ -101,8 +101,8 @@
 				</li>
 			</ul>
 		</div>
-		<div class="mobileMenu__btn">
-			<a href="#" class="sandwich__btn sandwich__btn_close">
+		<div class="mobileMenu__btn" id="menu1">
+			<a href="#" class="sandwich__btn">
 				<span class="sandwich__line"></span>
 			</a>
 		</div>
@@ -110,34 +110,88 @@
 			<div class="navDropdown__wrap">
 				<div class="menuMobile__wrap">
 					<ul class="menuMobile">
-						<li class="menuMobile__item">
-							<a href="#" class="menuMobile__link">Главная</a>
+						<li class="nav__item nav__item_mobile">
+							<a href="#" class="nav__link nav__link_active nav__link_mobile">Главная</a>
 						</li>
-						<li class="menuMobile__item">
-							<a href="#" class="menuMobile__link">О нас</a>
+						<li class="nav__item nav__item_mobile">
+							<a href="#" class="nav__link nav__link_mobile">О нас</a>
 						</li>
-						<li class="menuMobile__item">
-							<a href="#" class="menuMobile__link">Аренда</a>
+						<li class="nav__item nav__item_mobile" id="dropdown3">
+							<a href="#" class="nav__link nav__link_mobile">Аренда</a>
+							<div class="nav__dropdown">
+								<div class="navDropdown__wrap">
+									<ul class="navDropdown">
+										<li class="navDropdown__item">
+											<a href="#" class="navDropdown__link">Владимирская, 101</a>
+										</li>
+										<li class="navDropdown__item">
+											<a href="#" class="navDropdown__link">Владимирская, 101</a>
+										</li>
+										<li class="navDropdown__item">
+											<a href="#" class="navDropdown__link">Владимирская, 101</a>
+										</li>
+										<li class="navDropdown__item">
+											<a href="#" class="navDropdown__link">Владимирская, 101</a>
+										</li>
+										<li class="navDropdown__item">
+											<a href="#" class="navDropdown__link">Владимирская, 101</a>
+										</li>
+										<li class="navDropdown__item">
+											<a href="#" class="navDropdown__link">Владимирская, 101</a>
+										</li>
+										<li class="navDropdown__item">
+											<a href="#" class="navDropdown__link">Владимирская, 101</a>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</li>
-						<li class="menuMobile__item">
-							<a href="#" class="menuMobile__link">Готовые объекты</a>
+						<li class="nav__item nav__item_mobile" id="dropdown4">
+							<a href="#" class="nav__link nav__link_mobile">Готовые объекты</a>
+							<div class="nav__dropdown">
+								<div class="navDropdown__wrap">
+									<ul class="navDropdown">
+										<li class="navDropdown__item">
+											<a href="#" class="navDropdown__link">Фитнес клуб Grand-Prix</a>
+										</li>
+										<li class="navDropdown__item">
+											<a href="#" class="navDropdown__link">Бизнес-центр Паньковский</a>
+										</li>
+										<li class="navDropdown__item">
+											<a href="#" class="navDropdown__link">Бизнес-центр Династия</a>
+										</li>
+										<li class="navDropdown__item">
+											<a href="#" class="navDropdown__link">Бизнес-центр Аквамарин</a>
+										</li>
+										<li class="navDropdown__item">
+											<a href="#" class="navDropdown__link">Здание Еврокомиссии</a>
+										</li>
+										<li class="navDropdown__item">
+											<a href="#" class="navDropdown__link">Владимирская, 101</a>
+										</li>
+										<li class="navDropdown__item">
+											<a href="#" class="navDropdown__link">Владимирская, 101</a>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</li>
-						<li class="menuMobile__item">
-							<a href="#" class="menuMobile__link">Вакансии</a>
+						<li class="nav__item nav__item_mobile">
+							<a href="#" class="nav__link nav__link_mobile">Вакансии</a>
 						</li>
-						<li class="menuMobile__item">
-							<a href="#" class="menuMobile__link">Контакты</a>
+						<li class="nav__item nav__item_mobile">
+							<a href="#" class="nav__link nav__link_mobile">Контакты</a>
 						</li>
 					</ul>
 					<ul class="mobile__lang">
-						<li class="menuLang__item">
-							<a href="#" class="menuLang__link">ua</a>
+						<li class="lang__item">
+							<a href="#" class="lang__link">ua</a>
 						</li>
-						<li class="menuLang__item">
-							<a href="#" class="menuLang__link">ru</a>
+						<li class="lang__item">
+							<a href="#" class="lang__link lang__link_active">ru</a>
 						</li>
-						<li class="menuLang__item">
-							<a href="#" class="menuLang__link">en</a>
+						<li class="lang__item">
+							<a href="#" class="lang__link">en</a>
 						</li>
 					</ul>
 				</div>
@@ -436,9 +490,13 @@
 	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 
 	<script src="js/Dropdown.js" type="text/javascript"></script>
+	<script src="js/DropdownMob.js" type="text/javascript"></script>
 	<script>
 		var d1 = new DropDown('#dropdown1');
 		var d2 = new DropDown('#dropdown2');
+		var d2 = new DropDown('#dropdown3');
+		var d2 = new DropDown('#dropdown4');
+		var m1 = new DropDownMob('#menu1');
 	</script>
 
 	<script src="js/jquery.scrollify.js" type="text/javascript"></script>
