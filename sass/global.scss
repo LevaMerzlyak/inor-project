@@ -219,6 +219,9 @@ body {
 .mobileMenu__btn {
 	display: none;
 }
+.mobile__menu {
+	display: none;
+}
 	/*----- /Mobile Menu -----*/
 
 /*----- /Header -----*/
@@ -562,6 +565,7 @@ body {
 		}
 	}
 	.mobile__menu {
+		display: block;
 		visibility: hidden;
 		position: absolute;
 		top: 15vh;

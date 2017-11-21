@@ -266,6 +266,9 @@ body {
 .mobileMenu__btn {
   display: none; }
 
+.mobile__menu {
+  display: none; }
+
 /*----- /Mobile Menu -----*/
 /*----- /Header -----*/
 /*----- Langueges -----*/
@@ -637,6 +640,7 @@ body {
       -ms-transform: rotate(-45deg);
       transform: rotate(-45deg); }
   .mobile__menu {
+    display: block;
     visibility: hidden;
     position: absolute;
     top: 15vh;
