@@ -8,6 +8,9 @@ body {
   font-size: 16px;
   font-weight: 400; }
 
+section {
+  overflow: hidden; }
+
 .container {
   width: 86%;
   margin: 0 auto; }
@@ -570,6 +573,76 @@ body {
     color: #333333; }
 
 /*----- /Footer ------*/
+.scroll__btn {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 7vh;
+  z-index: 9999; }
+
+.scrollBtn {
+  text-decoration: none;
+  color: #9b9b9b;
+  font-size: 1.25em;
+  font-weight: 700;
+  opacity: 1;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s; }
+  .scrollBtn:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1em;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 2px;
+    height: 1em;
+    background-color: #9b9b9b;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+    -webkit-animation-name: fly;
+    animation-name: fly;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; }
+  .scrollBtn:hover {
+    color: #333333; }
+    .scrollBtn:hover:before {
+      background-color: #333333; }
+
+.scrollBtn_hidden {
+  opacity: 0; }
+
+@-webkit-keyframes fly {
+  0% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%); }
+  50% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); }
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%); } }
+
+@keyframes fly {
+  0% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%); }
+  50% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); }
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%); } }
+
 @media only screen and (max-width: 1199px) {
   .container {
     width: 100%; }
@@ -577,7 +650,8 @@ body {
     position: absolute; }
   .nav__wrap,
   .langueges,
-  .pagination {
+  .pagination,
+  .scroll__btn {
     display: none; }
   /*----- Mobile Menu -----*/
   .mobileMenu__btn {

@@ -9,6 +9,9 @@ body {
 	font-size: 16px;
 	font-weight: 400;
 }
+section {
+	overflow: hidden;
+}
 
 .container {
 	width: 86%;
@@ -489,6 +492,57 @@ body {
 	}
 }
 /*----- /Footer ------*/
+.scroll__btn {
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 7vh;
+	z-index: 9999;
+}
+.scrollBtn {
+	text-decoration: none;
+	color: $txtSub;
+	font-size: 1.25em;
+	font-weight: 700;
+	opacity: 1;
+	transition: all 0.25s;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: -1em;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 2px;
+		height: 1em;
+		background-color: $txtSub;
+		transition: all 0.25s;
+		animation-name: fly;
+    	animation-duration: 4s;
+    	animation-iteration-count: infinite;
+	}
+	&:hover {
+		color: $txt;
+		&:before {
+			background-color: $txt;
+		}
+	}
+}
+.scrollBtn_hidden {
+	opacity: 0;
+}
+@keyframes fly {
+	0% {
+		transform: translateY(0%);
+	}
+	50% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
 
 @media only screen and (max-width: 1199px) {
 	.container {
@@ -499,7 +553,8 @@ body {
 	}
 	.nav__wrap,
 	.langueges,
-	.pagination {
+	.pagination,
+	.scroll__btn {
 		display: none;
 	}
 		/*----- Mobile Menu -----*/
