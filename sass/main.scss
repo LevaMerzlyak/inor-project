@@ -137,8 +137,7 @@
 	box-sizing: border-box;
 	position: relative;
 	top: 15vh;
-	height: 75vh;
-	margin-bottom: 10vh;
+	height: 85vh;
 }
 .objectsSvg__wrap {
 	position: relative;
@@ -411,10 +410,9 @@
 
 /*----- Company -----*/
 .company {
-	height: 75vh;
+	height: 85vh;
 	position: relative;
 	top: 15vh;
-	margin-bottom: 10vh;
 }
 .companySvg__wrap {
 	position: relative;
@@ -489,10 +487,9 @@
 
 /*----- Reputation -----*/
 .reputation {
-	height: 75vh;	
+	height: 85vh;	
 	position: relative;
 	top: 15vh;
-	margin-bottom: 10vh;
 }
 .reputation__txt {
 	background-color: #e4e4e4;
@@ -549,28 +546,18 @@
 /*----- /Reputation -----*/
 
 /*----- Mobile -----*/
-@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (orientation: portrait)  {
+@media only screen and (max-width: 1200px) {
+	.main,
+	.main__bg {
+		height: 85vh;
+	}
 	.objects,
 	.company,
 	.reputation {
-		height: 40vh;
-	}
-	.footer {
-		margin-top: 10vh;
+		height: auto;
+		overflow: visible;
 	}
 }
-@media only screen and (max-width: 1200px) {
-	/*----- Reputation -----*/
-	.reputation__logos {
-		margin-right: 0;
-	}
-	.reputationLogo__wrap {
-		width: 30%;
-		margin: 3% 0;
-	}
-	/*----- /Reputation -----*/
-}
-
 @media only screen and (max-width: 800px) {
 	/*----- Objects -----*/
 		/*----- Slider -----*/
@@ -617,14 +604,7 @@
 	.slide__head {
 		left: -40px;
 	}
-	.company,
-	.reputation,
-	.objects {
-		height: 90vh;
-	}
-	.objects {
-		margin-bottom: 15vh;
-	}
+	
 }
 @media only screen and (max-width: 760px) {
 	/*----- Reputation -----*/
