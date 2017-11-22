@@ -506,8 +506,7 @@ section {
 /*----- Footer ------*/
 .footer {
   position: relative;
-  top: 15vh;
-  margin-top: 35vh; }
+  top: 15vh; }
 
 .contacts {
   display: -webkit-box;
