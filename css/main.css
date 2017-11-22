@@ -547,8 +547,7 @@
   position: relative;
   width: 33%;
   height: 0;
-  padding-bottom: 11%;
-  z-index: -1; }
+  padding-bottom: 11%; }
 
 .reputation__svg {
   position: absolute;
