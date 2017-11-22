@@ -318,9 +318,9 @@ section {
 /*----- Pagination -----*/
 .pagination {
   position: fixed;
-  top: 15vh;
+  top: 14vh;
   width: 7%;
-  height: 75vh;
+  height: 76vh;
   right: 0;
   z-index: 100; }
 
@@ -845,16 +845,20 @@ section {
     -ms-flex: 1 100%;
     flex: 1 100%; } }
 
-@media only screen and (max-width: 600px) {
-  .contacts {
-    margin-bottom: 10vh; }
-  .footer__nav {
-    display: none; } }
-
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1200px) {
   .footer {
     margin-top: 20vh; } }
 
 @media only screen and (max-width: 950px) {
   .footer {
     margin-top: 15vh; } }
+
+@media only screen and (max-width: 769px) {
+  .footer {
+    margin-top: 10vh; } }
+
+@media only screen and (max-width: 600px) {
+  .contacts {
+    margin-bottom: 10vh; }
+  .footer__nav {
+    display: none; } }
