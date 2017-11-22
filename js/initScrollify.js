@@ -111,7 +111,10 @@ $(function() {
     			companyTxt.removeClass('animated2').removeClass('fadeInUp');
     			companyVid.removeClass('animated3').removeClass('fadeInRightBig');
 
-    		}
+                $('.scrollBtn').addClass('scrollBtn_hidden');
+    		} else {
+                $('.scrollBtn').removeClass('scrollBtn_hidden');
+            }
     		
     	},
     	after: function(i,panels) {
@@ -134,6 +137,10 @@ $(function() {
 		e.preventDefault();
 		$.scrollify.move('#main');
 	});
+    $('.scrollBtn').on('click', function (e) {
+        e.preventDefault();
+        $.scrollify.next();
+    });
 	function offMobile() {
 		var width = $(window).width();
 		if(width < 1199 && !$.scrollify.isDisabled()) {
