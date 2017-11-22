@@ -608,6 +608,19 @@
     height: auto;
     overflow: visible; } }
 
+@media only screen and (max-width: 1025px) {
+  .objects,
+  .company,
+  .reputation {
+    margin-top: 10vh; }
+  .video__container {
+    /*width: 100%;*/ }
+  .video__wrap {
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0; } }
+
 @media only screen and (max-width: 800px) {
   /*----- Objects -----*/
   /*----- Slider -----*/
@@ -644,12 +657,25 @@
   .slide__head {
     left: -40px; } }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 600px) {
   /*----- Reputation -----*/
   .reputationLogo__wrap {
     width: 40%;
     margin: 3% 0; }
   /*----- /Reputation -----*/ }
+
+@media only screen and (max-width: 670px) {
+  .slideArt__head,
+  .main__txt_slide,
+  .slideImg__wrap {
+    padding-left: 5%;
+    width: 70%; } }
+
+@media only screen and (max-width: 481px) {
+  .slideArt__head,
+  .main__txt_slide,
+  .slideImg__wrap {
+    width: 65%; } }
 
 @media only screen and (max-width: 650px) {
   .slideHead {
