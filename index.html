@@ -236,9 +236,9 @@
 	<div class="container">
 
 		<div class="scrollifyClass" data-section-name="main">
-			<section class="main " id="videoPlay">			
+			<section class="main">			
 				<div class="main__bg">
-					<a href="#" class="playBtn">
+					<a href="#" class="playBtn" id="videoPlay1" data-video="#mainVideo" data-src="https://www.youtube.com/embed//PE-QOjc1Z5w">
 						<div class="play__btn play__btn_main">
 							<span></span>
 						</div>
@@ -387,7 +387,7 @@
 				</div>
 				<div class="company__video col span_6_of_14">
 					<img class="companyVideo__cover" src="images/bud1.jpg">
-					<a href="#" class="playBtn">
+					<a href="#" class="playBtn" id="videoPlay2" data-video="#companyVideo" data-src="https://www.youtube.com/embed//PE-QOjc1Z5w">
 						<div class="play__btn play__btn_company">
 							<span></span>
 						</div>
@@ -477,10 +477,19 @@
 
 	</div>
 
-	<div class="main__video">
+	
+	<div class="main__video main__video_main" id="mainVideo">
 		<div class="video__container">
 			<div class="video__wrap">
-				<iframe id="player" width="560" height="349" src="" frameborder="0" allowfullscreen></iframe>
+				<iframe class="player" width="560" height="349" src="" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="close__btn fa fa-times"></div>
+	</div>
+	<div class="main__video" id="companyVideo">
+		<div class="video__container">
+			<div class="video__wrap">
+				<iframe class="player" width="560" height="349" src="" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
 		<div class="close__btn fa fa-times"></div>
@@ -505,7 +514,8 @@
 
 	<script src="js/videoPlay.js" type="text/javascript"></script>
 	<script>
-		var v1 = new VideoStart('#videoPlay');
+		var v1 = new VideoStart('#videoPlay1');
+		var v1 = new VideoStart('#videoPlay2');
 	</script>
 
 	<script type="text/javascript" src="js/SliderInit.js"></script>
