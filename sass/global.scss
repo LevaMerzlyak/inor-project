@@ -800,6 +800,9 @@ section {
 	}
 }
 @media only screen and (max-width: 1025px) {
+	.video__container {
+		width: 86%;
+	}
 	.video__wrap {
 		padding-bottom: 56.25%; /* 16:9 */
 		padding-top: 25px;
