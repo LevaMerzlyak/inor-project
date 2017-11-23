@@ -122,7 +122,7 @@ $(function() {
     	},
 		afterResize:offMobile,
     	afterRender:offMobile,
-		interstitialSection: ".footer"
+		//interstitialSection: ".footer"
 	});
 	
 	
