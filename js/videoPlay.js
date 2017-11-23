@@ -3,11 +3,12 @@ function VideoStart(sSelector) {
 		,mainClass  = 'play__start'
 		;
 
-	v.container = $(sSelector);
-	v.playBtn 	= v.container.find(".playBtn");
-	v.video = $('.main__video');
+	v.playBtn = $(sSelector);
+	v.selector = v.playBtn.attr("data-video");
+	v.src = v.playBtn.attr("data-src");
+	v.video = $(v.selector);
 	v.closeBtn	= v.video.find(".close__btn");
-	v.player	= v.video.find("#player");
+	v.player	= v.video.find(".player");
 
 
 	
@@ -16,9 +17,9 @@ function VideoStart(sSelector) {
 		event.preventDefault();
 		v.video.addClass(mainClass);
 		setTimeout(function() {
-			v.player.attr("src", "https://www.youtube.com/embed//PE-QOjc1Z5w?autoplay=1&showinfo=0&controls=0");
+			v.player.attr("src", v.src + "?autoplay=1&showinfo=0&controls=0&border=0");
 		}, 1000);
-
+		$('.scrollBtn').addClass('scrollBtn_hidden');
 
 	}
 	
@@ -26,6 +27,7 @@ function VideoStart(sSelector) {
 
 		v.video.removeClass(mainClass);
 		v.player.attr("src", "");
+		$('.scrollBtn').removeClass('scrollBtn_hidden');
 
 	}
 	
