@@ -703,7 +703,79 @@ section {
 		flex: 1 100%;
 	}
 }
-
+/*----- Video -----*/
+.main__video {
+	z-index: -100;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: #000;	
+	transition: opacity 0.2s ease-out 0.1s;
+}
+.video__container {
+	width: 50%;
+	height: 75vh;
+	margin-top: 2.5vh;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	clip: rect(0,0,100vh,0);
+	transition: clip 0s cubic-bezier(0.99, 0.01, 0.45, 0.9) 0.2s;
+}
+.video__wrap {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	width: 100%;
+	background-color: $red;	
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: opacity 1s ease-in 0.5s;
+	}
+}
+.close__btn {
+	width: 40px;
+	height: 40px;
+	color: $txtMain;
+	opacity: 0.7;
+	text-align: center;
+	line-height: 40px;
+	position: absolute;
+	right: 5vh;
+	top: 5vh;
+	cursor: pointer;
+	font-size: 30px;
+	&:hover {
+		opacity: 1;
+	}
+}
+/*----- /Video -----*/
+/*----- Play Start Animation -----*/
+.main__video.play__start {
+	z-index: 100;
+	opacity: 1;
+	transition-duration: 1s;
+	.video__container {
+		clip: rect(0,100vw,100vh,0);
+		transition-duration: 1s;
+	}
+	.video__wrap {
+		iframe {
+			opacity: 1;
+		}
+	}
+}
+/*----- /Play Start Animation -----*/
 @media only screen and (max-width: 1200px) {
 	.footer {
 		margin-top: 20vh;
@@ -725,5 +797,22 @@ section {
 	}
 	.footer__nav {
 		display: none;
+	}
+}
+@media only screen and (max-width: 1025px) {
+	.video__wrap {
+		padding-bottom: 56.25%; /* 16:9 */
+		padding-top: 25px;
+		height: 0;
+	}
+}
+@media only screen and (max-width: 740px) and (orientation: portrait) {
+	.video__container {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 740px) and (orientation: landscape) {
+	.video__container {
+		width: 70%;
 	}
 }
