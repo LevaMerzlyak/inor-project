@@ -195,8 +195,7 @@
     margin-bottom: 10vh; }
   .arenda__txt {
     height: auto;
-    padding-bottom: 3%;
-    z-index: 1; }
+    padding-bottom: 3%; }
   .rooms {
     height: auto;
     margin-bottom: 10vh; }
@@ -215,7 +214,8 @@
   .arenda__txt {
     position: relative;
     width: 94%;
-    padding-left: 7%; } }
+    padding-left: 7%;
+    z-index: 1; } }
 
 @media only screen and (max-width: 740px) {
   .room__wrap {

@@ -190,7 +190,6 @@
 	.arenda__txt {
 		height: auto;
 		padding-bottom: 3%;
-		z-index: 1;
 	}
 
 	.rooms {
@@ -217,6 +216,7 @@
 		position: relative;
 		width: 94%;
 		padding-left: 7%;
+		z-index: 1;
 	}
 }
 @media only screen and (max-width: 740px) {
