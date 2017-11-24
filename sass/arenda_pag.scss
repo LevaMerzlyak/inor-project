@@ -1,0 +1,75 @@
+@import "mixins";
+@import "variables";
+
+.nav__wrap_arenda {
+	background-color: $txt;
+	.nav__link {
+		color: $txtMain;
+	}
+	.nav__link_active {
+		color: $txtMain;
+	}
+	.nav__dropdown {
+		.navDropdown {
+			background-color: $txt;
+		}
+		.navDropdown__link {
+			color: $txtMain;
+			font-weight: 400;
+			&:hover {
+				font-weight: 700;
+			}
+		}
+	}
+}
+.pagination_arenda {
+	height: 76vh;
+	.pag__bg {
+		height: 86vh;
+		background-color: $txt;
+	}
+}
+
+.arenda {
+	position: relative;
+	top: 15vh;
+	height: 85vh;
+}
+.arenda__video {
+	position: relative;
+}
+.arendaVideo__cover {
+	width: 100%;
+	height: auto;
+}
+.play__btn_arenda {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.arenda__txt {
+	position: absolute;
+	right: 0;
+	box-sizing: border-box;
+	height: 100%;
+	width: 58.14%;
+	padding-left: 14%;
+	padding-right: 7%;
+	background-color: $txt;
+	z-index: -1;
+}
+.arenda__head {
+	color: $txtMain;
+	font-weight: 800;
+	font-size: 3em;
+}
+.arendaTable__txt {
+	color: $txtMain;
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 2.2em;
+	&:first-child {
+		font-weight: 700;
+		padding-right: 6%;
+	}
+}
