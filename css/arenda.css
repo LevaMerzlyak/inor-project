@@ -29,11 +29,17 @@
   height: 85vh; }
 
 .arenda__video {
-  position: relative; }
+  position: relative;
+  height: 77.5vh; }
 
 .arendaVideo__cover {
   width: 100%;
-  height: auto; }
+  height: auto;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
 
 .play__btn_arenda {
   top: 50%;
@@ -211,6 +217,16 @@
 @media only screen and (max-width: 770px) {
   .arenda {
     height: auto; }
+  .arenda__video {
+    height: auto; }
+  .arendaVideo__cover {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%); }
   .arenda__txt {
     position: relative;
     width: 94%;
