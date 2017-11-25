@@ -1,13 +1,4 @@
-@import "mixins";
 @import "variables";
-@mixin padding-hor($pad:auto) {
-	padding-right: $pad;
-	padding-left: $pad;
-}
-@mixin padding-ver($pad:0) {
-	padding-right: $pad;
-	padding-left: $pad;
-}
 @mixin boxShadow() {
 	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
 }
