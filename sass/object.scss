@@ -50,3 +50,31 @@
 	position: relative;
 	top: 15vh;
 }
+.object__wrap {
+	background-color: $bgObj;
+}
+.objectTxt {
+	box-sizing: border-box;
+	width: 50%;
+	padding-left: 5%;
+	padding-bottom: 3%;
+	padding-top: 3%;
+}
+.object__head {
+	color: $txt;
+	font-size: 3.5em;
+	line-height: 0.9em;
+	font-weight: 800;
+	margin: 0;
+}
+.object__txt {
+	color: $txtObj;
+	font-size: 1em;
+	line-height: 1.8em;
+	font-weight: 400;
+}
+.object__txt_sup {
+	font-size: 1.3em;
+	line-height: 1.3em;
+	font-weight: 800;
+}
