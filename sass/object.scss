@@ -1,0 +1,46 @@
+@import "variables";
+@mixin boxShadow() {
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+/*----- Main -----*/
+.main {
+	height: 75vh;
+	margin-bottom: 10vh;
+	overflow: hidden;
+	position: relative;
+	top: 15vh;
+}
+.main__bg {
+	background-image: url("../images/bud3.jpg");
+	background-size: cover;
+	background-position: top left;
+	height: 75vh;
+	width: 100%;
+}
+
+	/*----- Play Button ------*/
+.playBtn {
+	color: #fff;
+	text-decoration: none;	
+}
+.playBtn__txt {
+	display: inline-block;
+	position: absolute;
+ 	top: 45%;
+  	margin: 0;
+  	margin-left: 10%;
+  	padding-left: 105px;
+	font-size: 1.89em;
+	line-height: 70px;
+	font-weight: 800;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 5px $txtSub;
+}
+.play__btn_main {
+ 	top: 45%;
+  	margin-left: 10%;
+}
+
+	/*----- /Play Button ------*/
+
+/*----- /Main -----*/
