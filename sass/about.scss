@@ -25,3 +25,136 @@
 	/*----- /Play Button ------*/
 
 /*----- /Main -----*/
+
+.about {
+	position: relative;
+	top: 15vh;
+}
+.aboutTxt {
+	display: flex;
+	justify-content: space-between;
+}
+.about__head {
+	display: inline-block;
+	color: $svgTxt;
+	font-size: 8.9em;
+	font-weight: 800;
+	text-transform: uppercase;
+	position: relative;
+	margin: 0;
+	&:after {
+		content: "";
+  		position: absolute;
+  		left: 35%;
+  		top: 1em;
+  		width: 65%;
+  		height: 0.2em;
+  		background-color: $red;
+	}
+}
+.aboutTxt__wrap {
+	width: 50%;
+	box-sizing: border-box;
+	padding-right: 5%;
+}
+.about__txt {
+	color: $txtSub;
+	font-size: 1.2em;
+	font-weight: 700;
+	line-height: 1.4em;
+}
+.aboutNums {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10% 0;
+}
+.aboutNum__item {
+	display: flex;
+	align-items: flex-end;
+	box-sizing: border-box;
+	width: 50%;
+	padding: 3% 1%;
+	border-left: 2px solid $svgTxt;
+	border-right: 2px solid $svgTxt;
+	&:nth-child(2n) {
+		border-left: none;
+	}
+}
+.about__num {
+	color: $red;
+	font-size: 8.9em;
+	font-weight: 800;
+	line-height: 0.7em;
+	margin: 0 1% 0 0;
+}
+.aboutNum__txt {
+	color: $svgTxt;
+	font-size: 2.85em;
+	line-height: 1em;
+	font-weight: 800;
+	text-transform: uppercase;
+	margin: 0;
+}
+@media only screen and (max-width: 1025px) {
+	.about {
+		width: 94%;
+		margin: 0 auto;
+	}
+	.aboutTxt__wrap {
+		padding-right: 0;
+	}
+}
+@media only screen and (max-width: 770px) {
+	.aboutTxt {
+		flex-wrap: wrap;
+	}
+	.aboutTxt__wrap {
+		width: 100%;
+		margin-top: 10%;
+	}
+	.about__txt {
+		font-size: 1.6em;
+	}
+	.aboutNum__item {
+		width: 100%;
+		padding: 5% 5%;
+		&:nth-child(2n) {
+			border-left: 2px solid $svgTxt;
+		}
+	}
+	.about__num {
+		margin: 0 5% 0 0;
+	}
+}
+@media only screen and (max-width: 570px) {
+	.about__txt {
+		font-size: 1.2em;
+	}
+	.about__num {
+		font-size: 6em;
+	}
+	.aboutNum__txt {
+		font-size: 2em;
+	}
+}
+@media only screen and (max-width: 481px) {
+	.about__head {
+		font-size: 6em;
+	}
+	.aboutNum__item {
+		padding: 5% 0;
+		border-left: none;
+		border-right: none;
+		&:nth-child(2n) {
+			border-left: none;
+		}
+	}
+}
+@media only screen and (max-width: 380px) {
+	.about__num {
+		font-size: 5em;
+	}
+	.aboutNum__txt {
+		font-size: 1.5em;
+	}
+}
