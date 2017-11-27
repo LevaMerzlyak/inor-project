@@ -1,0 +1,27 @@
+@import "variables";
+
+/*----- Main -----*/
+.main {
+	height: 75vh;
+	margin-bottom: 10vh;
+	overflow: hidden;
+	position: relative;
+	top: 15vh;
+}
+.main__bg {
+	background-image: url("../images/bud1.jpg");
+	background-size: cover;
+	background-position: top left;
+	height: 75vh;
+	width: 100%;
+}
+
+	/*----- Play Button ------*/
+.play__btn_company {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+	/*----- /Play Button ------*/
+
+/*----- /Main -----*/
