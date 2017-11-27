@@ -156,3 +156,64 @@
 	font-size: 2em;
 	color: $pagAll;
 }
+@media only screen and (max-width: 1025px) {
+	.object {
+		margin-bottom: 0;
+	}
+	.object__wrap {
+		min-height: auto;
+	}
+	.footer {
+		margin-top: 0;
+	}
+}
+@media only screen and (max-width: 770px) {
+	.object {
+		margin-bottom: 10vh;
+		height: auto;
+	}
+	.object__wrap {
+		top: 0;
+	}
+	.objectTxt {
+		width: 100%;
+		padding-right: 5%;
+	}
+	.object__txt {
+		line-height: 1.5em;
+	}
+	.slider__wrap {
+		position: relative;
+		top: 0;
+		right: -5%;
+		width: 90%;
+		padding-bottom: 5%;
+	}
+	.slider__item {
+		padding-bottom: 100%;
+	}
+}
+@media only screen and (max-width: 770px) and (orientation: landscape) {
+	.slider__item {
+		padding-bottom: 50%;
+	}
+	.slider__img {
+		width: 100%;
+		height: auto;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.owl-carousel .owl-item img {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 380px) {
+	.object__head {
+		font-size: 3em;
+	}
+}
+@media only screen and (max-width: 321px) {
+	.object__head {
+		font-size: 2.7em;
+	}
+}
