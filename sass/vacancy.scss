@@ -1,7 +1,7 @@
 @import "variables";
 
 .main {
-	height: 75vh;
+	height: 85vh;
 	margin-bottom: 10vh;
 	overflow: hidden;
 	position: relative;
@@ -11,9 +11,10 @@
 }
 .main__head {
 	color: $txt;
-	font-size: 6em;
+	font-size: 4.5em;
 	font-weight: 800;
 	line-height: 0.9em;
+	text-transform: uppercase;
 	width: 42%;
 }
 .mainTxt__wrap {
@@ -33,4 +34,63 @@
 	left: 50%;
 	transform: translate(-50%,-50%);
 	margin: 0;
+}
+.vacancies {
+	position: relative;
+	top: 15vh;	
+	margin-bottom: 10vh;
+}
+.vacancies__wrap {
+	width: 85%;
+}
+.vacancy {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 2px solid $svgTxt;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	&:first-child {
+		border-top: 2px solid $svgTxt;
+	}
+}
+.vacancy__num {
+	color: $red;
+	font-size: 5.6em;
+	font-weight: 800;
+	margin: 0;
+	width: 10%;
+}
+.vacancy__head {
+	color: $txtRoom;
+	font-size: 1.1em;
+	font-weight: 700;
+	line-height: 1em;
+	margin: 0;
+	width: 22%;
+}
+.vacancyTxt__wrap {
+	width: 45%;
+}
+.vacancy__txt,
+.vaancy__list {
+	color: $txtRoom;
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1.5em;
+	margin: 0;
+}
+.vacancyBtn__wrap {	
+	width: 5%;
+}
+.vacancy__infoBtn {
+	color: $txtMain;
+	background-color: $red;
+	font-size: 1em;
+	font-weight: 700;
+	line-height: 1em;
+	padding: 2em 0.7em;
+	writing-mode: vertical-lr;
+	text-transform: uppercase;
+	transform: rotate(180deg);
 }
