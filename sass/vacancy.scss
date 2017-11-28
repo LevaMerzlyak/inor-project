@@ -1,0 +1,36 @@
+@import "variables";
+
+.main {
+	height: 75vh;
+	margin-bottom: 10vh;
+	overflow: hidden;
+	position: relative;
+	top: 15vh;
+	display: flex;
+	align-items: center;
+}
+.main__head {
+	color: $txt;
+	font-size: 6em;
+	font-weight: 800;
+	line-height: 0.9em;
+	width: 42%;
+}
+.mainTxt__wrap {
+	background-color: $svgTxt;
+	width: 58%;
+	height: 100%;
+	position: relative;
+}
+.mainTxt {
+	color: $txt;
+	font-size: 1.2em;
+	font-weight: 700;
+	line-height: 2em;
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	margin: 0;
+}
