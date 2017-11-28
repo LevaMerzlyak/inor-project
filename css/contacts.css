@@ -1,0 +1,11 @@
+/*----- Variables -----*/
+/*----- Colors -----*/
+/*----- /Colors -----*/
+/*----- /Variables -----*/
+.main {
+  height: 85vh;
+  margin-bottom: 10vh;
+  overflow: hidden;
+  position: relative;
+  top: 15vh;
+  background-color: #333333; }

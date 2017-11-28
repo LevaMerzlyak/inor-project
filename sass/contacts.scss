@@ -1,0 +1,10 @@
+@import "variables";
+
+.main {
+	height: 85vh;
+	margin-bottom: 10vh;
+	overflow: hidden;
+	position: relative;
+	top: 15vh;
+	background-color: $txt;
+}
