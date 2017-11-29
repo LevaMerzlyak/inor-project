@@ -1,4 +1,7 @@
 @import "variables";
+@mixin boxShadow() {
+	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
 
 .nav__item_vacancy{
 	position: absolute;
@@ -159,6 +162,76 @@
 	margin: 0;
 	writing-mode: vertical-lr;
 	text-transform: uppercase;
+}
+.vacancyDisc {
+	display: none;
+	position: absolute;
+	box-sizing: border-box;
+	left: 0;
+	top: 0;
+	margin-top: 15px;
+	margin-left: 15px;
+	width: 92%;
+	padding: 5% 7%;
+	background-color: $txtMain;
+	@include boxShadow();
+}
+.vacancyDisc__head {
+	color: $discHead;
+	font-size: 1.7em;
+	font-weight: 700;
+	line-height: 0.9em;
+}
+.vacancyDisc__subHead {
+	color: $discHead;
+	font-size: 1em;
+	font-weight: 700;
+	line-height: 1.25em;
+	text-transform: uppercase;
+}
+.vacancyDisc__txt {
+	color: $discTxt;
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1.25em;
+}
+.vacancyDisc__listWrap {
+	width: 82%;
+}
+.vacancyDisc__list {
+	list-style: none;
+	padding: 0;
+	li {
+		color: $discTxt;
+		font-size: 1em;
+		font-weight: 400;
+		line-height: 1.25em;
+	}
+}
+.vacancyDisc__closeBtn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	padding: 22px;
+	margin: 1%;
+	border-radius: 50%;
+	background-color: $red;
+	color: $txtMain;
+	font-size: 1.3em;
+	text-decoration: none;
+	transition: all 0.25s;
+	span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	&:hover {
+		background-color: $txt;
+		color: $red;
+	}
 }
 @media only screen and (max-width: 1200px) {
 	.main__head {
