@@ -2,6 +2,40 @@
 /*----- Colors -----*/
 /*----- /Colors -----*/
 /*----- /Variables -----*/
+.nav__item_vacancy {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 10%; }
+  .nav__item_vacancy .nav__link {
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-right: 8px;
+    padding-left: 8px; }
+    .nav__item_vacancy .nav__link:before {
+      top: -100%;
+      left: 0; }
+    .nav__item_vacancy .nav__link:after {
+      height: 40%;
+      width: 3px;
+      left: 0;
+      bottom: 100%; }
+    .nav__item_vacancy .nav__link:hover:before {
+      left: 0;
+      top: 100%; }
+    .nav__item_vacancy .nav__link:hover:after {
+      left: 0;
+      bottom: 60%; }
+  .nav__item_vacancy .nav__link_active:after {
+    left: 0;
+    bottom: 60%; }
+
 .main {
   height: 85vh;
   margin-bottom: 10vh;
@@ -106,12 +140,153 @@
   background-color: #cc2a3a;
   font-size: 1em;
   font-weight: 700;
+  text-decoration: none;
   line-height: 1em;
   padding: 2em 0.7em;
+  text-transform: uppercase;
   -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: tb-lr;
   writing-mode: vertical-lr;
-  text-transform: uppercase;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
+
+.vacanciesHead {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin-right: 7%;
+  margin-top: 15vh;
+  width: 7%;
+  height: 85vh;
+  opacity: 1;
+  z-index: -1;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s; }
+
+.vacanciesHead_hide {
+  opacity: 0;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s; }
+
+.vacancies__head {
+  color: #dedddd;
+  font-size: 5.5em;
+  font-weight: 700;
+  line-height: 1em;
+  margin: 0;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  text-transform: uppercase; }
+
+@media only screen and (max-width: 1200px) {
+  .main__head {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 2%; }
+  .vacancies__wrap {
+    width: 90%;
+    margin: 0 auto; }
+  .vacanciesHead {
+    display: none; } }
+
+@media only screen and (max-width: 1025px) {
+  .main {
+    height: 60vh; } }
+
+@media only screen and (max-width: 770px) {
+  .main {
+    height: auto;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 0; }
+  .main__head {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2; }
+  .mainTxt__wrap {
+    width: 100%;
+    height: 40vw;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1; }
+  .vacancy {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  .vacancy__num {
+    width: 15%; }
+  .vacancy__head {
+    width: 60%;
+    font-size: 1.5em; }
+  .vacancyTxt__wrap {
+    width: 100%; }
+  .vacancyBtn__wrap {
+    position: relative;
+    width: 100%;
+    height: 2em;
+    margin-top: 5%; }
+  .vacancy__infoBtn {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding: 0.7em 2em;
+    -webkit-writing-mode: horizontal-tb;
+    -ms-writing-mode: lr-tb;
+    writing-mode: horizontal-tb; } }
+
+@media only screen and (max-width: 740px) and (orientation: landscape) {
+  .mainTxt__wrap {
+    height: 85vh; } }
+
+@media only screen and (max-width: 490px) {
+  .vacancy__head {
+    font-size: 1.3em; } }
+
+@media only screen and (max-width: 420px) and (orientation: portrait) {
+  .main {
+    top: 8vh; }
+  .mainTxt__wrap {
+    height: 100vw; }
+  .mainTxt {
+    width: 90%; }
+  .vacancy__num {
+    width: 30%; }
+  .vacancy__head {
+    width: 67%; } }
+
+@media only screen and (max-width: 380px) {
+  .mainTxt {
+    font-size: 1.1em; }
+  .main__head {
+    font-size: 3.5em; }
+  .vacancy__num {
+    font-size: 5em; }
+  .vacancy__head {
+    font-size: 1.2em; } }
+
+@media only screen and (max-width: 330px) {
+  .mainTxt__wrap {
+    height: 60vh; }
+  .main__head {
+    font-size: 3em; }
+  .vacancy__num {
+    font-size: 4em;
+    width: 28%; }
+  .vacancy__head {
+    font-size: 1.1em;
+    width: 70%; } }
