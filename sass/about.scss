@@ -150,6 +150,11 @@
 		}
 	}
 }
+@media only screen and (max-width: 420px) and (orientation: portrait) {
+	.main {
+		top: 8vh;
+	}
+}
 @media only screen and (max-width: 380px) {
 	.about__num {
 		font-size: 5em;

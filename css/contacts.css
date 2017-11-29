@@ -154,3 +154,7 @@
     width: 100%; }
   .mainForm input[type=text] {
     margin-right: 0; } }
+
+@media only screen and (max-width: 420px) and (orientation: portrait) {
+  .main {
+    top: 8vh; } }
