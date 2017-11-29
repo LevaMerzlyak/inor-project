@@ -211,6 +211,9 @@
 				<a href="#" class="lang__link">en</a>
 			</li>
 		</ul>
+		<div class="nav__item  nav__item_vacancy">
+			<a href="vacancy.html" class="nav__link nav__link_active">Вакансии</a>
+		</div>
 	</nav>
 	
 	<nav class="pagination">
@@ -237,44 +240,50 @@
 						<p class="vacancy__num">01</p>
 						<h3 class="vacancy__head">Менеджер по продаже недвижимости (брокер)</h3>
 						<div class="vacancyTxt__wrap">
-							<p class="vacancy__txt">В связи с расширением Инвестационная компания «ИНОР» ищет в свою команду брокера, риэлтора.
-							Основные задачи:</p>
+							<p class="vacancy__txt">В связи с расширением Инвестационная компания «ИНОР» ищет в свою команду брокера, риэлтора.<br>Основные задачи:</p>
 							<ul class="vaancy__list">
 								<li>Работа с новыми клиентами;</li>
 								<li>Проведение первичных встреч для продажи страховых продуктов;</li>
 								<li>Участие в выставках, форумах, конференциях и других целевых мероприятиях, для поиска клиентов;</li>
 							</ul>
 						</div>
-						<div class="vacancyBtn__wrap"><a class="vacancy__infoBtn">Подробнее</a></div>
+						<div class="vacancyBtn__wrap">
+							<a href="#" class="vacancy__infoBtn">Подробнее</a>
+						</div>
 					</div>
 					<div class="vacancy">
 						<p class="vacancy__num">02</p>
 						<h3 class="vacancy__head">Менеджер по продаже недвижимости (брокер)</h3>
 						<div class="vacancyTxt__wrap">
-							<p class="vacancy__txt">В связи с расширением Инвестационная компания «ИНОР» ищет в свою команду брокера, риэлтора.
-							Основные задачи:</p>
+							<p class="vacancy__txt">В связи с расширением Инвестационная компания «ИНОР» ищет в свою команду брокера, риэлтора.<br>Основные задачи:</p>
 							<ul class="vaancy__list">
 								<li>Работа с новыми клиентами;</li>
 								<li>Проведение первичных встреч для продажи страховых продуктов;</li>
 								<li>Участие в выставках, форумах, конференциях и других целевых мероприятиях, для поиска клиентов;</li>
 							</ul>
 						</div>
-						<div class="vacancyBtn__wrap"><a class="vacancy__infoBtn">Подробнее</a></div>
+						<div class="vacancyBtn__wrap">
+							<a href="#" class="vacancy__infoBtn">Подробнее</a>
+						</div>
 					</div>
 					<div class="vacancy">
 						<p class="vacancy__num">03</p>
 						<h3 class="vacancy__head">Менеджер по продаже недвижимости (брокер)</h3>
 						<div class="vacancyTxt__wrap">
-							<p class="vacancy__txt">В связи с расширением Инвестационная компания «ИНОР» ищет в свою команду брокера, риэлтора.
-							Основные задачи:</p>
+							<p class="vacancy__txt">В связи с расширением Инвестационная компания «ИНОР» ищет в свою команду брокера, риэлтора.<br>Основные задачи:</p>
 							<ul class="vaancy__list">
 								<li>Работа с новыми клиентами;</li>
 								<li>Проведение первичных встреч для продажи страховых продуктов;</li>
 								<li>Участие в выставках, форумах, конференциях и других целевых мероприятиях, для поиска клиентов;</li>
 							</ul>
 						</div>
-						<div class="vacancyBtn__wrap"><a class="vacancy__infoBtn">Подробнее</a></div>
+						<div class="vacancyBtn__wrap">
+							<a href="#" class="vacancy__infoBtn">Подробнее</a>
+						</div>
 					</div>
+				</div>
+				<div class="vacanciesHead">
+					<h2 class="vacancies__head">Вакансии</h2>
 				</div>
 			</section>
 		</div>
@@ -349,19 +358,30 @@
 				before: function(i,panels) {
 		    		var ref = panels[i].attr('data-section-name');
 
+		    		if(ref === 'main') {
+		    			$('.vacanciesHead').addClass('vacanciesHead_hide');
+		    		} else {
+		    			$('.vacanciesHead').removeClass('vacanciesHead_hide');
+		    		}
 		    		if(ref === 'footer') {
 		    			scrollBtn.addClass('scrollBtn_hidden');
 		    			$('.pagination a.pag__arrow.arrow_down').hide();
     					$('.pagination a.pag__arrow.arrow_up').show();
+		    			$('.vacanciesHead').addClass('vacanciesHead_hide');
 		    		} else {
 		                scrollBtn.removeClass('scrollBtn_hidden');
 		                $('.pagination a.pag__arrow.arrow_up').hide();
     					$('.pagination a.pag__arrow.arrow_down').show();
+		    			$('.vacanciesHead').removeClass('vacanciesHead_hide');
 		            }
 		    		
 		    	},
 		    	after: function(i,panels) {
-		    		
+		    		var ref = panels[i].attr('data-section-name');
+
+		    		if(ref === 'main') {
+		    			$('.vacanciesHead').addClass('vacanciesHead_hide');
+		    		}
 		    	},
 				afterResize:offMobile,
 		    	afterRender:offMobile
