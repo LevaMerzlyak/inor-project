@@ -264,7 +264,10 @@
     width: 90%;
     margin: 0 auto; }
   .vacanciesHead {
-    display: none; } }
+    display: none; }
+  .vacancyDisc {
+    width: 94%;
+    margin: 15px 3%; } }
 
 @media only screen and (max-width: 1025px) {
   .main {
