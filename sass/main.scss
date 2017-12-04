@@ -387,20 +387,23 @@
 	fill: $svgTxt;
 }
 .company__txt {
-	margin-top: -12%;
+	margin-top: -10%;
 }
 .companyTxt {	
 	padding: 3% 5%;
 }
-
+.main__txt_company {
+	margin-bottom: 2em;
+}
 .info__btn {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: 700;
 	color: $txtMain;
 	line-height: 1.5em;
+	font-size: 0.8em;
 	background-color: $red;
-	padding: 0.66em 6em  0.66em 1em;
+	padding: 1em 4em  1em 1em;
 	position: relative;
 	&:after {
 		content: "";
@@ -411,14 +414,14 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		position: absolute;
-		right: 3em;
+		right: 1em;
 		top: 50%;
 		transform: translateY(-50%);
 		transition: all 0.2s ease-in 0s;
 	}
 	&:hover {
 		&:after {
-			right: 2em;
+			right: 0.5em;
 		}
 	}
 }
@@ -467,7 +470,7 @@
 .reputationSvg__txt {
 	font-family: 'ProximaNova';
 	font-weight: 800;
-	font-size: 70px;
+	font-size: 67px;
 	fill: $txt;
 }
 .main__txt_reputation {
@@ -496,6 +499,18 @@
 	height: auto;
 }
 /*----- /Reputation -----*/
+
+.scroll__btn {
+	width: 100%;
+	background-color: $bg;
+	height: 10vh;
+}
+.scrollBtn {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
 
 /*----- Mobile -----*/
 @media only screen and (max-width: 1200px) {
