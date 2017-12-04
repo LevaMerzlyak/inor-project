@@ -28,18 +28,23 @@
   top: 15vh;
   height: 85vh; }
 
+.arenda {
+  z-index: 2; }
+
 .arenda__video {
   position: relative;
-  height: 77.5vh; }
+  height: 75vh;
+  overflow: hidden; }
 
 .arendaVideo__cover {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
 .play__btn_arenda {
   top: 50%;
@@ -110,9 +115,9 @@
   padding-top: 3%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border-right: 2px solid #dedddd; }
+  border-right: 1px solid #dedddd; }
   .room__wrap:first-child {
-    border-left: 2px solid #dedddd; }
+    border-left: 1px solid #dedddd; }
 
 .room__num {
   color: #cc2a3a;

@@ -35,16 +35,21 @@
 	top: 15vh;
 	height: 85vh;
 }
+.arenda {
+	z-index: 2;
+}
 .arenda__video {
 	position: relative;
-	height: 77.5vh;
+	height: 75vh;
+	overflow: hidden;
 }
 .arendaVideo__cover {
-	width: 100%;
-	height: auto;
+	width: auto;
+	height: 100%;
 	position: absolute;
 	top: 50%;
-	transform: translateY(-50%);
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
 .play__btn_arenda {
 	top: 50%;
@@ -105,9 +110,9 @@
 	padding-right: 7%;
 	padding-top: 3%;
 	box-sizing: border-box;
-	border-right: 2px solid $svgTxt;
+	border-right: 1px solid $svgTxt;
 	&:first-child {
-		border-left: 2px solid $svgTxt;
+		border-left: 1px solid $svgTxt;
 	}
 }
 .room__num {
