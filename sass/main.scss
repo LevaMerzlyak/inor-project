@@ -274,7 +274,8 @@
 	/*----- Slider Navigation -----*/
 .slider__nav {
 	float: right;
-	padding-right: 3%;
+	position: relative;
+	z-index: 99;
 }
 .slideNav__btn {
 	display: inline-block;
@@ -283,14 +284,14 @@
 	height: 44px;
 	text-decoration: none;
 	color: $txtSub;
-	margin-right: 15px;
+	margin-right: 20px;
 }
 .slideNav__btn:last-child {
 	margin-right: 0;
 }
 .slideNav__btn_next,
 .slideNav__btn_prev {
-	width: 80px;
+	width: 35px;
 
 }
 	/*----- /Slider Navigation -----*/
@@ -476,22 +477,24 @@
 .main__txt_reputation {
 	width: 33%;
 }
-.reputation__logos {
+.reputationSlider {
 	position: absolute;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-around;
 	right: 0;
 	margin-top: 5%;
 	margin-right: 15px;
-	padding: 3%;
-	box-sizing: border-box;
 	background-color: $bg;
 	box-shadow: 0px 0px 15px 0px rgba(0, 1, 2, 0.12);
 }
+.reputation__logos {	
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;	
+	padding: 5% 2%;
+	box-sizing: border-box;
+}
 .reputationLogo__wrap {
-	width: 18%;
+	width: 16%;
 	margin: 5% 2%;
 }
 .reputation__logo {
@@ -504,6 +507,7 @@
 	width: 100%;
 	background-color: $bg;
 	height: 10vh;
+	z-index: 98;
 }
 .scrollBtn {
 	position: absolute;
@@ -511,7 +515,9 @@
 	top: 50%;
 	transform: translate(-50%,-50%);
 }
-
+.footer {
+	height: 85vh;
+}
 /*----- Mobile -----*/
 @media only screen and (max-width: 1200px) {
 	.main,
