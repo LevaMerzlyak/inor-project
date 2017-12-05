@@ -23,6 +23,20 @@ section {
 	color: $txt;
 	font-weight: 400;
 }
+.bg_overlay {
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: rgba(0,0,0,0.2);
+	}
+}
 /*----- Header -----*/
 .header {	
   	height: 15vh;
@@ -57,7 +71,7 @@ section {
 	padding-right: 7%;
 	height: 9vh;
 	padding-top: 6vh;
-	background-color: transparent;
+	background-color: $bg;
 	transition: background-color 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0s;
 }
 .nav{
@@ -82,6 +96,7 @@ section {
 	padding-bottom: 8px;
 	padding-top: 8px;
 	transition: color 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+	z-index: 60;
 	&:before {
 		content: "";
   		position: absolute;
@@ -119,39 +134,41 @@ section {
 	}
 }
 		/*----- DropDown Menu -----*/
-.nav__dropdown {
-	visibility: hidden;
-	position: absolute;
-	top: 100%;
-	right: 0;			
-	min-width: 210px;
-	box-shadow: none;
-	transition: all 1s;
-	&:before {
-		position: absolute;
-		content: "";
-		height: 3px;
-		width: 0;
-		background-color: $red;
-		top: -3px;
-		right: 0;
-		transition: all .6s cubic-bezier(0.7, 0, 0.3, 1);
-	}
-}
-.navDropdown__wrap {
-	overflow: hidden;
-	position: relative;
-}
 .navDropdown {
 	list-style: none;
 	padding: 0;
-	background-color: $bg;
-	transform: translateY(-100%);
-	transition: all 0.25s;
+	background-color: transparent;
+	position: absolute;
+	right: 0;		
+	top: 0;
+	padding-top: 9vh;
+	min-width: 210px;
+	visibility: hidden;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 9vh;
+		background-color: $bg;
+		z-index: 51;
+	}
 }
 .navDropdown__item {
-	opacity:0;
-    transition: all 0.25s;
+	position: relative;
+	background-color: $bg;
+	border-bottom: 1px solid $red;
+  	transition: top 0.2s ease-in-out;
+	&:last-child {
+		border-bottom: none;
+	}
+	@for $i from 1 through 12 {
+      	&:nth-of-type(#{$i}) {
+      		top: 0 - ($i*37px);
+      		z-index: 50 - $i;
+        }
+    }
 }
 .navDropdown__link {
 	display: block;
@@ -164,23 +181,14 @@ section {
 		color: $txt;
 	}
 }
-.nav__dropdown_opened {
+
+.navDropdown_opened {
 	visibility: visible;
-	@include boxShadow();
-	transition-delay: 0.5s;
-	&:before {				
-		width: 100%;
-		transition-delay: 0.25s;
-	}
-	.navDropdown {
-		transform: translateY(0%);
-		transition-delay: 0.5s;
-	}
 	.navDropdown__item {
-		opacity:1;
        	@for $i from 1 through 12 {
           	&:nth-of-type(#{$i}) {
-             	transition-delay: 0.5s + ($i*0.07s);
+				top: 0;
+             	transition-delay: 0s + ($i*0.05s);
             }
         }
 	}
@@ -202,19 +210,23 @@ section {
 	.nav__link_active {
 		color: $txtMain;
 	}
-	.nav__dropdown {
-		&:before {				
-			background-color: $txtMain;
-		}
-		.navDropdown {
+	.navDropdown {
+		&:before {
 			background-color: $red;
 		}
-		.navDropdown__link {
-			color: $txtMain;
-			font-weight: 400;
-			&:hover {
-				font-weight: 700;
-			}
+	}
+	.navDropdown__item {
+		background-color: $red;
+		border-bottom: 1px solid $bg;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	.navDropdown__link {
+		color: $txtMain;
+		font-weight: 400;
+		&:hover {
+			font-weight: 700;
 		}
 	}
 }
@@ -352,10 +364,10 @@ section {
 	display: none;
 }
 .arrow_right {
-	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMjE2IDI3NSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTIxNiAyNzU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojOUI5QjlCO30KPC9zdHlsZT4KPGc+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMSwxNjAuM2gxMTI3LjZsLTgxLjksODEuOWwzMS45LDMxLjlMMTIxNSwxMzcuNUwxMDc4LjUsMWwtMzEuOSwzMS45bDgxLjksODEuOUgxVjE2MC4zeiIvPgo8L2c+Cjwvc3ZnPg==);
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0MTIgMjc1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MTIgMjc1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzlCOUI5Qjt9Cjwvc3R5bGU+CjxnPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTEuMiwxNjAuM2gzMjMuMWwtODEuOSw4MS45bDMxLjksMzEuOWwxMzYuNS0xMzYuNUwyNzQuMywxbC0zMS45LDMxLjlsODEuOSw4MS45SDEuMlYxNjAuM3ogTTEuMiwxNjAuMyIvPgo8L2c+Cjwvc3ZnPg==);
 }
 .arrow_left {
-	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMjE2IDI3NSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTIxNiAyNzU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojOUI5QjlCO30KPC9zdHlsZT4KPGc+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTIxNSwxMTQuN0g4Ny40bDgxLjktODEuOUwxMzcuNSwxTDEsMTM3LjVMMTM3LjUsMjc0bDMxLjktMzEuOWwtODEuOS04MS45SDEyMTVWMTE0Ljd6Ii8+CjwvZz4KPC9zdmc+);	
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0MTIgMjc1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MTIgMjc1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzlCOUI5Qjt9Cjwvc3R5bGU+CjxnPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTQxMC44LDExNC43SDg3LjdsODEuOS04MS45TDEzNy43LDFMMS4yLDEzNy41TDEzNy43LDI3NGwzMS45LTMxLjlsLTgxLjktODEuOWgzMjMuMVYxMTQuN3ogTTQxMC44LDExNC43Ii8+CjwvZz4KPC9zdmc+);	
 }
 .arrow_down,
 .arrow_up,
@@ -448,11 +460,22 @@ section {
 	position: relative;
 	top: 15vh;
 }
+.mainMap {
+	background-color: $txt;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	.map {
+		width: 96%;
+		height: 250px;
+		margin: 0 auto;
+	}
+}
 .contacts {
 	display: flex;
 	flex-direction: row;
    	flex-wrap: wrap;
 	justify-content: space-between;
+	margin-top: 3%;
 }
 .footer__contacts {
 }
@@ -473,8 +496,8 @@ section {
 	margin: 0;
 }
 .footer__nav {
-	margin-top: 10%;
-	margin-bottom: 10%;
+	margin-top: 5%;
+	margin-bottom: 5%;
 }
 .footerNav {
 	padding: 0;
@@ -534,6 +557,9 @@ section {
 }
 .scrollBtn_hidden {
 	opacity: 0;
+}
+.scroll__btn_hidden {
+	visibility: hidden;
 }
 @keyframes fly {
 	0% {
@@ -628,7 +654,8 @@ section {
 		position: absolute;
 		top: 15vh;
 		width: 100%;
-    	transition: all 0.1s;
+		z-index: -1;
+    	transition: all 0.0001s;
 	}
 	.menuMobile__wrap {
 		background-color: $bg;
@@ -638,7 +665,7 @@ section {
 		justify-content: center;
 		flex-direction: column;		
 		transform: translateY(-100%);
-		transition: all 1s 0.25s;
+		transition: all 1s 0.01s;
 	}
 	.menuMobile,
 	.mobile__lang {
@@ -653,17 +680,21 @@ section {
 		margin-top: 0.8em;
 		opacity:0;
     	transition: all 0.25s;
-		.nav__dropdown {
+		.navDropdown {
 			position: relative;
-			box-shadow: none;
 			height: 0;
+			padding-top: 0;
 			transition: all .4s;
+			overflow: hidden;
 			&:before {
-				width: 0;
+				height: 0;
 			}
 		}
-		.nav__dropdown_opened {
+		.navDropdown_opened {
 			height: 100%;
+		}
+		.navDropdown__item {
+			border-bottom: none;
 		}
 	}
 	.nav__link_mobile {
@@ -679,16 +710,16 @@ section {
 	}
 	.mobile__menu_opened {
 		visibility: visible;
-		transition-delay: 0.5s;
+		transition-delay: 0.0001s;
 		.menuMobile__wrap {
 			transform: translateY(0%);
-			transition-delay: 0.5s;
+			/*transition-delay: 0.25s;*/
 		}
 		.nav__item_mobile {
 			opacity: 1;
 	       	@for $i from 1 through 6 {
 	          	&:nth-of-type(#{$i}) {
-	             	transition-delay: 0.5s + ($i*0.07s);
+	             	transition-delay: 0.7s + ($i*0.07s);
 	            }
 	        }
 		}
