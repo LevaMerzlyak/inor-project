@@ -1,39 +1,37 @@
 function DropDownMob(sSelector) {
 
-	var m = this;
+	var d = this;
 
-	var opened = 'mobile__menu_opened';
-	var close = 'sandwich__btn_close';
+	var opened = 'navDropdown_opened';
 
-	m.menu = $(sSelector);
-	m.btn = m.menu.find('.sandwich__btn');
-	m.drop = m.menu.siblings('.mobile__menu');
+	d.item = $(sSelector);
+	d.link = d.item.find('.nav__link');
+	d.drowdown = d.item.find('.navDropdown');
 
-	m.showHide = function (e) {
+	d.showHide = function (e) {
 		e.preventDefault();
-		if (m.btn.hasClass(close)) {
+		if (d.drowdown.hasClass(opened)) {
 
-			m.hide();
+			d.hide();
 
 		} else {
 
-			m.show();
+			d.show();
 		}
 		
 	}
-	m.hide = function () {
+	d.hide = function () {
 
-		m.drop.removeClass(opened);
-		m.btn.removeClass(close);
-
-	}
-	m.show = function () {
-
-		m.drop.addClass(opened);
-		m.btn.addClass(close);
+		d.drowdown.removeClass(opened);
 
 	}
+	d.show = function () {
 
-	m.btn.click(m.showHide);
+		$('.header').find('.navDropdown_opened').removeClass(opened);
+		d.drowdown.addClass(opened);
+
+	}
+
+	d.link.click(d.showHide);
 
 }
