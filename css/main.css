@@ -28,7 +28,7 @@
 
 /*----- /Video -----*/
 .main__bg {
-  background-image: url("../images/bud5.jpg");
+  background-image: url("../images/INOR_Photo_Glav.jpg");
   background-size: cover;
   background-position: top left;
   height: 75vh;
@@ -608,7 +608,7 @@
     padding-bottom: 30%; }
   .main__txt_reputation {
     width: 100%; }
-  .reputation__logos {
+  .reputationSlider {
     position: relative;
     -webkit-box-shadow: none;
     box-shadow: none; }
