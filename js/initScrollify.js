@@ -36,7 +36,7 @@ $(function() {
     			objectSlider.removeClass('animated2').removeClass('fadeInUp');
     			objectNav.removeClass('animated2').removeClass('fadeInUpBig');
 
-    			companySvg.removeClass('animated3').removeClass('fadeInLeftBig');
+    			companySvg.removeClass('animated').removeClass('fadeInLeftBig');
     			companyTxt.removeClass('animated2').removeClass('fadeInUp');
     			companyVid.removeClass('animated3').removeClass('fadeInRightBig');
 
@@ -64,7 +64,7 @@ $(function() {
 
     			companySvg.removeClass('animated').removeClass('fadeInUp');
     			companyTxt.removeClass('animated2').removeClass('fadeInUp');
-    			companyVid.removeClass('animated2').removeClass('fadeInUpBig');
+    			companyVid.removeClass('animated2').removeClass('fadeInUp');
 
     			reputationGrey.removeClass('animated').removeClass('fadeInUp');
     			reputationWht.removeClass('animated2').removeClass('fadeInUpBig');
@@ -72,7 +72,7 @@ $(function() {
     		if(ref === 'company') {
     			companySvg.addClass('animated').addClass('fadeInUp');
     			companyTxt.addClass('animated2').addClass('fadeInUp');
-    			companyVid.addClass('animated2').addClass('fadeInUpBig');
+    			companyVid.addClass('animated2').addClass('fadeInUp');
 
     			objectSvg.removeClass('animated').removeClass('fadeInUp');
     			objectSlider.removeClass('animated2').removeClass('fadeInUp');
@@ -91,7 +91,7 @@ $(function() {
 
     			companySvg.removeClass('animated').removeClass('fadeInUp');
                 companyTxt.removeClass('animated2').removeClass('fadeInUp');
-                companyVid.removeClass('animated2').removeClass('fadeInUpBig');
+                companyVid.removeClass('animated2').removeClass('fadeInUp');
     		}
     		if(ref === 'footer') {
     			
@@ -101,7 +101,7 @@ $(function() {
 
     			companySvg.removeClass('animated').removeClass('fadeInUp');
                 companyTxt.removeClass('animated2').removeClass('fadeInUp');
-                companyVid.removeClass('animated2').removeClass('fadeInUpBig');
+                companyVid.removeClass('animated2').removeClass('fadeInUp');
 
                 $('.scrollBtn').addClass('scrollBtn_hidden');
                 setTimeout(function () {
