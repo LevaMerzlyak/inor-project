@@ -652,9 +652,6 @@ section {
 	.container {
 		width: 100%;
 	}
-	.header {
-		position: absolute;
-	}
 	.nav__wrap,
 	.langueges,
 	.pagination,
@@ -735,7 +732,8 @@ section {
 	.menuMobile__wrap {
 		background-color: $bg;
 		padding-top: 5%;
-		min-height: 85vh;
+		height: 85vh;
+  		max-height: 85vh;
 		display: flex;
 		justify-content: center;
 		flex-direction: column;		
@@ -787,7 +785,9 @@ section {
 		visibility: visible;
 		transition-delay: 0.0001s;
 		.menuMobile__wrap {
-			transform: translateY(0%);
+			transform: translateY(0%);			
+ 			overflow-y: scroll;
+  			-webkit-overflow-scrolling:touch;
 			/*transition-delay: 0.25s;*/
 		}
 		.nav__item_mobile {
@@ -818,6 +818,7 @@ section {
 	}
 	.footer__contacts {
 		flex: 1 100%;
+		margin-bottom: 1em;
 	}
 	.footer {
 		margin-top: 20vh;
@@ -831,6 +832,13 @@ section {
 @media only screen and (max-width: 769px) {
 	.footer {
 		margin-top: 10vh;
+	}
+}
+@media only screen and (max-width: 740px) and (orientation: landscape) {
+	.mainMap {
+		.map {
+			height: 70vh;
+		}
 	}
 }
 @media only screen and (max-width: 600px) {
@@ -861,6 +869,13 @@ section {
 		width: 70%;
 	}
 }
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+	.mainMap {
+		.map {
+			height: 96vw;
+		}
+	}
+}
 @media only screen and (max-width: 420px) and (orientation: portrait) {
 	.header {
 		height: 8vh;
@@ -876,5 +891,9 @@ section {
 	}
 	.mobile__menu {
 		top: 8vh;
+	}
+	.menuMobile__wrap {
+		height: 92vh;
+		max-height: 92vh;
 	}
 }

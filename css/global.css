@@ -784,8 +784,6 @@ section {
 @media only screen and (max-width: 1199px) {
   .container {
     width: 100%; }
-  .header {
-    position: absolute; }
   .nav__wrap,
   .langueges,
   .pagination,
@@ -864,7 +862,8 @@ section {
   .menuMobile__wrap {
     background-color: #f4f3f3;
     padding-top: 5%;
-    min-height: 85vh;
+    height: 85vh;
+    max-height: 85vh;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -944,6 +943,8 @@ section {
       -webkit-transform: translateY(0%);
       -ms-transform: translateY(0%);
       transform: translateY(0%);
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
       /*transition-delay: 0.25s;*/ }
     .mobile__menu_opened .nav__item_mobile {
       opacity: 1; }
@@ -986,7 +987,8 @@ section {
     -webkit-box-flex: 1;
     -webkit-flex: 1 100%;
     -ms-flex: 1 100%;
-    flex: 1 100%; }
+    flex: 1 100%;
+    margin-bottom: 1em; }
   .footer {
     margin-top: 20vh; } }
 
@@ -997,6 +999,10 @@ section {
 @media only screen and (max-width: 769px) {
   .footer {
     margin-top: 10vh; } }
+
+@media only screen and (max-width: 740px) and (orientation: landscape) {
+  .mainMap .map {
+    height: 70vh; } }
 
 @media only screen and (max-width: 600px) {
   .contacts {
@@ -1021,6 +1027,10 @@ section {
   .video__container {
     width: 70%; } }
 
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  .mainMap .map {
+    height: 96vw; } }
+
 @media only screen and (max-width: 420px) and (orientation: portrait) {
   .header {
     height: 8vh; }
@@ -1031,4 +1041,7 @@ section {
   .mobileMenu__btn {
     height: 8vh; }
   .mobile__menu {
-    top: 8vh; } }
+    top: 8vh; }
+  .menuMobile__wrap {
+    height: 92vh;
+    max-height: 92vh; } }
