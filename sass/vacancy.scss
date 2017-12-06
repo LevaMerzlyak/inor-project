@@ -265,12 +265,10 @@
 		width: 100%;
 		padding-left: 0;
 		text-align: center;
-		order: 2;
 	}
 	.mainTxt__wrap {
 		width: 100%;
 		height: 40vw;
-		order: 1;
 	}
 	.vacancy {
 		flex-wrap: wrap;		
@@ -319,6 +317,10 @@
 	}
 	.mainTxt {
 		width: 90%;
+	}
+	.vacancy {
+		padding-top: 10%;
+		padding-bottom: 15%;
 	}
 	.vacancy__num {
 		width: 30%;
