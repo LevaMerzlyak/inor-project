@@ -432,7 +432,7 @@
   padding: 3% 5%; }
 
 .main__txt_company {
-  margin-bottom: 2em; }
+  margin-bottom: 1.5em; }
 
 .info__btn {
   text-decoration: none;
@@ -443,7 +443,8 @@
   font-size: 0.8em;
   background-color: #cc2a3a;
   padding: 1em 4em  1em 1em;
-  position: relative; }
+  position: relative;
+  display: inline-block; }
   .info__btn:after {
     content: "";
     display: block;
@@ -651,6 +652,24 @@
 @media only screen and (max-width: 500px) and (orientation: landscape) {
   .slideHead {
     font-size: 1.3em; } }
+
+@media only screen and (max-width: 479px) and (orientation: portrait) {
+  .play__btn_main {
+    margin-left: 0;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .playBtn__txt {
+    display: none; }
+  .companyTxt {
+    padding: 3% 5% 10%; }
+  .info__btn {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); } }
 
 @media only screen and (max-width: 420px) and (orientation: portrait) {
   .main {
