@@ -144,6 +144,7 @@ section {
 	padding-top: 9vh;
 	min-width: 210px;
 	visibility: hidden;
+	z-index: -1;
 	&:before {
 		content: "";
 		display: block;
@@ -153,6 +154,7 @@ section {
 		height: 9vh;
 		background-color: $bg;
 		z-index: 51;
+		transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0s;
 	}
 }
 .navDropdown__item {
@@ -160,9 +162,8 @@ section {
 	background-color: $bg;
 	border-bottom: 1px solid $red;
   	transition: top 0.2s ease-in-out;
-	&:last-child {
-		border-bottom: none;
-	}
+  	transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+
 	@for $i from 1 through 12 {
       	&:nth-of-type(#{$i}) {
       		top: 0 - ($i*37px);
@@ -177,6 +178,7 @@ section {
 	font-size: 0.9em;
 	line-height: 2.5em;
 	text-align: center;
+	transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0s;
 	&:hover {
 		color: $txt;
 	}
@@ -184,11 +186,13 @@ section {
 
 .navDropdown_opened {
 	visibility: visible;
+	z-index: 1;
 	.navDropdown__item {
+		box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
        	@for $i from 1 through 12 {
           	&:nth-of-type(#{$i}) {
 				top: 0;
-             	transition-delay: 0s + ($i*0.05s);
+             	transition-delay: 0s + ($i*0.1s);
             }
         }
 	}
@@ -218,9 +222,7 @@ section {
 	.navDropdown__item {
 		background-color: $red;
 		border-bottom: 1px solid $bg;
-		&:last-child {
-			border-bottom: none;
-		}
+		
 	}
 	.navDropdown__link {
 		color: $txtMain;
