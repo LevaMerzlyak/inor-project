@@ -581,7 +581,9 @@
   .company,
   .reputation {
     height: auto;
-    overflow: visible; } }
+    overflow: visible; }
+  .slider__nav {
+    padding-right: 3%; } }
 
 @media only screen and (max-width: 1025px) {
   .objects,
