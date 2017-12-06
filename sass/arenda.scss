@@ -8,16 +8,20 @@
 	.nav__link_active {
 		color: $txtMain;
 	}
-	.nav__dropdown {
-		.navDropdown {
+	.navDropdown {
+		&:before {
 			background-color: $txt;
 		}
-		.navDropdown__link {
-			color: $txtMain;
-			font-weight: 400;
-			&:hover {
-				font-weight: 700;
-			}
+	}
+	.navDropdown__item {
+		background-color: $txt;
+		border-bottom: 1px solid $red;
+	}
+	.navDropdown__link {
+		color: $txtMain;
+		font-weight: 400;
+		&:hover {
+			font-weight: 700;
 		}
 	}
 }
