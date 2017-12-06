@@ -576,7 +576,7 @@
 @media only screen and (max-width: 1200px) {
   .main,
   .main__bg {
-    height: 85vh; }
+    height: 92vh; }
   .objects,
   .company,
   .reputation {
@@ -671,11 +671,13 @@
     -ms-transform: translateX(-50%);
     transform: translateX(-50%); } }
 
-@media only screen and (max-width: 420px) and (orientation: portrait) {
+@media only screen and (max-width: 770px) and (orientation: portrait) {
   .main {
-    top: 8vh; }
+    top: 8vh; } }
+
+@media only screen and (max-width: 420px) and (orientation: portrait) {
   .objectsSvg__wrap {
-    padding-bottom: 24%; }
+    padding-bottom: 40%; }
   .objects__svg {
     display: none; }
   .objects__svg_mobile {

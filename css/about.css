@@ -114,6 +114,9 @@
   margin: 0; }
 
 @media only screen and (max-width: 1025px) {
+  .main,
+  .main__bg {
+    height: 85vh; }
   .about {
     width: 94%;
     margin: 0 auto; }
@@ -156,9 +159,12 @@
     .aboutNum__item:nth-child(2n) {
       border-left: none; } }
 
-@media only screen and (max-width: 420px) and (orientation: portrait) {
+@media only screen and (max-width: 770px) and (orientation: portrait) {
   .main {
-    top: 8vh; } }
+    top: 8vh;
+    height: 92vh; }
+  .main__bg {
+    height: 92vh; } }
 
 @media only screen and (max-width: 380px) {
   .about__num {

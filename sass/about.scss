@@ -95,7 +95,12 @@
 	text-transform: uppercase;
 	margin: 0;
 }
+
 @media only screen and (max-width: 1025px) {
+	.main,
+	.main__bg {
+		height: 85vh;
+	}
 	.about {
 		width: 94%;
 		margin: 0 auto;
@@ -150,9 +155,13 @@
 		}
 	}
 }
-@media only screen and (max-width: 420px) and (orientation: portrait) {
+@media only screen and (max-width: 770px) and (orientation: portrait) {
 	.main {
 		top: 8vh;
+		height: 92vh;
+	}
+	.main__bg {
+		height: 92vh;
 	}
 }
 @media only screen and (max-width: 380px) {

@@ -214,9 +214,10 @@
     height: auto;
     position: relative;
     top: 0;
-    -webkit-transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    transform: translateY(0%); }
+    left: 0;
+    -webkit-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    transform: translate(0%, 0%); }
   .arenda__txt {
     height: auto;
     padding-bottom: 3%; }
@@ -265,7 +266,9 @@
   .room__wrap {
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 55%;
+    padding-bottom: 70%;
+    padding-top: 10%;
+    border-bottom: 1px solid #dedddd;
     width: 94%;
     border-right: none; }
     .room__wrap:first-child {

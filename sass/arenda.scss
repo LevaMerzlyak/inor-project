@@ -207,7 +207,8 @@
 		height: auto;
 		position: relative;
 		top: 0;
-		transform: translateY(0%);
+		left: 0;
+		transform: translate(0%,0%);
 	}
 	.arenda__txt {
 		height: auto;
@@ -263,7 +264,9 @@
 	.room__wrap {
 		padding-left: 0;
 		padding-right: 0;
-		padding-bottom: 55%;
+		padding-bottom: 70%;
+		padding-top: 10%;
+		border-bottom: 1px solid $svgTxt;
 		width: 94%;
 		border-right: none;
 		&:first-child {
