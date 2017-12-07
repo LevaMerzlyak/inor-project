@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width" />
+
+	<title>INOR</title>
+	<!-- Fonts -->
+	<link rel="stylesheet" type="text/css" href="css/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/grid.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+
+	<!-- Owl -->
+	<link rel="stylesheet" type="text/css" href="js/OwlCarousel2-2.2.1/dist/assets/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="js/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.css">
+
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link rel="stylesheet" type="text/css" href="css/room.css">
+</head>
+<body>
+
+	<header class="header">
+		<div class="logo">
+			<a href="index.html" class="logo__link">INOR</a>
+		</div>
+		<div class="nav__wrap nav__wrap_main">
+			<ul class="nav">
+				<li class="nav__item">
+					<a href="index.html" class="nav__link">Главная</a>
+				</li>
+				<li class="nav__item">
+					<a href="about.html" class="nav__link">О нас</a>
+				</li>
+				<li class="nav__item" id="dropdown1">
+					<a href="#" class="nav__link nav__link_active">Аренда</a>
+					<ul class="navDropdown">
+						<li class="navDropdown__item">
+							<a href="arenda.html" class="navDropdown__link">Антоновича, 46</a>
+						</li>
+						<li class="navDropdown__item">
+							<a href="#" class="navDropdown__link">Владимирская, 101</a>
+						</li>
+						<li class="navDropdown__item">
+							<a href="#" class="navDropdown__link">Владимирская, 101</a>
+						</li>
+						<li class="navDropdown__item">
+							<a href="#" class="navDropdown__link">Владимирская, 101</a>
+						</li>
+						<li class="navDropdown__item">
+							<a href="#" class="navDropdown__link">Владимирская, 101</a>
+						</li>
+						<li class="navDropdown__item">
+							<a href="#" class="navDropdown__link">Владимирская, 101</a>
+						</li>
+						<li class="navDropdown__item">
+							<a href="#" class="navDropdown__link">Владимирская, 101</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav__item" id="dropdown2">
+					<a href="#" class="nav__link">Готовые объекты</a>
+					<ul class="navDropdown">
+						<li class="navDropdown__item">
+							<a href="#" class="navDropdown__link">Фитнес клуб Grand-Prix</a>
+						</li>
+						<li class="navDropdown__item">
+							<a href="#" class="navDropdown__link">Бизнес-центр Паньковский</a>
+						</li>
+						<li class="navDropdown__item">
+							<a href="object.html" class="navDropdown__link">Бизнес-центр Династия</a>
+						</li>
+						<li class="navDropdown__item">
+							<a href="#" class="navDropdown__link">Бизнес-центр Аквамарин</a>
+						</li>
+						<li class="navDropdown__item">
+							<a href="#" class="navDropdown__link">Здание Еврокомиссии</a>
+						</li>
+						<li class="navDropdown__item">
+							<a href="#" class="navDropdown__link">Владимирская, 101</a>
+						</li>
+						<li class="navDropdown__item">
+							<a href="#" class="navDropdown__link">Владимирская, 101</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav__item">
+					<a href="contacts.html" class="nav__link">Контакты</a>
+				</li>
+			</ul>
+		</div>
+		<div class="mobileMenu__btn" id="menu1">
+			<a href="#" class="sandwich__btn">
+				<span class="sandwich__line"></span>
+			</a>
+		</div>
+		<div class="mobile__menu">
+			<div class="menuMobile__wrap">
+				<ul class="menuMobile">
+					<li class="nav__item nav__item_mobile">
+						<a href="index.html" class="nav__link nav__link_mobile">Главная</a>
+					</li>
+					<li class="nav__item nav__item_mobile">
+						<a href="about.html" class="nav__link nav__link_mobile">О нас</a>
+					</li>
+					<li class="nav__item nav__item_mobile" id="dropdown3">
+						<a href="#" class="nav__link nav__link_active nav__link_mobile">Аренда</a>
+						<ul class="navDropdown">
+							<li class="navDropdown__item">
+								<a href="arenda.html" class="navDropdown__link">Антоновича, 46</a>
+							</li>
+							<li class="navDropdown__item">
+								<a href="#" class="navDropdown__link">Владимирская, 101</a>
+							</li>
+							<li class="navDropdown__item">
+								<a href="#" class="navDropdown__link">Владимирская, 101</a>
+							</li>
+							<li class="navDropdown__item">
+								<a href="#" class="navDropdown__link">Владимирская, 101</a>
+							</li>
+							<li class="navDropdown__item">
+								<a href="#" class="navDropdown__link">Владимирская, 101</a>
+							</li>
+							<li class="navDropdown__item">
+								<a href="#" class="navDropdown__link">Владимирская, 101</a>
+							</li>
+							<li class="navDropdown__item">
+								<a href="#" class="navDropdown__link">Владимирская, 101</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav__item nav__item_mobile" id="dropdown4">
+						<a href="#" class="nav__link nav__link_mobile">Готовые объекты</a>
+						<ul class="navDropdown">
+							<li class="navDropdown__item">
+								<a href="#" class="navDropdown__link">Фитнес клуб Grand-Prix</a>
+							</li>
+							<li class="navDropdown__item">
+								<a href="#" class="navDropdown__link">Бизнес-центр Паньковский</a>
+							</li>
+							<li class="navDropdown__item">
+								<a href="object.html" class="navDropdown__link">Бизнес-центр Династия</a>
+							</li>
+							<li class="navDropdown__item">
+								<a href="#" class="navDropdown__link">Бизнес-центр Аквамарин</a>
+							</li>
+							<li class="navDropdown__item">
+								<a href="#" class="navDropdown__link">Здание Еврокомиссии</a>
+							</li>
+							<li class="navDropdown__item">
+								<a href="#" class="navDropdown__link">Владимирская, 101</a>
+							</li>
+							<li class="navDropdown__item">
+								<a href="#" class="navDropdown__link">Владимирская, 101</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav__item nav__item_mobile">
+						<a href="vacancy.html" class="nav__link nav__link_mobile">Вакансии</a>
+					</li>
+					<li class="nav__item nav__item_mobile">
+						<a href="contacts.html" class="nav__link nav__link_mobile">Контакты</a>
+					</li>
+				</ul>
+				<ul class="mobile__lang">
+					<li class="lang__item">
+						<a href="#" class="lang__link">ua</a>
+					</li>
+					<li class="lang__item">
+						<a href="#" class="lang__link lang__link_active">ru</a>
+					</li>
+					<li class="lang__item">
+						<a href="#" class="lang__link">en</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<nav class="langueges">
+		<ul class="navLang">
+			<li class="lang__item">
+				<a href="#" class="lang__link">ua</a>
+			</li>
+			<li class="lang__item">
+				<a href="#" class="lang__link lang__link_active">ru</a>
+			</li>
+			<li class="lang__item">
+				<a href="#" class="lang__link">en</a>
+			</li>
+		</ul>
+	</nav>
+	
+	<nav class="pagination pagination_main">
+		<div class="pag__bg"></div>
+		<a class="pag__arrow arrow_down" href="#"></a>
+		<a class="pag__arrow arrow_up" href="#"></a>
+	</nav>
+	
+	<div class="container">
+
+		<div class="scrollifyClass" data-section-name="room">
+			<section class="room section group">
+				<div class="roomGallery" id="gallery">
+					<div class="gallery__wrap">
+						<div class="gallery__preview" id="preview">
+							<img class="preview__img" src="">
+						</div>
+						<a href="" class="fullScrin__btn"></a>
+					</div>
+					<div class="gallery__pag">
+						<div class="galleryPag__wrap">
+							<div class="galleryPag__item galleryPag__item_current">
+								<img src="images/bud1.jpg" alt="" class="gallery__img">
+							</div>
+							<div class="galleryPag__item">
+								<img src="images/bud3.jpg" alt="" class="gallery__img">
+							</div>
+							<div class="galleryPag__item galleryPag__item_360">
+								<img src="images/360photo/1_114_1.jpg" alt="" class="gallery__img">
+							</div>
+							<div class="galleryPag__item galleryPag__item_360">
+								<img src="images/360photo/1_114_2.jpg" alt="" class="gallery__img">
+							</div>
+							<div class="galleryPag__item">
+								<img src="images/schemas/schema.png" alt="" class="gallery__img">
+							</div>
+							<div class="galleryPag__item">
+								<img src="images/bud1.jpg" alt="" class="gallery__img">
+							</div>
+						</div>
+						<div class="galleryPag__controls">
+							<a href="#" class="galleryPag__btn"></a>
+							<a href="#" class="galleryPag__btn"></a></div>
+					</div>
+				</div>
+				<div class="roomTxt">
+					<h1 class="room__head">Аренда помещения №21</h1>
+					<p class="room__txt">Офисное помещение: 1 этаж</p>
+					<p class="room__txt">Общая площадь: 114 М<sup>2</sup></p>
+					<p class="room__txt">Эксплуатационные расходы: 6&#36; &#43; НДС</p>
+					<h2 class="roomList__head">Состояние офиса:</h2>
+					<ul class="roomList">
+						<li class="roomList__item">арендодатель выполняет за свой счет базовые отделочные работы на арендуемой площади под открытую планировку:</li>
+						<li class="roomList__item">установка фальшпола</li>
+						<li class="roomList__item">стены подготовлены под покраску</li>
+						<li class="roomList__item">подвесные потолки с освещением</li>
+						<li class="roomList__item">разводка инженерных систем под открытую планировку</li>
+					</ul>
+					<p class="room__val">Паркоместо&#47;месяц: 150&#36; &#43; НДС</p>
+					<p class="room__val">Подземная парковка: 250&#36; паркоместо&#47;месяц + НДС</p>
+					<button class="room__pdf">СКАЧАТЬ PDF файл</button>
+				</div>
+			</section>
+		</div>
+
+		<div class="scrollifyClass" data-section-name="footer">
+			<footer class="footer">
+				<div class="footer__nav">
+					<ul class="footerNav">
+						<li class="footerNav__item">
+							<a href="#" class="footerNav__link">Главная</a>
+						</li>
+						<li class="footerNav__item">
+							<a href="about.html" class="footerNav__link">О нас</a>
+						</li>
+						<li class="footerNav__item">
+							<a href="contacts.html" class="footerNav__link">Контакты</a>
+						</li>
+						<li class="footerNav__item">
+							<a href="vacancy.html" class="footerNav__link">Вакансии</a>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+
+	</div>
+
+	
+	<div class="main__video" id="aboutVideo">
+		<div class="video__container">
+			<div class="video__wrap">
+				<iframe class="player" width="560" height="349" src="" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="close__btn fa fa-times"></div>
+	</div>
+
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+
+	<script src="js/Dropdown.js" type="text/javascript"></script>
+	<script>
+		var d1 = new DropDown('#dropdown1');
+		var d2 = new DropDown('#dropdown2');
+		var d2 = new DropDownMob('#dropdown3');
+		var d2 = new DropDownMob('#dropdown4');
+		var m1 = new DropDownMenu('#menu1');
+	</script>
+
+	<script src="js/jquery.scrollify.js" type="text/javascript"></script>
+	<script>
+		$(function() {
+			var scrollBtn = $('.scrollBtn')
+				;
+
+			$.scrollify({
+				section : ".scrollifyClass",
+				scrollbars: true,
+				scrollSpeed: 1500,
+				standardScrollElements: ".slide__article, .main__video",
+				setHeights: false,
+				before: function(i,panels) {
+		    		var ref = panels[i].attr('data-section-name');
+
+		    		if(ref === 'room') {
+		    			$('.pagination').addClass('pagination_main');
+    					$('.nav__wrap').addClass('nav__wrap_main');
+		    		} else {
+		    			$('.pagination').removeClass('pagination_main');
+    					$('.nav__wrap').removeClass('nav__wrap_main');
+		    		}
+		    		if(ref === 'footer') {
+		    			scrollBtn.addClass('scrollBtn_hidden');
+		    			$('.pagination a.pag__arrow.arrow_down').hide();
+    					$('.pagination a.pag__arrow.arrow_up').show();
+		    		} else {
+		                scrollBtn.removeClass('scrollBtn_hidden');
+		                $('.pagination a.pag__arrow.arrow_up').hide();
+    					$('.pagination a.pag__arrow.arrow_down').show();
+		            }
+		    		
+		    	},
+		    	after: function(i,panels) {
+		    		
+		    	},
+				afterResize:offMobile,
+		    	afterRender:offMobile
+			});
+			
+			$('.pagination a.pag__arrow.arrow_down').on('click', function (e) {
+				e.preventDefault();
+				$.scrollify.next();
+			});
+			$('.pagination a.pag__arrow.arrow_up').on('click', function (e) {
+				e.preventDefault();
+				$.scrollify.move('#room');
+			});
+		    scrollBtn.on('click', function (e) {
+		        e.preventDefault();
+		        $.scrollify.next();
+		    });
+			function offMobile() {
+				var width = $(window).width();
+				if(width < 1199 && !$.scrollify.isDisabled()) {
+					$.scrollify.disable();
+				} else if(width >= 1199 && $.scrollify.isDisabled()) {
+					$.scrollify.enable();
+				}
+			}
+		});
+	</script>
+	<script src="js/three.min.js"></script>
+	<script src="js/photo-sphere-viewer.min.js"></script>
+	<script src="js/Gallery.js" type="text/javascript"></script>
+	<script>
+		g1 = new Gallery('#gallery');
+	</script>
+</body>
+</html>
