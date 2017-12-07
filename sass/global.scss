@@ -157,6 +157,16 @@ section {
 		transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0s;
 	}
 }
+#dropdown1 {
+	.navDropdown {
+		right: -80px;
+	}
+}
+#dropdown2 {
+	.navDropdown {
+		right: -35px;
+	}
+}
 .navDropdown__item {
 	position: relative;
 	background-color: $bg;
