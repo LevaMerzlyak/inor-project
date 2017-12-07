@@ -32,18 +32,6 @@ $(function() {
     			$('.pagination').addClass('pagination_main');
     			$('.nav__wrap').addClass('nav__wrap_main');
 
-    			objectSvg.removeClass('animated').removeClass('fadeInUp');
-    			objectSlider.removeClass('animated2').removeClass('fadeInUp');
-    			objectNav.removeClass('animated2').removeClass('fadeInUpBig');
-
-    			companySvg.removeClass('animated').removeClass('fadeInLeftBig');
-    			companyTxt.removeClass('animated2').removeClass('fadeInUp');
-    			companyVid.removeClass('animated3').removeClass('fadeInRightBig');
-
-    			reputationGrey.removeClass('animated2').removeClass('fadeInLeftBig');
-    			reputationWht.removeClass('animated3').removeClass('fadeInUpBig');
-    			reputationSvg.removeClass('animated-d').removeClass('fadeIn');
-    			reputationTxt.removeClass('animated-d').removeClass('fadeIn');
     		} else {
     			$('.pagination').removeClass('pagination_main');
     			$('.nav__wrap').removeClass('nav__wrap_main');
@@ -61,47 +49,17 @@ $(function() {
     			objectSvg.addClass('animated').addClass('fadeInUp');
     			objectSlider.addClass('animated2').addClass('fadeInUp');
     			objectNav.addClass('animated2').addClass('fadeInUpBig');
-
-    			companySvg.removeClass('animated').removeClass('fadeInUp');
-    			companyTxt.removeClass('animated2').removeClass('fadeInUp');
-    			companyVid.removeClass('animated2').removeClass('fadeInUp');
-
-    			reputationGrey.removeClass('animated').removeClass('fadeInUp');
-    			reputationWht.removeClass('animated2').removeClass('fadeInUpBig');
     		}
     		if(ref === 'company') {
     			companySvg.addClass('animated').addClass('fadeInUp');
     			companyTxt.addClass('animated2').addClass('fadeInUp');
     			companyVid.addClass('animated2').addClass('fadeInUp');
-
-    			objectSvg.removeClass('animated').removeClass('fadeInUp');
-    			objectSlider.removeClass('animated2').removeClass('fadeInUp');
-    			objectNav.removeClass('animated2').removeClass('fadeInUpBig');
-
-    			reputationGrey.removeClass('animated').removeClass('fadeInUp');
-                reputationWht.removeClass('animated2').removeClass('fadeInUpBig');
     		}
     		if(ref === 'reputation') {
     			reputationGrey.addClass('animated').addClass('fadeInUp');
     			reputationWht.addClass('animated2').addClass('fadeInUpBig');
-
-    			objectSvg.removeClass('animated').removeClass('fadeInUp');
-    			objectSlider.removeClass('animated2').removeClass('fadeInUp');
-    			objectNav.removeClass('animated2').removeClass('fadeInUpBig');
-
-    			companySvg.removeClass('animated').removeClass('fadeInUp');
-                companyTxt.removeClass('animated2').removeClass('fadeInUp');
-                companyVid.removeClass('animated2').removeClass('fadeInUp');
     		}
     		if(ref === 'footer') {
-    			
-    			objectSvg.removeClass('animated').removeClass('fadeInUp');
-    			objectSlider.removeClass('animated2').removeClass('fadeInUp');
-    			objectNav.removeClass('animated2').removeClass('fadeInUpBig');
-
-    			companySvg.removeClass('animated').removeClass('fadeInUp');
-                companyTxt.removeClass('animated2').removeClass('fadeInUp');
-                companyVid.removeClass('animated2').removeClass('fadeInUp');
 
                 $('.scrollBtn').addClass('scrollBtn_hidden');
                 setTimeout(function () {
@@ -116,6 +74,22 @@ $(function() {
     		
     	},
     	after: function(i,panels) {
+            var ref = panels[i].attr('data-section-name');
+
+            if(ref === 'main') {
+                objectSvg.removeClass('animated').removeClass('fadeInUp');
+                objectSlider.removeClass('animated2').removeClass('fadeInUp');
+                objectNav.removeClass('animated2').removeClass('fadeInUpBig');
+            }
+            if(ref === 'objects') {
+                companySvg.removeClass('animated').removeClass('fadeInUp');
+                companyTxt.removeClass('animated2').removeClass('fadeInUp');
+                companyVid.removeClass('animated2').removeClass('fadeInUp');
+            }
+            if(ref === 'company') {
+                reputationGrey.removeClass('animated').removeClass('fadeInUp');
+                reputationWht.removeClass('animated2').removeClass('fadeInUpBig');
+            }
 
     	},
 		afterResize:offMobile,
