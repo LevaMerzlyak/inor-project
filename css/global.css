@@ -573,7 +573,8 @@ section {
   .mainMap .map {
     width: 96%;
     height: 250px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    display: block; }
 
 .contacts {
   display: -webkit-box;

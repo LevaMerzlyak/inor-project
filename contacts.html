@@ -223,7 +223,7 @@
 					</div>
 				</div>
 				<div class="mainMap">
-					<div class="map" id="map"></div>
+					<iframe class="map" class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10165.839770163586!2d30.508869!3d50.432533!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb3b444a999d736df!2z0IbQndCe0KA!5e0!3m2!1suk!2sua!4v1512650656223" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
 			</section>
 		</div>
@@ -326,28 +326,6 @@
 			}
 		});
 	</script>
-
-	<script>
-		function myMap() {
-			var myCenter = new google.maps.LatLng(50.432422,30.509548);
-  			var mapCanvas = document.getElementById("map");
-  			var mapOptions = {
-	  			center: myCenter,
-	    		mapTypeId: google.maps.MapTypeId.ROADMAP,
-	  			zoom: 14,
-	    		zoomControl: true,
-				zoomControlOptions: {style: google.maps.ZoomControlStyle.SMALL},
-	  			mapTypeControl: true,
-	    		mapTypeControlOptions: {style: 	google.maps.MapTypeControlStyle.DROPDOWN_MENU}
-    		};
-  			var map = new google.maps.Map(mapCanvas, mapOptions);
-  			var marker = new google.maps.Marker({position:myCenter});
-
-  			marker.setMap(map);
-		}
-	</script>
-
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNJdGvq2uLbLmA79NDa6FqcdLc6QEMdAA&callback=myMap"></script>
 
 </body>
 </html>
