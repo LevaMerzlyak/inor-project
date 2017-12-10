@@ -43,11 +43,9 @@
   position: relative;
   top: 15vh;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
 
@@ -89,15 +87,12 @@
 
 .vacancy {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
   border-bottom: 2px solid #dedddd;
@@ -190,8 +185,9 @@
   left: 0;
   top: 0;
   margin-top: 15px;
-  margin-left: 15px;
-  width: 92%;
+  margin-bottom: 15px;
+  margin-left: 7%;
+  width: 79%;
   padding: 5% 7%;
   background-color: #fff;
   -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
@@ -276,7 +272,6 @@
 @media only screen and (max-width: 770px) {
   .main {
     height: auto;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-bottom: 0; }
@@ -288,10 +283,8 @@
     width: 100%;
     height: 40vw; }
   .vacancy {
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around; }
   .vacancy__num {
