@@ -7,14 +7,16 @@
 	position: relative;
 	top: 15vh;
 	background-color: $txt;
-	padding: 5%;
-	box-sizing: border-box;
 	display: flex;
+	flex-wrap: wrap;
 }
-.mainTxt {
-	width: 50%;
+.mainTxt,
+.mainForm {
+	width: 40%;
 	box-sizing: border-box;
-	padding-right: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 5%;
 }
 .mainTxt__head {
 	color: $txtMain;
@@ -96,13 +98,9 @@
 	width: 100%;
 }
 .mainMap {
-	width: 50%;
-	.map {
-		width: 100%;
-		height: 400px;
-	}
+	width: 100%;
 }
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 1199px) {
 	.main {
 		height: auto;
 	}
@@ -113,26 +111,19 @@
 	}
 }
 @media only screen and (max-width: 770px) {
-	.main {
-		flex-wrap: wrap;
-	}
-	.mainTxt {
-		width: 100%;
-		padding-right: 0;
-	}
-	.mainMap {
-		margin-top: 5%;
+	.mainTxt,
+	.mainForm {
 		width: 100%;
 	}
 }
 @media only screen and (max-width: 770px) and (orientation:portrait) {
 	.mainMap .map {
-		height: 90vw;
+		height: 50vh;
 	}
 }
-@media only screen and (max-width: 740px) and (orientation:landscape) {
-	.mainMap .map {
-		height: 85vh;
+@media only screen and (max-width: 600px) {
+	.main {
+		margin-bottom: 0;
 	}
 }
 @media only screen and (max-width: 670px) {
