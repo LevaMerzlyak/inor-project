@@ -4,13 +4,21 @@ function Gallery(sSelector) {
 
 	g.gallery = $(sSelector);
 
-	g.pag = g.gallery.find('.galleryPag__item');
-	g.current = g.gallery.find('.galleryPag__item_current')
-	g.img = g.current.find('.gallery__img');
-	g.preview = g.gallery.find('.gallery__preview');
-	g.imgPreview = g.preview.find('.preview__img');
-	g.imgNav = g.gallery.find('.gallery__nav');
-	g.fullScreen = g.imgNav.find('.fullScreen__btn');
+	g.pags 		= g.gallery.find('.galleryPag__wrap');
+	g.pag 		= g.gallery.find('.galleryPag__item');
+	g.pagAmount = g.pag.length;
+	g.current 	= g.gallery.find('.galleryPag__item_current');
+	g.img 		= g.current.find('.gallery__img');
+
+	g.btnPrev 	= g.gallery.find('.galleryPag__btn_prev');
+	g.btnNext 	= g.gallery.find('.galleryPag__btn_next');
+	g.count 	= 0;
+
+	g.preview 		= g.gallery.find('.gallery__preview');
+	g.imgPreview 	= g.preview.find('.preview__img');
+
+	g.imgNav 		= g.gallery.find('.gallery__nav');
+	g.fullScreen 	= g.imgNav.find('.fullScreen__btn');
 
 	g.pans = g.gallery.find('.galleryPag__item_360');
 
@@ -34,6 +42,8 @@ function Gallery(sSelector) {
 
 	g.pagInit = function () {
 
+		//console.log(g.pags.width()*0.26);
+
 		if(g.current.hasClass('galleryPag__item_360')) {
 
 			g.show360(g.current);
@@ -53,7 +63,45 @@ function Gallery(sSelector) {
 			$(this).css({'background-image': 'url(' + src + ')'});
 
 		});
+
+		g.pagCntrl();
 		
+	}
+
+	g.pagCntrl = function () {
+
+		var max = (4 - g.pagAmount)*26;
+
+		if (g.pagAmount <= 4) {
+			g.btnPrev.hide();
+			g.btnNext.hide();
+		} else {
+			if (g.count == 0) {
+				g.btnPrev.hide();
+			} else {
+				g.btnPrev.show();		
+			}
+			if (g.count == max) {
+				g.btnNext.hide();
+			} else {
+				g.btnNext.show();		
+			}
+		}
+
+	}
+	g.pagPrev = function (event) {
+		event.preventDefault();
+		g.count += 26;
+
+		g.pags.css('left', g.count + '%');
+		g.pagCntrl();
+	}
+	g.pagNext = function (event) {
+		event.preventDefault();
+		g.count -= 26;
+
+		g.pags.css('left', g.count + '%');
+		g.pagCntrl();
 	}
 
 	g.showPreview = function (event) {
@@ -156,5 +204,7 @@ function Gallery(sSelector) {
 		}
 		g.fullScreen.toggleClass('fullScreen__btn_out');
 	});
+	g.btnPrev.click(g.pagPrev);
+	g.btnNext.click(g.pagNext);
 
 }

@@ -92,16 +92,24 @@
 
 .gallery__pag {
   overflow: hidden;
-  margin-top: 1em; }
+  margin-top: 1em;
+  position: relative; }
 
 .galleryPag__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  position: relative;
+  left: 0;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
 
 .galleryPag__item {
-  margin-right: 3.5%;
+  margin-right: 4%;
   width: 22%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   height: 0;
   padding-bottom: 16.5%;
   position: relative;
@@ -141,6 +149,27 @@
 
 .gallery__img {
   display: none; }
+
+.galleryPag__btn {
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 100%;
+  text-decoration: none;
+  background-color: rgba(61, 61, 61, 0.5);
+  color: #dedddd; }
+  .galleryPag__btn:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    opacity: 0.7; }
+
+.galleryPag__btn_next {
+  right: 0; }
 
 .roomTxt {
   -webkit-box-sizing: border-box;
