@@ -30,7 +30,7 @@
 .main__bg {
   background-image: url("../images/INOR_Photo_Glav2.jpg");
   background-size: cover;
-  background-position: top left;
+  background-position: center;
   height: 75vh;
   width: 100%; }
 
@@ -529,17 +529,13 @@
 
 .reputation__logos {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
   padding: 4% 2%;
