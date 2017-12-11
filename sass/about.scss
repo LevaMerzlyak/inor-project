@@ -74,8 +74,8 @@
 	box-sizing: border-box;
 	width: 50%;
 	padding: 3% 1%;
-	border-left: 2px solid $svgTxt;
-	border-right: 2px solid $svgTxt;
+	border-left: 1px solid $svgTxt;
+	border-right: 1px solid $svgTxt;
 	&:nth-child(2n) {
 		border-left: none;
 	}
@@ -124,7 +124,7 @@
 		width: 100%;
 		padding: 5% 5%;
 		&:nth-child(2n) {
-			border-left: 2px solid $svgTxt;
+			border-left: 1px solid $svgTxt;
 		}
 	}
 	.about__num {

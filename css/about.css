@@ -33,11 +33,9 @@
 
 .aboutTxt {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
@@ -72,29 +70,25 @@
 
 .aboutNums {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 10% 0; }
 
 .aboutNum__item {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
-  -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 50%;
   padding: 3% 1%;
-  border-left: 2px solid #dedddd;
-  border-right: 2px solid #dedddd; }
+  border-left: 1px solid #dedddd;
+  border-right: 1px solid #dedddd; }
   .aboutNum__item:nth-child(2n) {
     border-left: none; }
 
@@ -125,7 +119,6 @@
 
 @media only screen and (max-width: 770px) {
   .aboutTxt {
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
   .aboutTxt__wrap {
@@ -137,7 +130,7 @@
     width: 100%;
     padding: 5% 5%; }
     .aboutNum__item:nth-child(2n) {
-      border-left: 2px solid #dedddd; }
+      border-left: 1px solid #dedddd; }
   .about__num {
     margin: 0 5% 0 0; } }
 

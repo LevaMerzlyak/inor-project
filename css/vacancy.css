@@ -95,11 +95,11 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  border-bottom: 2px solid #dedddd;
+  border-bottom: 1px solid #dedddd;
   padding-top: 5%;
   padding-bottom: 5%; }
   .vacancy:first-child {
-    border-top: 2px solid #dedddd; }
+    border-top: 1px solid #dedddd; }
 
 .vacancy__num {
   color: #cc2a3a;
