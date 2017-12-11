@@ -523,7 +523,7 @@
 @media only screen and (max-width: 1200px) {
 	.main,
 	.main__bg {
-		height: 92vh;
+		height: 85vh;
 	}
 	.objects,
 	.company,
@@ -644,6 +644,10 @@
 @media only screen and (max-width: 770px) and (orientation: portrait) {
 	.main {
 		top: 8vh;
+	}
+	.main,
+	.main__bg {
+		height: 92vh;
 	}
 }
 @media only screen and (max-width: 420px) and (orientation: portrait) {
