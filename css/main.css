@@ -274,6 +274,9 @@
   width: 100%;
   height: auto; }
 
+.slide__img_cover_disable {
+  display: none; }
+
 .slideArt__head,
 .main__txt_slide,
 .slideImg__wrap {

@@ -23,7 +23,7 @@ function SliderInit(sSelector) {
         for (var j = 0; j < i.length; j++) {
 
             var slide       = i.slide.eq(j)
-                ,src        = slide.find('.slide__img').attr('src')
+                ,src        = slide.find('.slide__img_cover').attr('src')
                 ,head       = slide.find('.slideArt__head').html()
                 ,item       = i.item.eq(j)
                 ,wrap       = item.find('.slide__bg')
