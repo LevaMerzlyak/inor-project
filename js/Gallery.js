@@ -198,11 +198,11 @@ function Gallery(sSelector) {
 	$(document).ready(g.pagInit);
 	g.pag.click(g.showPreview);
 	g.fullScreen.on('click', function() {
-		/*var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+		var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 		// if already full screen; exit
 		// else go fullscreen
-		if (iOS) {*/
-			g.iosShow();/*
+		if (iOS) {
+			g.iosShow();
 		} else if (
 			document.fullscreenElement ||
 			document.webkitFullscreenElement ||
@@ -230,7 +230,7 @@ function Gallery(sSelector) {
 				element.msRequestFullscreen();
 			}
 		}
-		g.fullScreen.toggleClass('fullScreen__btn_out');*/
+		g.fullScreen.toggleClass('fullScreen__btn_out');
 	});
 	g.btnPrev.click(g.pagPrev);
 	g.btnNext.click(g.pagNext);
