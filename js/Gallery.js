@@ -20,9 +20,10 @@ function Gallery(sSelector) {
 	g.imgNav 		= g.gallery.find('.gallery__nav');
 	g.fullScreen 	= g.imgNav.find('.fullScreen__btn');
 
-	g.psvFullscreen = g.gallery.find('.psv-fullscreen-button');
-
 	g.pans = g.gallery.find('.galleryPag__item_360');
+
+	g.iosFullScrn = $('#iosFullscreen');
+	g.fullScrnOut = g.iosFullScrn.find('.fullScreen__btn_out');
 
 	g.pagNum = 4;
 	g.pagWidth = 26;
@@ -150,6 +151,7 @@ function Gallery(sSelector) {
 
 		g.imgNav.show();
 		g.imgPreview.attr('src', src);
+		g.preview.removeClass('gallery__preview_360');
 
 	}
 
@@ -168,43 +170,47 @@ function Gallery(sSelector) {
 		var src = pag.find('.gallery__img').attr('src');
 
 		g.imgPreview.attr('src', '');
-		g.imgNav.hide();
+
+		var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+		/*if (iOS) {
+			*/g.imgNav.addClass('gallery__nav_360');/*
+		} else {
+			g.imgNav.hide();
+		}*/
 
 		PSV.setPanorama(src);
+
+		g.preview.addClass('gallery__preview_360');
 		
 	}
 
 	g.iosShow = function () {
-		var fullscreenImg = $('#iosFullscreen').find('.preview__img')
-			,img = g.imgPreview
-			,src = img.attr('src')
-			,w = img.get(0).naturalWidth
-			,h = img.get(0).naturalHeight
-			,fullscreenOut =  $('#iosFullscreen').find('.fullScreen__btn_out')
-			;
+		var scene = g.preview.html();
 
-		if ((w / h) > 1) {
-			fullscreenImg.css({'width': '100%','height': 'auto'});
-		} else {
-			fullscreenImg.css({'height': '100%','width': 'auto'});			
+		if (g.preview.hasClass('gallery__preview_360')) {
+			g.iosFullScrn.find('.gallery__nav').addClass('gallery__nav_360');
 		}
-		$('#iosFullscreen').addClass('fullScreen__wrap_open');
-		fullscreenImg.attr('src', src);
 
-		fullscreenOut.click(function (event) {
+		g.iosFullScrn.addClass('fullScreen__wrap_open');
+		g.iosFullScrn.prepend(scene);
+
+		g.fullScrnOut.click(function (event) {
 			event.preventDefault();
-			$('#iosFullscreen').removeClass('fullScreen__wrap_open');
-		})
+			g.iosFullScrn.removeClass('fullScreen__wrap_open');
+			g.iosFullScrn.find('.psv-container').remove();
+			g.iosFullScrn.find('.preview__img').remove();
+		});
+
 	}
 	
 	$(document).ready(g.pagInit);
 	g.pag.click(g.showPreview);
 	g.fullScreen.on('click', function() {
-		var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+		/*var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 		// if already full screen; exit
 		// else go fullscreen
 		if (iOS) {
-			g.iosShow();
+			*/g.iosShow();/*
 		} else if (
 			document.fullscreenElement ||
 			document.webkitFullscreenElement ||
@@ -231,7 +237,7 @@ function Gallery(sSelector) {
 			} else if (element.msRequestFullscreen) {
 				element.msRequestFullscreen();
 			}
-		}
+		}*/
 		g.fullScreen.toggleClass('fullScreen__btn_out');
 	});
 	g.btnPrev.click(g.pagPrev);
