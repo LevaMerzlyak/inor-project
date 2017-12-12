@@ -22,6 +22,9 @@ function Gallery(sSelector) {
 
 	g.pans = g.gallery.find('.galleryPag__item_360');
 
+	g.pagNum = 4;
+	g.pagWidth = 26;
+
 	var src = $(g.pans[0]).find('.gallery__img').attr('src');
 
 	// Panorama display
@@ -70,9 +73,9 @@ function Gallery(sSelector) {
 
 	g.pagCntrl = function () {
 
-		var max = (4 - g.pagAmount)*26;
+		var max = (g.pagNum - g.pagAmount)*g.pagWidth;
 
-		if (g.pagAmount <= 4) {
+		if (g.pagAmount <= g.pagNum) {
 			g.btnPrev.hide();
 			g.btnNext.hide();
 		} else {
@@ -91,14 +94,14 @@ function Gallery(sSelector) {
 	}
 	g.pagPrev = function (event) {
 		event.preventDefault();
-		g.count += 26;
+		g.count += g.pagWidth;
 
 		g.pags.css('left', g.count + '%');
 		g.pagCntrl();
 	}
 	g.pagNext = function (event) {
 		event.preventDefault();
-		g.count -= 26;
+		g.count -= g.pagWidth;
 
 		g.pags.css('left', g.count + '%');
 		g.pagCntrl();
@@ -140,7 +143,7 @@ function Gallery(sSelector) {
 		if ((w / h) > 1) {
 			g.imgPreview.css({'width': '100%','height': 'auto'});
 		} else {
-			g.imgPreview.css({'height': '100%','width': 'auto'});				
+			g.imgPreview.css({'height': '100%','width': 'auto'});			
 		}
 
 		g.imgNav.show();
@@ -169,13 +172,38 @@ function Gallery(sSelector) {
 		
 	}
 
+	g.iosShow = function () {
+		var fullscreenImg = $('#iosFullscreen').find('.preview__img')
+			,img = g.imgPreview
+			,src = img.attr('src')
+			,w = img.get(0).naturalWidth
+			,h = img.get(0).naturalHeight
+			,fullscreenOut =  $('#iosFullscreen').find('.fullScreen__btn_out')
+			;
+
+		if ((w / h) > 1) {
+			fullscreenImg.css({'width': '100%','height': 'auto'});
+		} else {
+			fullscreenImg.css({'height': '100%','width': 'auto'});			
+		}
+		$('#iosFullscreen').addClass('fullScreen__wrap_open');
+		fullscreenImg.attr('src', src);
+
+		fullscreenOut.click(function (event) {
+			event.preventDefault();
+			$('#iosFullscreen').removeClass('fullScreen__wrap_open');
+		})
+	}
 	
 	$(document).ready(g.pagInit);
 	g.pag.click(g.showPreview);
 	g.fullScreen.on('click', function() {
+		/*var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 		// if already full screen; exit
 		// else go fullscreen
-		if (
+		if (iOS) {*/
+			g.iosShow();/*
+		} else if (
 			document.fullscreenElement ||
 			document.webkitFullscreenElement ||
 			document.mozFullScreenElement ||
@@ -202,7 +230,7 @@ function Gallery(sSelector) {
 				element.msRequestFullscreen();
 			}
 		}
-		g.fullScreen.toggleClass('fullScreen__btn_out');
+		g.fullScreen.toggleClass('fullScreen__btn_out');*/
 	});
 	g.btnPrev.click(g.pagPrev);
 	g.btnNext.click(g.pagNext);
