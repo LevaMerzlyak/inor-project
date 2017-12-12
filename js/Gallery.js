@@ -236,7 +236,7 @@ function Gallery(sSelector) {
 	});
 	g.btnPrev.click(g.pagPrev);
 	g.btnNext.click(g.pagNext);
-	g.psvFullscreen.click(function () {
+	/*g.psvFullscreen.click(function () {
 		var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 		if (iOS) {
 			var scene = $(div).find('.psv-container').clone();
@@ -244,6 +244,6 @@ function Gallery(sSelector) {
 			$('#iosFullscreen').addClass('fullScreen__wrap_open');
 			$('#iosFullscreen').append(scene);
 		}
-	})
+	})*/
 
 }
