@@ -20,6 +20,8 @@ function Gallery(sSelector) {
 	g.imgNav 		= g.gallery.find('.gallery__nav');
 	g.fullScreen 	= g.imgNav.find('.fullScreen__btn');
 
+	g.psvFullscreen = g.gallery.find('.psv-fullscreen-button');
+
 	g.pans = g.gallery.find('.galleryPag__item_360');
 
 	g.pagNum = 4;
@@ -234,5 +236,14 @@ function Gallery(sSelector) {
 	});
 	g.btnPrev.click(g.pagPrev);
 	g.btnNext.click(g.pagNext);
+	g.psvFullscreen.click(function () {
+		var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+		if (iOS) {
+			var scene = $(div).find('.psv-container').clone();
+			$('#iosFullscreen').find('.preview__img').attr('src', '');
+			$('#iosFullscreen').addClass('fullScreen__wrap_open');
+			$('#iosFullscreen').append(scene);
+		}
+	})
 
 }
