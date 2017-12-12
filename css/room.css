@@ -59,7 +59,8 @@
 .gallery__nav_360 {
   right: 0;
   width: 40px;
-  background-color: transparent; }
+  background-color: transparent;
+  z-index: 100; }
 
 .fullScreen__btn {
   position: relative;

@@ -152,6 +152,7 @@ function Gallery(sSelector) {
 		g.imgNav.show();
 		g.imgPreview.attr('src', src);
 		g.preview.removeClass('gallery__preview_360');
+		g.imgNav.removeClass('gallery__nav_360');
 
 	}
 
@@ -172,11 +173,11 @@ function Gallery(sSelector) {
 		g.imgPreview.attr('src', '');
 
 		var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-		/*if (iOS) {
-			*/g.imgNav.addClass('gallery__nav_360');/*
+		if (iOS) {
+			g.imgNav.addClass('gallery__nav_360');
 		} else {
 			g.imgNav.hide();
-		}*/
+		}
 
 		PSV.setPanorama(src);
 
@@ -206,11 +207,11 @@ function Gallery(sSelector) {
 	$(document).ready(g.pagInit);
 	g.pag.click(g.showPreview);
 	g.fullScreen.on('click', function() {
-		/*var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+		var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 		// if already full screen; exit
 		// else go fullscreen
 		if (iOS) {
-			*/g.iosShow();/*
+			g.iosShow();
 		} else if (
 			document.fullscreenElement ||
 			document.webkitFullscreenElement ||
@@ -237,19 +238,9 @@ function Gallery(sSelector) {
 			} else if (element.msRequestFullscreen) {
 				element.msRequestFullscreen();
 			}
-		}*/
+		}
 		g.fullScreen.toggleClass('fullScreen__btn_out');
 	});
 	g.btnPrev.click(g.pagPrev);
 	g.btnNext.click(g.pagNext);
-	/*g.psvFullscreen.click(function () {
-		var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-		if (iOS) {
-			var scene = $(div).find('.psv-container').clone();
-			$('#iosFullscreen').find('.preview__img').attr('src', '');
-			$('#iosFullscreen').addClass('fullScreen__wrap_open');
-			$('#iosFullscreen').append(scene);
-		}
-	})*/
-
 }
