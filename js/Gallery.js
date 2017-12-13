@@ -56,7 +56,7 @@ function Gallery(sSelector) {
 
 	g.pagInit = function () {
 
-		//console.log(g.pags.width()*0.26);
+		console.log(navigator.platform);
 
 		if(g.current.hasClass('galleryPag__item_360')) {
 
