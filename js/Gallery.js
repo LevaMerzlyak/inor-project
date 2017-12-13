@@ -200,9 +200,9 @@ function Gallery(sSelector) {
 			;
 		
 		g.iosFullScrn.addClass('fullScreen__wrap_open');
-		g.iosFullScrn.find('.gallery__nav').addClass('gallery__nav_360');
 
 		if (g.preview.hasClass('gallery__preview_360')) {
+			g.iosFullScrn.find('.gallery__nav').addClass('gallery__nav_360');
 			g.iosFullScrn.find('.psv-container').show();
 			PSV2.setPanorama(src);
 			g.iosImgPreview.css('src','');
@@ -268,8 +268,8 @@ function Gallery(sSelector) {
 			} else if (element.msRequestFullscreen) {
 				element.msRequestFullscreen();
 			}
+			g.fullScreen.toggleClass('fullScreen__btn_out');
 		}
-		g.fullScreen.toggleClass('fullScreen__btn_out');
 	});
 	g.btnPrev.click(g.pagPrev);
 	g.btnNext.click(g.pagNext);
