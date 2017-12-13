@@ -224,6 +224,39 @@
 						<p class="about__txt">Опыт и продуманная стратегия позволили нам сформировать высококлассную команду для системного управления коммерческой недвижимостью. Сегодня в составе компании работают профильные подразделения инвестиционного, финансового, юридического и инженерно-эксплуатационного сопровождения проектов</p>
 					</div>
 				</div>
+				<div class="aboutGallery__wrap">
+					<div class="aboutGallery" id="gallery">
+						<div class="gallery__wrap">
+							<div class="gallery__preview" id="preview">
+								<img class="preview__img" src="">
+							</div>
+							<div class="gallery__nav">
+								<a href="#" class="fullScreen__btn"></a>
+							</div>
+						</div>
+						<div class="gallery__pag">
+							<div class="galleryPag__wrap">
+								<div class="galleryPag__item galleryPag__item_current galleryPag__item_360">
+									<img src="images/about/360/R0010898.jpg" alt="" class="gallery__img">
+								</div>
+								<div class="galleryPag__item galleryPag__item_360">
+									<img src="images/about/360/R0010900.jpg" alt="" class="gallery__img">
+								</div>
+								<div class="galleryPag__item galleryPag__item_360">
+									<img src="images/about/360/R0010902.jpg" alt="" class="gallery__img">
+								</div>
+								<div class="galleryPag__item galleryPag__item_360">
+									<img src="images/about/360/R0010911.jpg" alt="" class="gallery__img">
+								</div>
+							</div>
+							<a href="#" class="galleryPag__btn galleryPag__btn_prev fa fa-angle-left"></a>
+							<a href="#" class="galleryPag__btn galleryPag__btn_next fa fa-angle-right"></a>
+						</div>
+					</div>
+					<div class="logo360__wrap">
+						<div class="logo360"></div>
+					</div>
+				</div>
 				<div class="aboutNums">
 					<div class="aboutNum__item">
 						<p class="about__num">25</p>
@@ -296,6 +329,12 @@
 		<div class="close__btn fa fa-times"></div>
 	</div>
 	<div class="scroll__btn"><a href="#" class="scrollBtn">scroll</a></div>
+	<div class="fullScreen__wrap" id="iosFullscreen">
+		<img class="preview__img" src="">
+		<div class="gallery__nav">
+			<a href="#" class="fullScreen__btn fullScreen__btn_out"></a>
+		</div>
+	</div>
 
 	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 
@@ -376,6 +415,19 @@
 		var v1 = new VideoStart('#videoPlay1');
 	</script>
 
-	
+	<link rel="stylesheet" href="css/photo-sphere-viewer.min.css">
+	<script src="js/three.min.js"></script>
+	<script src="js/D.min.js"></script>
+	<script src="js/doT.min.js"></script>
+	<script src="js/uevent.min.js"></script>
+	<script src="js/CanvasRenderer.js"></script>
+	<script src="js/Projector.js"></script>
+	<script src="js/DeviceOrientationControls.js"></script>
+	<script src="js/photo-sphere-viewer.min.js"></script>
+
+	<script src="js/Gallery.js" type="text/javascript"></script>
+	<script>
+		g1 = new Gallery('#gallery');
+	</script>
 </body>
 </html>
