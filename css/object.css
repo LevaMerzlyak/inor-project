@@ -13,7 +13,7 @@
 .main__bg {
   background-image: url("../images/Biz_centr_D_Gotov_object.jpg");
   background-size: cover;
-  background-position: top left;
+  background-position: center;
   height: 75vh;
   width: 100%; }
 
@@ -134,15 +134,12 @@
 
 .slider__pag {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   margin-top: 1em; }
