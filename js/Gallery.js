@@ -200,10 +200,12 @@ function Gallery(sSelector) {
 			;
 		
 		g.iosFullScrn.addClass('fullScreen__wrap_open');
+		g.iosFullScrn.find('.gallery__nav').addClass('gallery__nav_360');
 
 		if (g.preview.hasClass('gallery__preview_360')) {
 			g.iosFullScrn.find('.psv-container').show();
 			PSV2.setPanorama(src);
+			g.iosImgPreview.css('src','');
 		} else {
 			var w = img.get(0).naturalWidth
 				,h = img.get(0).naturalHeight
@@ -217,6 +219,7 @@ function Gallery(sSelector) {
 
 			g.iosFullScrn.find('.gallery__nav').removeClass('gallery__nav_360');
 			g.iosImgPreview.attr('src', src);
+			g.iosFullScrn.find('.psv-container').hide();
 			
 		}
 
