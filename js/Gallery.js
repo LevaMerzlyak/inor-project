@@ -56,8 +56,6 @@ function Gallery(sSelector) {
 
 	g.pagInit = function () {
 
-		console.log(navigator.platform);
-
 		if(g.current.hasClass('galleryPag__item_360')) {
 
 			g.show360(g.current);
@@ -180,7 +178,7 @@ function Gallery(sSelector) {
 
 		g.imgPreview.attr('src', '');
 
-		var iOS = !!navigator.platform && /iPad|iPhone|iPod|Win32/.test(navigator.platform);
+		var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 		if (iOS) {
 			g.imgNav.addClass('gallery__nav_360');
 		} else {
@@ -234,7 +232,7 @@ function Gallery(sSelector) {
 	$(document).ready(g.pagInit);
 	g.pag.click(g.showPreview);
 	g.fullScreen.on('click', function() {
-		var iOS = !!navigator.platform && /iPad|iPhone|iPod|Win32/.test(navigator.platform);
+		var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 		// if already full screen; exit
 		// else go fullscreen
 		if (iOS) {
