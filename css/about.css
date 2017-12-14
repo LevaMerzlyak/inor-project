@@ -29,7 +29,8 @@
 /*----- /Main -----*/
 .about {
   position: relative;
-  top: 15vh; }
+  top: 15vh;
+  height: 85vh; }
 
 .aboutTxt {
   display: -webkit-box;
@@ -126,6 +127,10 @@
   font-weight: 800;
   text-transform: uppercase;
   margin: 0; }
+
+@media only screen and (max-width: 1200px) {
+  .about {
+    height: auto; } }
 
 @media only screen and (max-width: 1025px) {
   .main,
