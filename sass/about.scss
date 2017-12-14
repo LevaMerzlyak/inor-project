@@ -64,6 +64,7 @@
 	font-weight: 700;
 	line-height: 1.4em;
 }
+
 .aboutGallery__wrap {
 	margin-top: 10%;
 	padding: 5% 5%;
@@ -116,6 +117,11 @@
 @media only screen and (max-width: 1200px) {
 	.about {
 		height: auto;
+	}
+	.gallery,
+	.nums {
+		position: relative;
+		top: 15vh;
 	}
 }
 @media only screen and (max-width: 1025px) {

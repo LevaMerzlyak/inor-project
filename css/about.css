@@ -130,7 +130,11 @@
 
 @media only screen and (max-width: 1200px) {
   .about {
-    height: auto; } }
+    height: auto; }
+  .gallery,
+  .nums {
+    position: relative;
+    top: 15vh; } }
 
 @media only screen and (max-width: 1025px) {
   .main,
