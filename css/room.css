@@ -109,7 +109,7 @@
   -webkit-animation: spin 0.8s ease infinite;
   animation: spin 0.8s ease infinite; }
 
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 1023px) {
   .room {
     height: auto; } }
 
@@ -117,7 +117,7 @@
   .room {
     top: 8vh; } }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 820px) {
   .room {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -129,7 +129,7 @@
     margin-top: 10%;
     padding-left: 0; } }
 
-@media only screen and (max-width: 740px) and (orientation: landscape) {
+@media only screen and (max-width: 820px) and (orientation: landscape) {
   .roomGallery {
     width: 65%; } }
 
