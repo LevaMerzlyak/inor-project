@@ -101,6 +101,11 @@
   -ms-transform: translateX(-50%);
   transform: translateX(-50%); }
 
+.discription {
+  position: relative;
+  top: 15vh;
+  margin-bottom: 10vh; }
+
 .gallery {
   position: relative;
   top: 15vh;
