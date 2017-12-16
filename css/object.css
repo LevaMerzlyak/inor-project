@@ -79,48 +79,20 @@
   line-height: 1.3em;
   font-weight: 800; }
 
-.sliderControl__btn {
-  display: inline-block;
-  position: relative;
-  height: 44px;
-  width: 60px;
-  background-color: #cc2a3a; }
-  .sliderControl__btn:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    height: 1em;
-    width: 2em;
-    background-repeat: no-repeat;
-    background-position: center; }
-
-.sliderControl__btn_prev {
-  margin-right: 1em; }
-  .sliderControl__btn_prev:before {
-    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0MTIgMjc1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MTIgMjc1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I0ZGRkZGRjt9Cjwvc3R5bGU+CjxnPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTQxMC44LDExNC43SDg3LjdsODEuOS04MS45TDEzNy43LDFMMS4yLDEzNy41TDEzNy43LDI3NGwzMS45LTMxLjlsLTgxLjktODEuOWgzMjMuMVYxMTQuN3ogTTQxMC44LDExNC43Ii8+CjwvZz4KPC9zdmc+); }
-
-.sliderControl__btn_next:before {
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0MTIgMjc1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MTIgMjc1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I0ZGRkZGRjt9Cjwvc3R5bGU+CjxnPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTEuMiwxNjAuM2gzMjMuMWwtODEuOSw4MS45bDMxLjksMzEuOWwxMzYuNS0xMzYuNUwyNzQuMywxbC0zMS45LDMxLjlsODEuOSw4MS45SDEuMlYxNjAuM3ogTTEuMiwxNjAuMyIvPgo8L2c+Cjwvc3ZnPg==); }
-
-.slider__wrap {
+.objectImg__wrap {
   width: 36%;
   position: absolute;
   top: -10vh;
   right: 7%; }
 
-.slider__item {
+.objectImg {
   position: relative;
   width: 100%;
   height: 0;
   padding-bottom: 110%;
   overflow: hidden; }
 
-.slider__img {
+.object__img {
   position: absolute;
   width: auto;
   height: 100%;
@@ -128,38 +100,6 @@
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%); }
-
-.owl-carousel .owl-item img {
-  width: auto; }
-
-.slider__pag {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-top: 1em; }
-
-.sliderPag {
-  margin: 0;
-  padding: 0 0.5em;
-  font-weight: 700;
-  -webkit-transition: all 0.25s;
-  -o-transition: all 0.25s;
-  transition: all 0.25s; }
-
-.sliderPag_current {
-  font-size: 2.5em;
-  color: #060606;
-  border-right: 2px solid #060606; }
-
-.sliderPag_all {
-  font-size: 2em;
-  color: #acacac; }
 
 .gallery {
   position: relative;
@@ -216,27 +156,25 @@
     line-height: 1.5em; }
   .slider__controls {
     text-align: center; }
-  .slider__wrap {
+  .objectImg__wrap {
     position: relative;
     top: 0;
     right: -5%;
     width: 90%;
     padding-bottom: 5%; }
-  .slider__item {
+  .objectImg {
     padding-bottom: 100%; } }
 
 @media only screen and (max-width: 770px) and (orientation: landscape) {
-  .slider__item {
+  .objectImg {
     padding-bottom: 50%; }
-  .slider__img {
+  .object__img {
     width: 100%;
     height: auto;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
-  .owl-carousel .owl-item img {
-    width: 100%; } }
+    transform: translate(-50%, -50%); } }
 
 @media only screen and (max-width: 770px) and (orientation: portrait) {
   .main {
