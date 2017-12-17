@@ -8,14 +8,9 @@
 	background-color: $txt;
 	padding-top: 3%;
 }
-.main__wrap {
+.section__wrap_main {
 	display: flex;
 	flex-wrap: wrap;
-	width: 100%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
 }
 .mainMap {
 	width: 100%;
@@ -120,12 +115,6 @@
 	}
 	.footer {
 		top: 0;
-	}
-	.main__wrap {
-		position: relative;
-		top: 0;
-		left: 0;
-		transform: translate(0%,0%);
 	}
 }
 @media only screen and (max-width: 770px) {

@@ -11,6 +11,14 @@ body {
 section {
   overflow: hidden; }
 
+.section__wrap {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
 .container {
   width: 86%;
   margin: 0 auto; }
@@ -1150,6 +1158,12 @@ section {
       -o-transition-delay: 1s;
       transition-delay: 1s; }
   /*----- /Mobile Menu -----*/
+  .section__wrap {
+    position: relative;
+    top: 0;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%); }
   .mainMap .map {
     height: 50vh; }
   .contacts,

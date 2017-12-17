@@ -11,6 +11,12 @@ body {
 section {
 	overflow: hidden;
 }
+.section__wrap {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
 
 .container {
 	width: 86%;
@@ -982,6 +988,13 @@ section {
 	}
 
 		/*----- /Mobile Menu -----*/
+
+	
+	.section__wrap {
+		position: relative;
+		top: 0;
+		transform: translateY(0%);
+	}
 
 	.mainMap {
 		.map {
