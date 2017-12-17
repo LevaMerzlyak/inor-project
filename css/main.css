@@ -560,20 +560,18 @@
   height: auto; }
 
 /*----- /Reputation -----*/
-.scroll__btn {
-  width: 100%;
-  background-color: #f4f3f3;
-  height: 10vh;
-  z-index: 98; }
-
+/*.scroll__btn {
+	width: 100%;
+	background-color: $bg;
+	height: 10vh;
+	z-index: 98;
+}
 .scrollBtn {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
-
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}*/
 .footer {
   height: 85vh; }
 
