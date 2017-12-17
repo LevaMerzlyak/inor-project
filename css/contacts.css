@@ -28,8 +28,6 @@
   width: 100%;
   padding-top: 0;
   padding-bottom: 0; }
-  .mainMap .map {
-    height: 40vh; }
 
 .mainTxt,
 .mainForm {
@@ -142,9 +140,7 @@
   .main__form textarea {
     height: 7em; }
   .footer {
-    top: 0; } }
-
-@media only screen and (max-width: 1199px) {
+    top: 0; }
   .main__wrap {
     position: relative;
     top: 0;

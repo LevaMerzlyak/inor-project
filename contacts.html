@@ -230,7 +230,7 @@
 			</section>
 		</div>
 
-		<div class="scrollifyClass" data-section-name="footer">
+		<div class="footy" data-section-name="footer">
 			<footer class="footer">
 				<div class="footer__nav">
 					<ul class="footerNav">
@@ -273,10 +273,11 @@
 				;
 
 			$.scrollify({
-				section : ".scrollifyClass",
+				section: ".scrollifyClass",
+				sectionName: false,
+				interstitialSection: ".footy",
 				scrollbars: true,
 				scrollSpeed: 1500,
-				standardScrollElements: ".slide__article, .main__video",
 				setHeights: false,
 				before: function(i,panels) {
 		    		var ref = panels[i].attr('data-section-name');

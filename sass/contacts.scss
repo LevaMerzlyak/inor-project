@@ -21,9 +21,6 @@
 	width: 100%;
 	padding-top: 0;
 	padding-bottom: 0;
-	.map {
-		height: 40vh;		
-	}
 }
 .mainTxt,
 .mainForm {
@@ -124,8 +121,6 @@
 	.footer {
 		top: 0;
 	}
-}
-@media only screen and (max-width: 1199px) {
 	.main__wrap {
 		position: relative;
 		top: 0;
