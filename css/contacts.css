@@ -4,16 +4,32 @@
 /*----- /Variables -----*/
 .main {
   height: 85vh;
-  margin-bottom: 10vh;
   overflow: hidden;
   position: relative;
   top: 15vh;
   background-color: #333333;
+  padding-top: 3%; }
+
+.main__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.mainMap {
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0; }
+  .mainMap .map {
+    height: 40vh; }
 
 .mainTxt,
 .mainForm {
@@ -22,7 +38,8 @@
   box-sizing: border-box;
   margin-left: 5%;
   margin-right: 5%;
-  margin-bottom: 5%; }
+  margin-bottom: 2%;
+  margin-top: 2%; }
 
 .mainTxt__head {
   color: #fff;
@@ -47,71 +64,6 @@
 .mainTxt__txt_sub {
   font-weight: 400; }
 
-.mainForm {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
-  .mainForm input[type=text],
-  .mainForm input[type=email],
-  .mainForm input[type=submit],
-  .mainForm textarea {
-    margin-top: 1em;
-    color: #333333;
-    font-weight: 700;
-    font-size: 1em;
-    line-height: 1.2em;
-    background-color: #494848;
-    border: none;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0.5em 1em; }
-    .mainForm input[type=text]:focus,
-    .mainForm input[type=email]:focus,
-    .mainForm input[type=submit]:focus,
-    .mainForm textarea:focus {
-      outline: none; }
-    .mainForm input[type=text]::-webkit-input-placeholder,
-    .mainForm input[type=email]::-webkit-input-placeholder,
-    .mainForm input[type=submit]::-webkit-input-placeholder,
-    .mainForm textarea::-webkit-input-placeholder {
-      color: #333333; }
-    .mainForm input[type=text]:-ms-input-placeholder,
-    .mainForm input[type=email]:-ms-input-placeholder,
-    .mainForm input[type=submit]:-ms-input-placeholder,
-    .mainForm textarea:-ms-input-placeholder {
-      color: #333333; }
-    .mainForm input[type=text]::-ms-input-placeholder,
-    .mainForm input[type=email]::-ms-input-placeholder,
-    .mainForm input[type=submit]::-ms-input-placeholder,
-    .mainForm textarea::-ms-input-placeholder {
-      color: #333333; }
-    .mainForm input[type=text]::placeholder,
-    .mainForm input[type=email]::placeholder,
-    .mainForm input[type=submit]::placeholder,
-    .mainForm textarea::placeholder {
-      color: #333333; }
-  .mainForm input[type=text],
-  .mainForm input[type=email] {
-    width: 48%; }
-  .mainForm input[type=text] {
-    margin-right: 3%; }
-  .mainForm textarea {
-    width: 100%;
-    resize: none; }
-  .mainForm input[type=submit] {
-    padding: 0.5em 6em  0.5em 1em;
-    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0MTIgMjc1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MTIgMjc1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzMzMzMzMzt9Cjwvc3R5bGU+CjxnPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTEuMiwxNjAuM2gzMjMuMWwtODEuOSw4MS45bDMxLjksMzEuOWwxMzYuNS0xMzYuNUwyNzQuMywxbC0zMS45LDMxLjlsODEuOSw4MS45SDEuMlYxNjAuM3ogTTEuMiwxNjAuMyIvPgo8L2c+Cjwvc3ZnPg==);
-    background-repeat: no-repeat;
-    background-position: 8em center;
-    background-size: 12%;
-    -webkit-transition: all 0.25s;
-    -o-transition: all 0.25s;
-    transition: all 0.25s; }
-    .mainForm input[type=submit]:hover {
-      background-position: 9em center; }
-
 .form__head {
   color: #494848;
   font-weight: 800;
@@ -120,14 +72,86 @@
   margin: 0;
   width: 100%; }
 
-.mainMap {
-  width: 100%; }
+.main__form input[type=text],
+.main__form input[type=email],
+.main__form input[type=submit],
+.main__form textarea {
+  margin-top: 1em;
+  color: #333333;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.2em;
+  background-color: #494848;
+  border: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.5em 1em; }
+  .main__form input[type=text]:focus,
+  .main__form input[type=email]:focus,
+  .main__form input[type=submit]:focus,
+  .main__form textarea:focus {
+    outline: none; }
+  .main__form input[type=text]::-webkit-input-placeholder,
+  .main__form input[type=email]::-webkit-input-placeholder,
+  .main__form input[type=submit]::-webkit-input-placeholder,
+  .main__form textarea::-webkit-input-placeholder {
+    color: #333333; }
+  .main__form input[type=text]:-ms-input-placeholder,
+  .main__form input[type=email]:-ms-input-placeholder,
+  .main__form input[type=submit]:-ms-input-placeholder,
+  .main__form textarea:-ms-input-placeholder {
+    color: #333333; }
+  .main__form input[type=text]::-ms-input-placeholder,
+  .main__form input[type=email]::-ms-input-placeholder,
+  .main__form input[type=submit]::-ms-input-placeholder,
+  .main__form textarea::-ms-input-placeholder {
+    color: #333333; }
+  .main__form input[type=text]::placeholder,
+  .main__form input[type=email]::placeholder,
+  .main__form input[type=submit]::placeholder,
+  .main__form textarea::placeholder {
+    color: #333333; }
+
+.main__form input[type=text],
+.main__form input[type=email] {
+  width: 48%; }
+
+.main__form input[type=text] {
+  margin-right: 3%; }
+
+.main__form textarea {
+  width: 100%;
+  resize: none; }
+
+.main__form input[type=submit] {
+  padding: 0.5em 6em  0.5em 1em;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0MTIgMjc1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MTIgMjc1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzMzMzMzMzt9Cjwvc3R5bGU+CjxnPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTEuMiwxNjAuM2gzMjMuMWwtODEuOSw4MS45bDMxLjksMzEuOWwxMzYuNS0xMzYuNUwyNzQuMywxbC0zMS45LDMxLjlsODEuOSw4MS45SDEuMlYxNjAuM3ogTTEuMiwxNjAuMyIvPgo8L2c+Cjwvc3ZnPg==);
+  background-repeat: no-repeat;
+  background-position: 8em center;
+  background-size: 12%;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s; }
+  .main__form input[type=submit]:hover {
+    background-position: 9em center; }
 
 @media only screen and (max-width: 1199px) {
   .main {
-    height: auto; }
-  .mainForm textarea {
-    height: 7em; } }
+    height: auto;
+    margin-bottom: 0; }
+  .main__form textarea {
+    height: 7em; }
+  .footer {
+    top: 0; } }
+
+@media only screen and (max-width: 1199px) {
+  .main__wrap {
+    position: relative;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    transform: translate(0%, 0%); } }
 
 @media only screen and (max-width: 770px) {
   .mainTxt,
@@ -135,18 +159,30 @@
     width: 100%; } }
 
 @media only screen and (max-width: 770px) and (orientation: portrait) {
+  .main {
+    padding-top: 5%; }
   .mainMap .map {
-    height: 50vh; } }
+    height: 50vh; }
+  .mainTxt {
+    margin-top: 5%; }
+  .mainForm {
+    margin-bottom: 5%; } }
+
+@media only screen and (max-width: 820px) and (orientation: landscape) {
+  .mainMap .map {
+    height: 70vh; } }
 
 @media only screen and (max-width: 600px) {
   .main {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .footer {
+    margin-top: 0; } }
 
 @media only screen and (max-width: 670px) {
-  .mainForm input[type=text],
-  .mainForm input[type=email] {
+  .main__form input[type=text],
+  .main__form input[type=email] {
     width: 100%; }
-  .mainForm input[type=text] {
+  .main__form input[type=text] {
     margin-right: 0; } }
 
 @media only screen and (max-width: 770px) and (orientation: portrait) {

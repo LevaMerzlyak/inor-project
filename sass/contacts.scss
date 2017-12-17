@@ -2,13 +2,28 @@
 
 .main {
 	height: 85vh;
-	margin-bottom: 10vh;
 	overflow: hidden;
 	position: relative;
 	top: 15vh;
 	background-color: $txt;
+	padding-top: 3%;
+}
+.main__wrap {
 	display: flex;
 	flex-wrap: wrap;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.mainMap {
+	width: 100%;
+	padding-top: 0;
+	padding-bottom: 0;
+	.map {
+		height: 40vh;		
+	}
 }
 .mainTxt,
 .mainForm {
@@ -16,7 +31,8 @@
 	box-sizing: border-box;
 	margin-left: 5%;
 	margin-right: 5%;
-	margin-bottom: 5%;
+	margin-bottom: 2%;
+	margin-top: 2%;
 }
 .mainTxt__head {
 	color: $txtMain;
@@ -43,9 +59,15 @@
 .mainTxt__txt_sub {
 	font-weight: 400;
 }
-.mainForm {
-	display: flex;
-	flex-wrap: wrap;
+.form__head {
+	color: $formHead;
+	font-weight: 800;
+	font-size: 1.7em;
+	text-transform: uppercase;
+	margin: 0;
+	width: 100%;
+}
+.main__form {
 	input[type=text],
 	input[type=email],
 	input[type=submit],
@@ -89,25 +111,26 @@
 		}
 	}
 }
-.form__head {
-	color: $formHead;
-	font-weight: 800;
-	font-size: 1.7em;
-	text-transform: uppercase;
-	margin: 0;
-	width: 100%;
-}
-.mainMap {
-	width: 100%;
-}
 @media only screen and (max-width: 1199px) {
 	.main {
 		height: auto;
+		margin-bottom: 0;
 	}
-	.mainForm {
+	.main__form {
 		textarea {
 			height: 7em;
 		}
+	}
+	.footer {
+		top: 0;
+	}
+}
+@media only screen and (max-width: 1199px) {
+	.main__wrap {
+		position: relative;
+		top: 0;
+		left: 0;
+		transform: translate(0%,0%);
 	}
 }
 @media only screen and (max-width: 770px) {
@@ -117,17 +140,36 @@
 	}
 }
 @media only screen and (max-width: 770px) and (orientation:portrait) {
+	.main {
+		padding-top: 5%;
+	}
 	.mainMap .map {
 		height: 50vh;
+	}
+	.mainTxt {
+		margin-top: 5%;
+	}
+	.mainForm {
+		margin-bottom: 5%;
+	}
+}
+@media only screen and (max-width: 820px) and (orientation: landscape) {
+	.mainMap {
+		.map {
+			height: 70vh;
+		}
 	}
 }
 @media only screen and (max-width: 600px) {
 	.main {
 		margin-bottom: 0;
 	}
+	.footer {
+		margin-top: 0;
+	}
 }
 @media only screen and (max-width: 670px) {
-	.mainForm{
+	.main__form{
 		input[type=text],
 		input[type=email] {
 			width: 100%;
