@@ -509,8 +509,8 @@ section {
 	margin: 0;
 }
 .footer__nav {
-	margin-top: 5%;
-	margin-bottom: 5%;
+	padding-top: 5%;
+	padding-bottom: 5%;
 }
 .footerNav {
 	padding: 0;
@@ -991,24 +991,15 @@ section {
 
 	.contacts,
 	.footer__nav {
-		padding: 0 5%;
+		padding-left: 5%;
+		padding-right: 5%;
 	}
 	.footer__contacts {
 		flex: 1 100%;
 		margin-bottom: 1em;
 	}
 	.footer {
-		margin-top: 20vh;
-	}
-}
-@media only screen and (max-width: 950px) {
-	.footer {
 		margin-top: 15vh;
-	}
-}
-@media only screen and (max-width: 769px) {
-	.footer {
-		margin-top: 10vh;
 	}
 }
 @media only screen and (max-width: 740px) and (orientation: landscape) {
@@ -1080,5 +1071,8 @@ section {
 	.menuMobile__wrap {
 		height: 92vh;
 		max-height: 92vh;
+	}
+	.footer {
+		margin-top: 8vh;
 	}
 }

@@ -605,8 +605,8 @@ section {
   margin: 0; }
 
 .footer__nav {
-  margin-top: 5%;
-  margin-bottom: 5%; }
+  padding-top: 5%;
+  padding-bottom: 5%; }
 
 .footerNav {
   padding: 0;
@@ -1154,22 +1154,15 @@ section {
     height: 50vh; }
   .contacts,
   .footer__nav {
-    padding: 0 5%; }
+    padding-left: 5%;
+    padding-right: 5%; }
   .footer__contacts {
     -webkit-box-flex: 1;
     -ms-flex: 1 100%;
     flex: 1 100%;
     margin-bottom: 1em; }
   .footer {
-    margin-top: 20vh; } }
-
-@media only screen and (max-width: 950px) {
-  .footer {
     margin-top: 15vh; } }
-
-@media only screen and (max-width: 769px) {
-  .footer {
-    margin-top: 10vh; } }
 
 @media only screen and (max-width: 740px) and (orientation: landscape) {
   .mainMap .map {
@@ -1221,4 +1214,6 @@ section {
     top: 8vh; }
   .menuMobile__wrap {
     height: 92vh;
-    max-height: 92vh; } }
+    max-height: 92vh; }
+  .footer {
+    margin-top: 8vh; } }
