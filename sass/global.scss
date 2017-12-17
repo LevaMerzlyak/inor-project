@@ -1023,9 +1023,6 @@ section {
 	}
 }
 @media only screen and (max-width: 600px) {
-	.contacts {
-		margin-bottom: 10vh;
-	}
 	.footer__nav {
 		display: none;
 	}
@@ -1038,6 +1035,11 @@ section {
 		padding-bottom: 56.25%; /* 16:9 */
 		padding-top: 25px;
 		height: 0;
+	}
+}
+@media only screen and (max-width: 1020px) {
+	.footer {
+		margin-top: 0;
 	}
 }
 @media only screen and (max-width: 740px) and (orientation: portrait) {
@@ -1084,8 +1086,5 @@ section {
 	.menuMobile__wrap {
 		height: 92vh;
 		max-height: 92vh;
-	}
-	.footer {
-		margin-top: 8vh;
 	}
 }
