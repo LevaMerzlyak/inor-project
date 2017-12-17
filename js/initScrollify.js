@@ -17,6 +17,7 @@ $(function() {
 
 	$.scrollify({
 		section : ".scrollifyClass",
+        sectionName: false,
 		scrollbars: true,
 		scrollSpeed: 1500,
 		standardScrollElements: ".slide__article, .main__video",
