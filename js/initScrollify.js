@@ -17,7 +17,7 @@ $(function() {
 
 	$.scrollify({
 		section : ".scrollifyClass",
-        sectionName: false,
+        interstitialSection: ".footy",
 		scrollbars: true,
 		scrollSpeed: 1500,
 		standardScrollElements: ".slide__article, .main__video",
