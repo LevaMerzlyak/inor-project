@@ -49,13 +49,10 @@
 	height: 85vh;
 	position: relative;
 	top: 15vh;
-	margin-bottom: 10vh;
 }
 .object__wrap {
 	background-color: $bgObj;
 	position: relative;
-	top: 10vh;
-	min-height: 75vh;
 }
 .objectTxt {
 	box-sizing: border-box;
@@ -105,12 +102,11 @@
 .discription {
 	position: relative;
 	top: 15vh;
-	margin-bottom: 10vh;
 }
 .gallery {
 	position: relative;
 	top: 15vh;
-	margin-bottom: 10vh;
+	height: 85vh;
 }
 .objectGallery__wrap {
 	padding: 5% 5%;
@@ -127,6 +123,21 @@
 }
 .logo360 {
 	height: 100%;
+}
+@media only screen and (max-width: 1199px) {
+	.gallery {
+		height: auto;
+	}
+	.section__wrap_object {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.discription {
+		padding-left: 5%;
+		padding-right: 5%;
+		padding-bottom: 5%;
+	}
 }
 @media only screen and (max-width: 1025px) {
 	.main,
@@ -153,9 +164,11 @@
 		margin-top: 0;
 	}
 }
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 820px) {
+	.main {
+		margin-bottom: 0;
+	}
 	.object {
-		margin-bottom: 10vh;
 		height: auto;
 	}
 	.object__wrap {
@@ -168,8 +181,10 @@
 	.object__txt {
 		line-height: 1.5em;
 	}
-	.slider__controls {
-		text-align: center;
+	.section__wrap_object {
+		position: relative;
+		top: 0;
+		transform: translateY(0%);
 	}
 	.objectImg__wrap {
 		position: relative;
@@ -182,15 +197,30 @@
 		padding-bottom: 100%;
 	}
 }
-@media only screen and (max-width: 770px) and (orientation: landscape) {
+@media only screen and (max-width: 820px) and (orientation: landscape) {
 	.objectImg {
-		padding-bottom: 50%;
+		padding-bottom: 40%;
 	}
 	.object__img {
 		width: 100%;
 		height: auto;
 		top: 50%;
 		transform: translate(-50%,-50%);
+	}
+	.objectGallery {
+		width: 55%;
+	}
+	.logo360__wrap {
+		width: 35%;
+		padding: 0 0 0 10%;
+	}
+	.logo360 {
+		background-position: center;
+	}
+}
+@media only screen and (max-width: 770px) and (orientation: landscape) {
+	.objectImg {
+		padding-bottom: 50%;
 	}
 }
 @media only screen and (max-width: 770px) and (orientation: portrait) {
