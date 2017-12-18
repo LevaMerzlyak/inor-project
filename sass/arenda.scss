@@ -72,6 +72,11 @@
 	z-index: -1;
 	transition: all 0.25s;
 }
+.arendaTxt {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
 .arenda__txt_scroll {
 	background-color: $bg;
 }
@@ -80,6 +85,7 @@
 	font-weight: 800;
 	font-size: 3em;
 	text-transform: uppercase;
+	margin-top: 0;
 }
 .arenda__table {
 	width: 100%;
@@ -110,9 +116,6 @@
 	font-weight: 400;
 	line-height: 1.3em;
 	width: 33%;
-	padding-left: 7%;
-	padding-right: 7%;
-	padding-top: 3%;
 	box-sizing: border-box;
 	border-right: 1px solid $svgTxt;
 	&:first-child {
@@ -138,17 +141,18 @@
 .room__val {
 	font-weight: 700;
 }
-.roomImg__wrap {
-	position: absolute;
-	right: 0;
-	width: 79%;
-	margin-top: 1em;
+.room__num,
+.room__floor,
+.room__txt,
+.roomImg {
+	margin-left: 25%;
 }
 .roomImg {
 	position: relative;
-	width: 100%;
+	width: 75%;
+	margin-top: 1em;
 	height: 0;
-	padding-bottom: 56.25%;
+	padding-bottom: 42.2%;
 	overflow: hidden;
 }
 .room__img {
@@ -193,45 +197,39 @@
 	writing-mode: tb;
 	glyph-orientation-vertical: 0;
 }
-
-@media only screen and (max-width: 1025px) {
-	.arenda {
-		height: 65vh;
-		margin-bottom: 10vh;
+@media only screen and (max-width: 1999px) {
+	.section__wrap_arenda {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
 	}
-	.arenda__video {
-		height: auto;
-	}
-	.arendaVideo__cover {
-		width: 100%;
-		height: auto;
-		position: relative;
-		top: 0;
-		left: 0;
-		transform: translate(0%,0%);
-	}
-	.arenda__txt {
-		height: auto;
-		padding-bottom: 3%;
-	}
-
 	.rooms {
 		height: auto;
 		margin-bottom: 10vh;
-	}
+	}	
 	.rooms__wrap {
 		width: 97%;
 		margin: 0 auto;
 	}
-	.room__wrap {
-		height: auto;
-		padding-bottom: 30%;
-	}
 	.arendaSvg {
 		display: none;
 	}
+	.room__wrap {
+		height: auto;
+		padding-top: 10%;
+		padding-bottom: 10%;
+	}
+	.footer {
+		top: 0;
+	}
 }
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 1025px) {
+	.arenda {
+		height: 85vh;
+		margin-bottom: 10vh;
+	}
+}
+@media only screen and (max-width: 820px) {
 	.arenda {
 		height: auto;
 	}
@@ -239,18 +237,32 @@
 		position: relative;
 		width: 94%;
 		padding-left: 7%;
+		padding-bottom: 5%;
 		z-index: 1;
 	}
-}
-@media only screen and (max-width: 740px) {
-	.room__wrap {
-		padding-left: 1.5%;
-		padding-right: 1.5%;
+	.section__wrap_arenda {
+		position: relative;
+		top: 0;
+		transform: translateY(0%);
 	}
-	.roomImg__wrap {
-		right: 50%;
-		transform: translateX(50%);
+	.arenda__head {
+		margin: 0.67em 0;
+	}
+	.room__num,
+	.room__floor,
+	.room__txt,
+	.roomImg {
+		margin-left: 10%;
+	}
+	.roomImg {
 		width: 90%;
+		padding-bottom: 50.63%;
+	}
+}
+@media only screen and (max-width: 820px) and (orientation: landscape) {
+	.arendaVideo__cover {
+		width: 100%;
+		height: auto;
 	}
 }
 @media only screen and (max-width: 650px) {
@@ -262,26 +274,35 @@
 		justify-content: space-around;
 	}
 	.room__wrap {
-		padding-left: 0;
-		padding-right: 0;
-		padding-bottom: 70%;
-		padding-top: 10%;
 		border-bottom: 1px solid $svgTxt;
 		width: 94%;
 		border-right: none;
+		padding-bottom: 3%;
+		padding-top: 3%;
 		&:first-child {
 			border-left: none;
 		}
 	}
-	.roomImg__wrap {
-		right: 100%;
-		transform: translateX(100%);
+	.room__num,
+	.room__floor,
+	.room__txt,
+	.roomImg {
+		margin-left: 0;
+	}
+	.roomImg {
 		width: 100%;
+		padding-bottom: 56.25%;
+	}
+	.footer {
+		margin-top: 15vh;
 	}
 }
 @media only screen and (max-width: 481px) {
 	.arendaTable__txt {
 		display: block;
+	}
+	.footer {
+		margin-top: 0;
 	}
 }
 @media only screen and (max-width: 420px) {
@@ -292,9 +313,13 @@
 	.arenda__head {
 		font-size: 2.7em;
 	}
+	.room__wrap {
+		padding-bottom: 5%;
+	}
 }
 @media only screen and (max-width: 770px) and (orientation: portrait) {
-	.arenda {
+	.arenda,
+	.rooms {
 		top: 8vh;
 	}
 }
