@@ -51,7 +51,6 @@ function SliderInit(sSelector) {
 
         }, 800);
         i.article.addClass('active');
-        console.log(i.opened);
 
     }
 
@@ -60,14 +59,20 @@ function SliderInit(sSelector) {
         var slide = i.objects.find('.objectSlider__item');
         
         slide.removeClass('opened');
-        //i.opened.removeClass('opened');
         i.article.removeClass('active');
         i.backBtn.removeClass('opened');
         $('body').css('overflow', '');
         
 
     }
-    
-    i.backBtn.click(i.hideSlide);
+    window.addEventListener("hashchange", function (event) {
+        var hash = window.location.hash.replace('#', '');
+        console.log(hash);
+        if (hash !== 'objects' ) {
+            i.showSlide();
+        } else {
+            i.hideSlide();
+        }
+    });
 
 };
