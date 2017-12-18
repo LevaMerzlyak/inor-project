@@ -205,7 +205,7 @@
   writing-mode: tb;
   glyph-orientation-vertical: 0; }
 
-@media only screen and (max-width: 1999px) {
+@media only screen and (max-width: 1199px) {
   .section__wrap_arenda {
     position: absolute;
     top: 50%;
