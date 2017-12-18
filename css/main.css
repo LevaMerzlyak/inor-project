@@ -678,7 +678,12 @@
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    transform: translateX(-50%); } }
+    transform: translateX(-50%); }
+  .info__btn_slide {
+    left: 0;
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%); } }
 
 @media only screen and (max-width: 770px) and (orientation: portrait) {
   .main {
