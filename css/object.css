@@ -126,6 +126,10 @@
 .logo360 {
   height: 100%; }
 
+@media only screen and (min-width: 1500px) {
+  .object__wrap {
+    padding-bottom: 10%; } }
+
 @media only screen and (max-width: 1199px) {
   .gallery {
     height: auto; }
@@ -165,6 +169,8 @@
     height: auto; }
   .object__wrap {
     top: 0; }
+  .object__head {
+    margin-top: 0.67em; }
   .objectTxt {
     width: 100%;
     padding-right: 5%; }
