@@ -1095,10 +1095,11 @@ section {
 		position: relative;
 		left: 0;
 		transform: translateX(0%);
+		z-index: 0;
 		.scrollBtn {
 			position: absolute;
 			left: 50%;
-			bottom: 0;
+			top: 50%;
 			transform: translateX(-50%);
 		}
 	}
