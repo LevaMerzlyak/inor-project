@@ -690,7 +690,7 @@
     top: 8vh; }
   .main,
   .main__bg {
-    height: 92vh; } }
+    height: 75vh; } }
 
 @media only screen and (max-width: 420px) and (orientation: portrait) {
   .objectsSvg__wrap {
