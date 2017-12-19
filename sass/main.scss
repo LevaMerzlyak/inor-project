@@ -665,6 +665,9 @@
 @media only screen and (max-width: 770px) and (orientation: portrait) {
 	.main {
 		top: 8vh;
+		width: 94%;
+		margin-left: 3%;
+		margin-right: 3%;
 	}
 	.main,
 	.main__bg {
