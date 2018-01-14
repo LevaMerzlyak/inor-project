@@ -28,4 +28,11 @@
 	font-weight: 900;
 	font-style: normal;
 }
-
+/*-----Code Pro Font-Family-----*/
+@font-face {
+	font-family: 'Code Pro';
+	src: url('fonts/Code Pro.eot');
+	src: local('☺'), url('fonts/Code Pro.woff') format('woff'), url('fonts/Code Pro.ttf') format('truetype'), url('fonts/Code Pro.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
