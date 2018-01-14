@@ -29,6 +29,13 @@ section {
   color: #333333;
   font-weight: 400; }
 
+.main__head {
+  font-family: 'Code Pro';
+  font-size: 3.6em;
+  color: #434242;
+  text-transform: uppercase;
+  margin: 0; }
+
 .bg_overlay:before {
   content: "";
   position: absolute;
