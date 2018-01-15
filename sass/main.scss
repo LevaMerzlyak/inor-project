@@ -138,6 +138,45 @@
 }
 	/*----- /Objects Txt -----*/
 
+	/*----- Slider Navigation -----*/
+.slider__nav {
+	position: relative;
+	z-index: 99;
+}
+.slideNav__btn {
+	display: inline-block;
+	float: left;
+	line-height: 44px;
+	height: 44px;
+	text-decoration: none;
+	color: $txtSub;
+	margin-right: 30px;
+}
+.slideNav__btn:last-child {
+	margin-right: 0;
+}
+.slideNav__btn_next,
+.slideNav__btn_prev {
+	width: 35px;
+
+}
+	/*----- /Slider Navigation -----*/
+
+	/*----- Slider Pagination -----*/
+.slider__pag {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2px solid $pagBB;
+	padding-top: 3%;
+}
+.sliderPag__item {
+	color: $txtSub;
+	font-size: 1.5em;
+	line-height: 1.25em;
+	text-decoration: none;
+}
+	/*----- /Slider Pagination -----*/
+
 	/*----- Slider -----*/
 .objectSlider__item {
 	padding-left: 12.5%;
@@ -253,30 +292,6 @@
 }
 
 	/*----- /Slide Articles -----*/
-
-	/*----- Slider Navigation -----*/
-.slider__nav {
-	position: relative;
-	z-index: 99;
-}
-.slideNav__btn {
-	display: inline-block;
-	float: left;
-	line-height: 44px;
-	height: 44px;
-	text-decoration: none;
-	color: $txtSub;
-	margin-right: 30px;
-}
-.slideNav__btn:last-child {
-	margin-right: 0;
-}
-.slideNav__btn_next,
-.slideNav__btn_prev {
-	width: 35px;
-
-}
-	/*----- /Slider Navigation -----*/
 
 	/*----- Slider Animations -----*/
 .objectSlider__item.opened {

@@ -327,13 +327,22 @@
 									<a href="#" class="slideNav__btn slideNav__btn_prev arrow_left"></a>
 									<a href="#" class="slideNav__btn slideNav__btn_next arrow_right"></a>
 								</div>
+								<div class="slider__pag">
+									<a href="#one" class="sliderPag__item">1</a>
+									<a href="#two" class="sliderPag__item">2</a>
+									<a href="#three" class="sliderPag__item">3</a>
+									<a href="#four" class="sliderPag__item">4</a>
+									<a href="#five" class="sliderPag__item">5</a>
+									<a href="#six" class="sliderPag__item">6</a>
+									<a href="#seven" class="sliderPag__item">7</a>
+								</div>
 							</div>
 						</div>						
 					</div>
 
 					<div class="objectsSlider__wrap col span_8_of_14">
 						<div class="objectSlider owl-carousel">
-							<div class="objectSlider__item">
+							<div class="objectSlider__item" data-hash="one">
 								<div class="slide__cover">
 									<div class="slide__bg"></div>
 									<a class="slide__head" href="#grandPrix">
@@ -341,7 +350,7 @@
 									</a>
 								</div>
 							</div>
-							<div class="objectSlider__item">
+							<div class="objectSlider__item"  data-hash="two">
 								<div class="slide__cover">
 									<div class="slide__bg"></div>
 									<a class="slide__head" href="#pankovsky">
@@ -349,7 +358,7 @@
 									</a>
 								</div>
 							</div>
-							<div class="objectSlider__item">
+							<div class="objectSlider__item"  data-hash="three">
 								<div class="slide__cover">
 									<div class="slide__bg"></div>
 									<a class="slide__head" href="#dynasty">
@@ -357,7 +366,7 @@
 									</a>
 								</div>
 							</div>
-							<div class="objectSlider__item">
+							<div class="objectSlider__item" data-hash="four">
 								<div class="slide__cover">
 									<div class="slide__bg"></div>
 									<a class="slide__head" href="#aquamarine">
@@ -365,7 +374,7 @@
 									</a>
 								</div>
 							</div>
-							<div class="objectSlider__item">
+							<div class="objectSlider__item" data-hash="five">
 								<div class="slide__cover">
 									<div class="slide__bg"></div>
 									<a class="slide__head" href="#eurocom">
@@ -374,9 +383,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
-
-					
+					</div>					
 				</div>
 			</section>
 		</div>
@@ -603,6 +610,8 @@
 				smartSpeed: 2000,
 				mouseDrag: false,
 				touchDrag: false,
+				URLhashListener: true,
+                startPosition: 'URLHash',
 				onInitialize: i.init,
 				responsiveClass: true,
 				responsive: {

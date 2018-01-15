@@ -68,7 +68,7 @@ function SliderInit(sSelector) {
     window.addEventListener("hashchange", function (event) {
         var hash = window.location.hash.replace('#', '');
         console.log(hash);
-        if (hash !== 'objects' ) {
+        if (hash !== 'objects' && hash !== 'one' && hash !== 'two' && hash !== 'three' && hash !== 'four' && hash !== 'five' && hash !== 'six' && hash !== 'seven') {
             i.showSlide();
         } else {
             i.hideSlide();
