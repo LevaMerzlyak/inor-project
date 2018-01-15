@@ -75,41 +75,8 @@
 	box-sizing: border-box;
 	position: relative;
 	top: 15vh;
-	height: 85vh;
-}
-.objectsSvg__wrap {
-	position: relative;
-	width: 100%;
-	height: 0;
-	padding-bottom: 20%;
-	z-index: -1;
-}
-.objects__svg {
-	position: absolute;
-	top: -20%;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-.objectsSvg__txt {
-	font-family: 'ProximaNova';
-	font-weight: 800;
-	font-size: 170px;
-	fill: $svgTxt;
-}
-.objects__svg_mobile {
-	display: none;
-	position: absolute;
-	top: -35%;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-.objectsSvg__txt_mobile {
-	font-family: 'ProximaNova';
-	font-weight: 800;
-	font-size: 70px;
-	fill: $svgTxt;
+	height: 70vh;
+	margin-bottom: 15vh;
 }
 
 	/*----- Back Button -----*/
@@ -161,16 +128,24 @@
 }
 	/*----- /Back Button -----*/
 
+	/*----- Objects Txt -----*/
+.objectsTxt__wrap {
+	position: relative;
+	height: 70vh;
+}
+.objectsTxt {
+	padding: 3% 7%;
+}
+	/*----- /Objects Txt -----*/
+
 	/*----- Slider -----*/
 .objectSlider__item {
-	margin-bottom: 20px;
-	margin-top: 20px;
+	padding-left: 12.5%;
 }
 .slide__cover {
 	position: relative;
 	width: 100%;
-	padding-bottom: 56.25%;
-	height: 0;
+	height: 70vh;
 }
 .slide__bg {
 	position: absolute;
@@ -183,7 +158,7 @@
 .slide__head {
 	position: absolute;
 	top: 60%;
-	left: -10%;
+	left: -14%;
 	background-color: $red;
 	text-decoration: none;
 	padding-left: 5%;
@@ -215,7 +190,6 @@
 
 	/*----- Slide Articles -----*/
 .objectSlider {
-	margin-top: -14%;
 }
 .slide__article {
 	position: fixed;
@@ -282,7 +256,6 @@
 
 	/*----- Slider Navigation -----*/
 .slider__nav {
-	float: right;
 	position: relative;
 	z-index: 99;
 }
@@ -373,38 +346,20 @@
 
 /*----- Company -----*/
 .company {
-	height: 85vh;
+	height: 70vh;
 	position: relative;
 	top: 15vh;
-}
-.companySvg__wrap {
-	position: relative;
-	width: 90%;
-	height: 0;
-	padding-bottom: 20%;
-	z-index: -1;
-}
-.company__svg {
-	position: absolute;
-	top: -50%;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-.companySvg__txt {
-	font-family: 'ProximaNova';
-	font-weight: 800;
-	font-size: 209px;
-	fill: $svgTxt;
+	margin-bottom: 15vh;
 }
 .company__txt {
-	margin-top: -10%;
+	position: relative;
+	height: 100%;
 }
 .companyTxt {	
-	padding: 3% 5%;
+	padding: 3% 7%;
 }
 .main__txt_company {
-	margin-bottom: 1.5em;
+	margin-bottom: 2em;
 }
 .info__btn {
 	text-decoration: none;
@@ -439,11 +394,11 @@
 }
 .company__video {
 	position: relative;
-	margin-top: -12%;
+	height: 100%;
 }
 .companyVideo__cover {
-	width: 100%;
-	height: auto;
+	width: auto;
+	height: 100%;
 }
 .play__btn_company {
 	top: 50%;
