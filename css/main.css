@@ -533,7 +533,17 @@
 	transform: translate(-50%,-50%);
 }*/
 .footer {
-  height: auto; }
+  height: 85vh; }
+
+.mainMap {
+  background-color: transparent;
+  padding-top: 0;
+  padding-bottom: 0; }
+  .mainMap .map {
+    width: 100%;
+    height: 70vh;
+    margin: 0 auto;
+    display: block; }
 
 /*----- Mobile -----*/
 @media only screen and (max-width: 1200px) {
