@@ -35,7 +35,8 @@ section {
   color: #434242;
   text-transform: uppercase;
   margin: 0;
-  line-height: 1em; }
+  line-height: 1em;
+  letter-spacing: 0.1em; }
 
 .bg_overlay:before {
   content: "";
