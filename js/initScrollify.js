@@ -8,6 +8,7 @@ $(function() {
 		,reputation = $('.reputation')
 		,reputationGrey = reputation.find('.reputation__txt')
 		,reputationWht = reputation.find('.reputationSlider')
+        ,footer = $('.footer')
 		;
 
 	$.scrollify({
@@ -50,10 +51,12 @@ $(function() {
     			companyVid.addClass('animated2').addClass('fadeInUp');
     		}
     		if(ref === 'reputation') {
-    			reputationGrey.addClass('animated').addClass('fadeInUp');
-    			reputationWht.addClass('animated2').addClass('fadeInUpBig');
+    			reputationGrey.addClass('animated2').addClass('fadeInUp');
+    			reputationWht.addClass('animated2').addClass('fadeInUp');
     		}
     		if(ref === 'footer') {
+
+                footer.addClass('animated2').addClass('fadeInUp');
 
                 $('.scrollBtn').addClass('scrollBtn_hidden');
                 setTimeout(function () {
@@ -79,8 +82,11 @@ $(function() {
                 companyVid.removeClass('animated2').removeClass('fadeInUp');
             }
             if(ref === 'company') {
-                reputationGrey.removeClass('animated').removeClass('fadeInUp');
-                reputationWht.removeClass('animated2').removeClass('fadeInUpBig');
+                reputationGrey.removeClass('animated2').removeClass('fadeInUp');
+                reputationWht.removeClass('animated2').removeClass('fadeInUp');
+            }
+            if(ref === 'reputation') {
+                footer.removeClass('animated2').removeClass('fadeInUp');
             }
 
     	},
