@@ -582,13 +582,31 @@
     height: auto;
     overflow: visible; }
   .slider__nav {
-    padding-right: 3%; } }
+    padding-right: 3%; }
+  .main__head {
+    padding-left: 7%; }
+  .main__head_reputation {
+    padding-left: 0; }
+  .objectsTxt__wrap,
+  .company__txt {
+    padding-top: 6%; }
+  .reputation__txt {
+    padding-top: 4%;
+    padding-bottom: 4%; }
+  .reputationSlider,
+  .reputation__txt,
+  .objectsTxt__wrap {
+    height: auto; }
+  .mainMap .map {
+    height: 50vh; } }
 
 @media only screen and (max-width: 1025px) {
   .objects,
   .company,
   .reputation {
-    margin-top: 10vh; } }
+    margin-top: 10vh; }
+  .reputation__logos {
+    padding: 10% 2%; } }
 
 @media only screen and (max-width: 820px) {
   /*----- Objects -----*/
