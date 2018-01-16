@@ -328,7 +328,7 @@
 									<a href="#" class="slideNav__btn slideNav__btn_next arrow_right"></a>
 								</div>
 								<div class="slider__pag">
-									<a href="#one" class="sliderPag__item">1</a>
+									<a href="#one" class="sliderPag__item sliderPag__item_active">1</a>
 									<a href="#two" class="sliderPag__item">2</a>
 									<a href="#three" class="sliderPag__item">3</a>
 									<a href="#four" class="sliderPag__item">4</a>
@@ -605,8 +605,8 @@
 				//loop: true,
 				center: true,
 				items: 1,
-				//margin: 150,
-				//stagePadding: 250,
+				margin: 50,
+				stagePadding: 0,
 				smartSpeed: 2000,
 				mouseDrag: false,
 				touchDrag: false,
@@ -614,7 +614,7 @@
                 startPosition: 'URLHash',
 				onInitialize: i.init,
 				responsiveClass: true,
-				responsive: {
+				/*responsive: {
 					0: {
 						margin: 20,
 						stagePadding: 20
@@ -624,14 +624,10 @@
 						stagePadding: 75
 					},
 					800: {
-						margin: 100,
-						stagePadding: 150
-					},
-					1200: {
 						margin: 50,
 						stagePadding: 0
 					}
-				}
+				}*/
 			});
 		});
 		i.prev.click(function(event) {

@@ -1,18 +1,13 @@
 $(function() {
 	var objects 		= $('.objects')
-		,objectSvg 		= objects.find('.objectsSvg__wrap')
 		,objectSlider 	= objects.find('.objectSlider')
-		,objectNav 		= objects.find('.slider__nav')
+		,objectTxt 		= objects.find('.objectsTxt__wrap')
 		,company 	= $('.company')
-		,companySvg = company.find('.companySvg__wrap')
 		,companyTxt = company.find('.company__txt')
 		,companyVid = company.find('.company__video')
 		,reputation = $('.reputation')
 		,reputationGrey = reputation.find('.reputation__txt')
-		,reputationSvg = reputation.find('.reputationSvg__wrap')
-		,reputationTxt = reputation.find('.main__txt_reputation')
 		,reputationWht = reputation.find('.reputationSlider')
-		,reputationLogos = reputation.find('.reputationLogo__wrap')
 		;
 
 	$.scrollify({
@@ -47,12 +42,10 @@ $(function() {
     		}
 
     		if(ref === 'objects') {
-    			objectSvg.addClass('animated').addClass('fadeInUp');
     			objectSlider.addClass('animated2').addClass('fadeInUp');
-    			objectNav.addClass('animated2').addClass('fadeInUpBig');
+    			objectTxt.addClass('animated2').addClass('fadeInUp');
     		}
     		if(ref === 'company') {
-    			companySvg.addClass('animated').addClass('fadeInUp');
     			companyTxt.addClass('animated2').addClass('fadeInUp');
     			companyVid.addClass('animated2').addClass('fadeInUp');
     		}
@@ -78,12 +71,10 @@ $(function() {
             var ref = panels[i].attr('data-section-name');
 
             if(ref === 'main') {
-                objectSvg.removeClass('animated').removeClass('fadeInUp');
                 objectSlider.removeClass('animated2').removeClass('fadeInUp');
-                objectNav.removeClass('animated2').removeClass('fadeInUpBig');
+                objectTxt.removeClass('animated2').removeClass('fadeInUp');
             }
             if(ref === 'objects') {
-                companySvg.removeClass('animated').removeClass('fadeInUp');
                 companyTxt.removeClass('animated2').removeClass('fadeInUp');
                 companyVid.removeClass('animated2').removeClass('fadeInUp');
             }
