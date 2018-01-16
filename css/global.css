@@ -32,6 +32,7 @@ section {
 .main__head {
   font-family: 'Code Pro';
   font-size: 3.6em;
+  font-weight: 400;
   color: #434242;
   text-transform: uppercase;
   margin: 0;
