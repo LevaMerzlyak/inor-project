@@ -39,6 +39,9 @@ section {
 	line-height: 1em;
 	letter-spacing: 0.1em;
 }
+.main__head_gallery {
+	color: $txtMain;
+}
 .bg_overlay {
 	&:before {
 		content: "";

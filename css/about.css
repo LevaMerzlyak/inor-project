@@ -5,7 +5,7 @@
 /*----- Main -----*/
 .main {
   height: 70vh;
-  margin-bottom: 10vh;
+  margin-bottom: 15vh;
   overflow: hidden;
   position: relative;
   top: 15vh; }
@@ -32,7 +32,8 @@
 .nums {
   position: relative;
   top: 15vh;
-  height: 85vh; }
+  height: 70vh;
+  margin-bottom: 15vh; }
 
 .aboutTxt {
   display: -webkit-box;
@@ -40,18 +41,11 @@
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
-
-.aboutImg__wrap {
-  width: 45%;
-  margin-right: 5%;
-  position: relative; }
-
-.aboutImg {
-  width: 100%;
-  height: auto; }
+  justify-content: space-between;
+  height: 70vh; }
 
 .aboutTxt__wrap {
+  position: relative;
   width: 50%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -65,29 +59,16 @@
   margin: 0; }
 
 .about__txt {
-  color: #9b9b9b;
-  font-size: 1.2em;
+  color: #333333;
+  font-size: 1.25em;
   font-weight: 400;
-  line-height: 1.4em; }
+  line-height: 1.5em;
+  padding: 0 10%; }
 
-.aboutGallery__wrap {
-  padding: 5% 5%;
-  background-color: #333333;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.aboutGallery {
-  width: 55%; }
-
-.logo360__wrap {
-  width: 45%;
-  padding: 5%;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.logo360 {
-  height: 100%; }
+.aboutNums__wrap {
+  width: 50%;
+  position: relative;
+  background-color: #e4e4e4; }
 
 .aboutNums {
   display: -webkit-box;
@@ -101,32 +82,45 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 50%;
-  padding: 3% 1%;
-  border-left: 1px solid #dedddd;
-  border-right: 1px solid #dedddd; }
-  .aboutNum__item:nth-child(2n) {
-    border-left: none; }
+  padding: 3% 3%; }
 
 .about__num {
   color: #cc2a3a;
-  font-size: 8.9em;
+  font-size: 6.25em;
   font-weight: 800;
-  line-height: 0.7em;
+  line-height: 1em;
   margin: 0 1% 0 0; }
 
 .aboutNum__txt {
-  color: #dedddd;
-  font-size: 2.85em;
+  color: #434242;
+  font-family: 'Code Pro';
+  font-size: 1.9em;
   line-height: 1em;
   font-weight: 800;
   text-transform: uppercase;
   margin: 0; }
+
+.aboutGallery__wrap {
+  padding: 5% 5%;
+  background-color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.aboutGallery {
+  width: 55%; }
+
+.galleryHead__wrap {
+  width: 50%;
+  padding: 5%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 @media only screen and (max-width: 1200px) {
   .about,

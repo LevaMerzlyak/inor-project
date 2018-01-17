@@ -3,7 +3,7 @@
 /*----- Main -----*/
 .main {
 	height: 70vh;
-	margin-bottom: 10vh;
+	margin-bottom: 15vh;
 	overflow: hidden;
 	position: relative;
 	top: 15vh;
@@ -31,22 +31,16 @@
 .nums {
 	position: relative;
 	top: 15vh;
-	height: 85vh;
+	height: 70vh;
+	margin-bottom: 15vh;
 }
 .aboutTxt {
 	display: flex;
 	justify-content: space-between;
-}
-.aboutImg__wrap {
-	width: 45%;
-	margin-right: 5%;
-	position: relative;
-}
-.aboutImg {
-	width: 100%;
-	height: auto;
+	height: 70vh;
 }
 .aboutTxt__wrap {
+	position: relative;
 	width: 50%;
 	box-sizing: border-box;
 }
@@ -59,27 +53,16 @@
 	margin: 0;
 }
 .about__txt {
-	color: $txtSub;
-	font-size: 1.2em;
+	color: $txt;
+	font-size: 1.25em;
 	font-weight: 400;
-	line-height: 1.4em;
+	line-height: 1.5em;
+	padding: 0 10%;
 }
-
-.aboutGallery__wrap {
-	padding: 5% 5%;
-	background-color: $txt;
-	display: flex;
-}
-.aboutGallery {
-	width: 55%;
-}
-.logo360__wrap {
-	width: 45%;
-	padding: 5%;
-	box-sizing: border-box;
-}
-.logo360 {
-	height: 100%;
+.aboutNums__wrap {
+	width: 50%;
+	position: relative;
+	background-color: $aboutBG;
 }
 .aboutNums {
 	display: flex;
@@ -88,31 +71,41 @@
 }
 .aboutNum__item {
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
 	box-sizing: border-box;
 	width: 50%;
-	padding: 3% 1%;
-	border-left: 1px solid $svgTxt;
-	border-right: 1px solid $svgTxt;
-	&:nth-child(2n) {
-		border-left: none;
-	}
+	padding: 3% 3%;
 }
 .about__num {
 	color: $red;
-	font-size: 8.9em;
+	font-size: 6.25em;
 	font-weight: 800;
-	line-height: 0.7em;
+	line-height: 1em;
 	margin: 0 1% 0 0;
 }
 .aboutNum__txt {
-	color: $svgTxt;
-	font-size: 2.85em;
+	color: $head;
+	font-family: 'Code Pro';
+	font-size: 1.9em;
 	line-height: 1em;
 	font-weight: 800;
 	text-transform: uppercase;
 	margin: 0;
 }
+.aboutGallery__wrap {
+	padding: 5% 5%;
+	background-color: $txt;
+	display: flex;
+}
+.aboutGallery {
+	width: 55%;
+}
+.galleryHead__wrap {
+	width: 50%;
+	padding: 5%;
+	box-sizing: border-box;
+}
+
 @media only screen and (max-width: 1200px) {
 	.about,
 	.gallery,

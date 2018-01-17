@@ -39,6 +39,9 @@ section {
   line-height: 1em;
   letter-spacing: 0.1em; }
 
+.main__head_gallery {
+  color: #fff; }
+
 .bg_overlay:before {
   content: "";
   position: absolute;
