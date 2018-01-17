@@ -77,7 +77,7 @@
 }
 
 /*  GO FULL WIDTH BELOW 800 PIXELS */
-@media only screen and (max-width: 820px) {
+@media only screen and (max-width: 1100px) {
 	.col {
     margin-bottom: 1%;
     margin-left: 3%;
