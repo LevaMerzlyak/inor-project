@@ -4,7 +4,7 @@
 /*----- /Variables -----*/
 /*----- Main -----*/
 .main {
-  height: 75vh;
+  height: 70vh;
   margin-bottom: 10vh;
   overflow: hidden;
   position: relative;
@@ -14,7 +14,7 @@
   background-image: url("../images/bud1.jpg");
   background-size: cover;
   background-position: center;
-  height: 75vh;
+  height: 70vh;
   width: 100%; }
 
 /*----- Play Button ------*/
