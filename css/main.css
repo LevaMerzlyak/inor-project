@@ -172,8 +172,8 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  border-bottom: 2px solid #cbc9c9;
-  margin-top: 25%; }
+  border-bottom: 1px solid #cbc9c9;
+  margin-top: 18%; }
 
 .sliderPag__item {
   color: #9b9b9b;
