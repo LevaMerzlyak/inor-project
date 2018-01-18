@@ -30,7 +30,7 @@ section {
   font-weight: 400; }
 
 .main__head {
-  font-family: 'Code Pro';
+  font-family: 'Code Pro', sans-serif;
   font-size: 3.6em;
   font-weight: 400;
   color: #434242;
