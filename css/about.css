@@ -86,9 +86,9 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 50%;
@@ -203,10 +203,7 @@
   .aboutNums {
     margin: 0; }
   .aboutNum__item {
-    padding: 5% 5%;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start; }
+    padding: 5% 5%; }
   .about__num {
     margin: 0 5% 0 0;
     font-size: 6.25em; }
