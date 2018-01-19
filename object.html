@@ -205,7 +205,7 @@
 		<div class="scrollifyClass" data-section-name="main">
 			<section class="main">			
 				<div class="main__bg bg_overlay">
-					<a href="#" class="playBtn" id="videoPlay1" data-video="#objectVideo" data-src="https://www.youtube.com/embed//PE-QOjc1Z5w">
+					<a href="#" class="playBtn" id="videoPlay1" data-video="#mainVideo" data-src="https://www.youtube.com/embed//PE-QOjc1Z5w">
 						<div class="play__btn play__btn_main">
 							<span></span>
 						</div>
@@ -219,13 +219,13 @@
 		</div>
 
 		<div class="scrollifyClass" data-section-name="object">
-			<section class="object  section group" id="slider">
+			<section class="object  section group" id="obj">
 				<div class="object__wrap">
 					<div class="objectTxt">
 						<div class="section__wrap">
 							<div class="objectTxt__wrap">
 								<h1 class="main__head main__head_object">Бизнес-центр Dynasty</h1>
-								<p class="object__txt object__txt_sup">Офисы в бизнес-центре «Dynasty» комфортные условия для эффективной работы.</p>
+								<p class="object__txt object__txt_sup">Офисы в бизнес-центре &#171;Dynasty&#187; комфортные условия для эффективной работы.</p>
 								<p class="object__txt">На площади 8530,7 м<sup>2</sup> размещены офисы, соответствующие современным стандартам качества: высокотехнологичные инженерные системы, поддержка службой эксплуатации, круглосуточная охрана, подземный паркинг и открытая стоянка. Преимущество «Dynasty» - расположен в центральной части города, на ул.Антоновича, удобная внутренняя парковка, до ближайшей станции метро «Олимпийская» – 350м.</p>
 								<a href="#" class="info__btn">Подробнее</a>
 							</div>
@@ -285,10 +285,31 @@
 			</section>
 		</div>
 
+		<div class="info">
+			<h2 class="info__head">БЦ &#171;DYNASTY&#187;</h2>
+			<h3 class="info__subHead">Описание:</h3>
+			<p class="info__txt">Офисное здание: 8-ми этажный бизнес-центр класса А общей площадью 8 946 м<sup>2</sup></p>
+			<h3 class="info__subHead">Расположение:</h3>
+			<p class="info__txt">8-ми этажное офисное здание расположено в центральном деловом районе Киева по адресу: ул. Горького, 46-46А. Характеризуется отличной пешеходной и транспортной доступностью. Введено в эксплуатацию в 2015 году</p>
+			<h3 class="info__subHead">Ближайшие станции метро:</h3>
+			<p class="info__txt">- Олимпийская - 250 м,<br>- Площадь Льва Толстого - 850 м,<br>- Дворец спорта - 1 000 м.</p>
+			<h3 class="info__subHead">Основные характеристики:</h3>
+			<p class="info__txt">- Общая площадь: 8 946 м<sup>2</sup><br>- Арендуемая площадь: около 8 000 м<sup>2</sup><br>- ПЛАНИРОВКА: open space<br>- СЕТКА КОЛОНН: 6,0 х 7,75<br>- ОБЩАЯ ПЛОЩАДЬ ТИПОВОГО ЭТАЖА: 930 м<sup>2</sup><br>- ВЫСОТА ТИПОВОГО ЭТАЖА: 2,92 м<br>- НАГРУЗКА НА ПЕРЕКРЫТИЯ: 400 кг/ м<sup>2</sup><br>- КЛИМАТ КОНТРОЛЬ: Центральная система кондиционирования «чиллер-фанкойл», приточно-вытяжная вентиляция с рекуперацией<br>- ЭЛЕКТРОСНАБЖЕНИЕ: 2 категория, 706 кВт<br>- ТЕЛЕКОММУНИКАЦИИ: Опто-волоконные линии<br>- ЛИФТОВОЕ ОБОРУДОВАНИЕ: 3 лифта, 1000кг, 1,6 м/с, KONE MonoSpace<br>- ПАРКИНГ: крытый – 10 м/м, наземный – 79 м/м<br>- СИСТЕМА ПОЖАРНОЙ БЕЗОПАСНОСТИ: Адресная система пожарной сигнализации, на всех этажах предусмотрены пожарные краны. Внешнее пожаротушение осуществляется посредством пожарных гидрантов.<br>- СИСТЕМА ОТОПЛЕНИЯ: воздушная.</p>
+			<a href="#" class="info__closeBtn"><span class="fa fa-times"></span></a>
+		</div>
+
 	</div>
 
 	
 	<div class="main__video" id="objectVideo">
+		<div class="video__container">
+			<div class="video__wrap">
+				<iframe class="player" width="560" height="349" src="" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="close__btn fa fa-times"></div>
+	</div>
+	<div class="main__video main__video_main" id="mainVideo">
 		<div class="video__container">
 			<div class="video__wrap">
 				<iframe class="player" width="560" height="349" src="" frameborder="0" allowfullscreen></iframe>
@@ -315,17 +336,22 @@
 		var m1 = new DropDownMenu('#menu1');
 	</script>
 
+	<script src="js/showDisc.js" type="text/javascript"></script>
+	<script>
+		var s1 = new ShowDisc('#obj');
+	</script>
+
 	<script src="js/jquery.scrollify.js" type="text/javascript"></script>
 	<script>
 		$(function() {
-			var scrollBtn = $('.scrollBtn')
+			var scrollBtn = $('.scroll__btn')
 				;
 
 			$.scrollify({
 				section : ".scrollifyClass",
 				scrollbars: true,
 				scrollSpeed: 1500,
-				standardScrollElements: ".main__video",
+				standardScrollElements: ".main__video, .info",
 				setHeights: false,
 				before: function(i,panels) {
 		    		var ref = panels[i].attr('data-section-name');
