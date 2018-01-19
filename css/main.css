@@ -10,23 +10,6 @@
   position: relative;
   top: 15vh; }
 
-/*----- Video -----*/
-.main__video_main {
-  background-color: rgba(255, 255, 255, 0.8); }
-  .main__video_main .close__btn {
-    color: #cc2a3a;
-    opacity: 0.7; }
-    .main__video_main .close__btn:hover {
-      opacity: 1; }
-  .main__video_main .video__container {
-    width: 86%; }
-  .main__video_main .video__wrap {
-    position: relative;
-    padding-bottom: 0;
-    padding-top: 0;
-    height: 100%; }
-
-/*----- /Video -----*/
 .main__bg {
   background-image: url("../images/INOR_Photo_Glav2.jpg");
   background-size: cover;
@@ -551,18 +534,20 @@
   height: auto; }
 
 /*----- /Reputation -----*/
-/*.scroll__btn {
-	width: 100%;
-	background-color: $bg;
-	height: 10vh;
-	z-index: 98;
-}
+.scroll__btn {
+  width: 100%;
+  background-color: #f4f3f3;
+  height: 10vh;
+  z-index: 98; }
+
 .scrollBtn {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
-}*/
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
 .footer {
   height: 85vh; }
 
