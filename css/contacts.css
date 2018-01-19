@@ -3,24 +3,25 @@
 /*----- /Colors -----*/
 /*----- /Variables -----*/
 .main {
-  height: 85vh;
+  height: 70vh;
   overflow: hidden;
   position: relative;
   top: 15vh;
   background-color: #333333;
-  padding-top: 3%; }
-
-.section__wrap_main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-bottom: 15vh; }
 
 .mainMap {
+  margin-top: 3%;
   width: 100%;
   padding-top: 0;
   padding-bottom: 0; }
+  .mainMap .map {
+    height: 35vh; }
 
 .mainTxt,
 .mainForm {
@@ -126,6 +127,14 @@
   .main__form input[type=submit]:hover {
     background-position: 9em center; }
 
+@media only screen and (max-height: 1079px) and (min-width: 1199px) {
+  .mainMap .map {
+    height: 30vh; } }
+
+@media only screen and (max-height: 850px) and (min-width: 1199px) {
+  .mainMap .map {
+    height: 25vh; } }
+
 @media only screen and (max-width: 1199px) {
   .main {
     height: auto;
@@ -135,7 +144,7 @@
   .footer {
     top: 0; } }
 
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 820px) {
   .mainTxt,
   .mainForm {
     width: 100%; } }

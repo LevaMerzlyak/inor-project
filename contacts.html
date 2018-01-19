@@ -200,42 +200,33 @@
 	
 	<nav class="pagination pagination_main">
 		<div class="pag__bg"></div>
-		<a class="pag__arrow arrow_down" href="#"></a>
-		<a class="pag__arrow arrow_up" href="#"></a>
 	</nav>
 	
 	<div class="container">
 
 		<div class="scrollifyClass" data-section-name="main">
 			<section class="main">
-				<div class="section__wrap section__wrap_main">
-					<div class="mainMap">
-						<iframe class="map" class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10165.839770163586!2d30.508869!3d50.432533!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb3b444a999d736df!2z0IbQndCe0KA!5e0!3m2!1suk!2sua!4v1512650656223" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-					</div>
-					<div class="mainTxt">
-						<h1 class="mainTxt__head">Контакты</h1>
-						<p class="mainTxt__txt">Адрес: ул. Владимирская, 101, корпус 2, г.Киев, 01033, Украина</p>
-						<p class="mainTxt__txt">Email: <span class="mainTxt__txt_sub">inor_office@inor.com.ua</span></p>
-						<p class="mainTxt__txt">Телефон: <span class="mainTxt__txt_sub">+38 (044) 289-04-25</span></p>
-						<p class="mainTxt__txt">Факс: <span class="mainTxt__txt_sub">+38 (044) 289-04-25</span></p>
-						<p class="mainTxt__txt"><span class="mainTxt__txt_sub">По вопросам аренды обращайтесь по телефону:</span><br>+38 (050) 388-90-96</p>			
-					</div>
-					<div class="mainForm">
-						<h2 class="form__head">Получить консультацию</h2>
-						<form class="main__form">
-							<input type="text" placeholder="Имя">
-							<input type="email" placeholder="Email">
-							<textarea placeholder="Сообщение"></textarea>
-							<input type="submit" value="Отправить">			
-						</form>
-					</div>
+				<div class="mainMap">
+					<iframe class="map" class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10165.839770163586!2d30.508869!3d50.432533!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb3b444a999d736df!2z0IbQndCe0KA!5e0!3m2!1suk!2sua!4v1512650656223" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				<div class="mainTxt">
+					<h1 class="mainTxt__head">Контакты</h1>
+					<p class="mainTxt__txt">Адрес: ул. Владимирская, 101, корпус 2, г.Киев, 01033, Украина</p>
+					<p class="mainTxt__txt">Email: <span class="mainTxt__txt_sub">inor_office@inor.com.ua</span></p>
+					<p class="mainTxt__txt">Телефон: <span class="mainTxt__txt_sub">+38 (044) 289-04-25</span></p>
+					<p class="mainTxt__txt">Факс: <span class="mainTxt__txt_sub">+38 (044) 289-04-25</span></p>
+					<p class="mainTxt__txt"><span class="mainTxt__txt_sub">По вопросам аренды обращайтесь по телефону:</span><br>+38 (050) 388-90-96</p>			
+				</div>
+				<div class="mainForm">
+					<h2 class="form__head">Получить консультацию</h2>
+					<form class="main__form">
+						<input type="text" placeholder="Имя">
+						<input type="email" placeholder="Email">
+						<textarea placeholder="Сообщение"></textarea>
+						<input type="submit" value="Отправить">			
+					</form>
 				</div>
 			</section>
-		</div>
-
-		<div class="footy" data-section-name="footer">
-			<footer class="footer">
-			</footer>
 		</div>
 
 	</div>
@@ -251,69 +242,6 @@
 		var d2 = new DropDownMob('#dropdown3');
 		var d2 = new DropDownMob('#dropdown4');
 		var m1 = new DropDownMenu('#menu1');
-	</script>
-
-	<script src="js/jquery.scrollify.js" type="text/javascript"></script>
-	<script>
-		$(function() {
-			var scrollBtn = $('.scrollBtn')
-				;
-
-			$.scrollify({
-				section: ".scrollifyClass",
-				interstitialSection: ".footy",
-				scrollbars: true,
-				scrollSpeed: 1500,
-				setHeights: false,
-				before: function(i,panels) {
-		    		var ref = panels[i].attr('data-section-name');
-
-		    		if(ref === 'main') {
-		    			$('.pagination').addClass('pagination_main');
-    					$('.nav__wrap').addClass('nav__wrap_main');
-		    		} else {
-		    			$('.pagination').removeClass('pagination_main');
-    					$('.nav__wrap').removeClass('nav__wrap_main');
-		    		}
-		    		if(ref === 'footer') {
-		    			scrollBtn.addClass('scrollBtn_hidden');
-		    			$('.pagination a.pag__arrow.arrow_down').hide();
-    					$('.pagination a.pag__arrow.arrow_up').show();
-		    		} else {
-		                scrollBtn.removeClass('scrollBtn_hidden');
-		                $('.pagination a.pag__arrow.arrow_up').hide();
-    					$('.pagination a.pag__arrow.arrow_down').show();
-		            }
-		    		
-		    	},
-		    	after: function(i,panels) {
-		    		
-		    	},
-				afterResize:offMobile,
-		    	afterRender:offMobile
-			});
-			
-			$('.pagination a.pag__arrow.arrow_down').on('click', function (e) {
-				e.preventDefault();
-				$.scrollify.next();
-			});
-			$('.pagination a.pag__arrow.arrow_up').on('click', function (e) {
-				e.preventDefault();
-				$.scrollify.move('#main');
-			});
-		    scrollBtn.on('click', function (e) {
-		        e.preventDefault();
-		        $.scrollify.next();
-		    });
-			function offMobile() {
-				var width = $(window).width();
-				if(width < 1199 && !$.scrollify.isDisabled()) {
-					$.scrollify.disable();
-				} else if(width >= 1199 && $.scrollify.isDisabled()) {
-					$.scrollify.enable();
-				}
-			}
-		});
 	</script>
 
 </body>
