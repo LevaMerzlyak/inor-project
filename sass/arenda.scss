@@ -26,9 +26,9 @@
 	}
 }
 .pagination_arenda {
-	height: 76vh;
+	height: 70vh;
 	.pag__bg {
-		height: 86vh;
+		height: 71vh;
 		background-color: $txt;
 	}
 }
@@ -37,14 +37,15 @@
 .rooms {
 	position: relative;
 	top: 15vh;
-	height: 85vh;
+	height: 70vh;
+	margin-bottom: 15vh;
 }
 .arenda {
 	z-index: 2;
 }
 .arenda__video {
 	position: relative;
-	height: 75vh;
+	height: 60vh;
 	overflow: hidden;
 }
 .arendaVideo__cover {
@@ -59,6 +60,9 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+}
+.section__wrap_arenda {
+	padding-bottom: 10vh;
 }
 .arenda__txt {
 	position: absolute;
@@ -80,12 +84,9 @@
 .arenda__txt_scroll {
 	background-color: $bg;
 }
-.arenda__head {
-	color: $txtMain;
-	font-weight: 800;
-	font-size: 3em;
-	text-transform: uppercase;
-	margin-top: 0;
+.main__head_gallery {
+	margin-top: 0.67em;
+	margin-bottom: 0.67em;
 }
 .arenda__table {
 	width: 100%;
@@ -109,7 +110,7 @@
 }
 .room__wrap {
 	position: relative;
-	height: 75vh;
+	height: 70vh;
 	text-decoration: none;
 	color: $txtRoom;
 	font-size: 1em;
@@ -197,6 +198,11 @@
 	writing-mode: tb;
 	glyph-orientation-vertical: 0;
 }
+@media only screen and (max-width: 1530px) {
+	.main__head_gallery {
+		font-size: 3em;
+	}
+}
 @media only screen and (max-width: 1199px) {
 	.section__wrap_arenda {
 		position: absolute;
@@ -225,12 +231,7 @@
 }
 @media only screen and (max-width: 1025px) {
 	.arenda {
-		height: 85vh;
 		margin-bottom: 10vh;
-	}
-}
-@media only screen and (max-width: 820px) {
-	.arenda {
 		height: auto;
 	}
 	.arenda__txt {
@@ -245,8 +246,8 @@
 		top: 0;
 		transform: translateY(0%);
 	}
-	.arenda__head {
-		margin: 0.67em 0;
+	.main__head_gallery {
+		font-size: 3.6em;
 	}
 	.room__num,
 	.room__floor,
@@ -259,7 +260,7 @@
 		padding-bottom: 50.63%;
 	}
 }
-@media only screen and (max-width: 820px) and (orientation: landscape) {
+@media only screen and (max-width: 1025px) and (orientation: landscape) {
 	.arendaVideo__cover {
 		width: 100%;
 		height: auto;
@@ -304,14 +305,14 @@
 	.footer {
 		margin-top: 0;
 	}
+	.main__head_gallery {
+		font-size: 2.5em;
+	}
 }
 @media only screen and (max-width: 420px) {
 	.arenda__txt {
 		padding-left: 5%;
 		padding-right: 5%;
-	}
-	.arenda__head {
-		font-size: 2.7em;
 	}
 	.room__wrap {
 		padding-bottom: 5%;
@@ -324,12 +325,10 @@
 	}
 }
 @media only screen and (max-width: 380px) {
-	.arenda__head {
-		font-size: 2.4em;
+	.main__head_gallery {
+		font-size: 2em;
 	}
 }
 @media only screen and (max-width: 330px) {
-	.arenda__head {
-		font-size: 2em;
-	}
+	
 }

@@ -205,7 +205,7 @@
 			<section class="arenda section group">
 				<div class="arenda__video col span_7_of_14">
 					<img class="arendaVideo__cover" src="images/arenda/build1/INOR_Photo_Arenda_video.jpg">
-					<a href="#" class="playBtn" id="videoPlay2" data-video="#arendaVideo" data-src="https://www.youtube.com/embed//ZCDxJGLD0Eg">
+					<a href="#" class="playBtn" id="videoPlay2" data-video="#mainVideo" data-src="https://www.youtube.com/embed//ZCDxJGLD0Eg">
 						<div class="play__btn play__btn_arenda">
 							<span></span>
 						</div>
@@ -214,7 +214,7 @@
 				<div class="arenda__txt col span_8_of_14">
 					<div class="arendaTxt">
 						<div class="section__wrap section__wrap_arenda">
-							<h1 class="arenda__head">Бизнес-центр Паньковский</h1>
+							<h1 class="main__head main__head_gallery">Бизнес-центр Паньковский</h1>
 							<table class="arenda__table">
 								<tr class="arendaTable__row">
 									<td class="arendaTable__txt">Бизнес Центр класса:</td>
@@ -321,12 +321,6 @@
 				</div>
 			</section>
 		</div>
-		
-		<div class="footy" data-section-name="footer">
-			<footer class="footer">
-				
-			</footer>
-		</div>
 
 	</div>
 
@@ -341,6 +335,14 @@
 	</div>
 	
 	<div class="main__video" id="arendaVideo">
+		<div class="video__container">
+			<div class="video__wrap">
+				<iframe class="player" width="560" height="349" src="" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+		<div class="close__btn fa fa-times"></div>
+	</div>
+	<div class="main__video main__video_main" id="mainVideo">
 		<div class="video__container">
 			<div class="video__wrap">
 				<iframe class="player" width="560" height="349" src="" frameborder="0" allowfullscreen></iframe>
@@ -383,23 +385,18 @@
     					$('.nav__wrap').addClass('nav__wrap_arenda');
     					$('.arendaSvg').removeClass('arendaSvg_shown');
     					$('.arenda__txt').removeClass('arenda__txt_scroll');
+		                scrollBtn.removeClass('scrollBtn_hidden');
+    					$('.pagination a.pag__arrow.arrow_down').show();
+		                $('.pagination a.pag__arrow.arrow_up').hide();
 		    		} else {
+		    			scrollBtn.addClass('scrollBtn_hidden');
+		    			$('.pagination a.pag__arrow.arrow_down').hide();
+    					$('.pagination a.pag__arrow.arrow_up').show();
 		    			$('.pagination').removeClass('pagination_arenda');
     					$('.nav__wrap').removeClass('nav__wrap_arenda');
     					$('.arendaSvg').addClass('arendaSvg_shown');
     					$('.arenda__txt').addClass('arenda__txt_scroll');
 		    		}
-		    		if(ref === 'footer') {
-		    			scrollBtn.addClass('scrollBtn_hidden');
-		    			$('.pagination a.pag__arrow.arrow_down').hide();
-    					$('.pagination a.pag__arrow.arrow_up').show();
-    					$('.arendaSvg').removeClass('arendaSvg_shown');
-		    		} else {
-		                scrollBtn.removeClass('scrollBtn_hidden');
-		                $('.pagination a.pag__arrow.arrow_up').hide();
-    					$('.pagination a.pag__arrow.arrow_down').show();
-    					$('.arendaSvg').addClass('arendaSvg_shown');
-		            }
 		    		
 		    	},
 		    	after: function(i,panels) {
