@@ -3,9 +3,9 @@ function ShowDisc(sSelector) {
 	var s = this;
 
 	s.object = $(sSelector);
-	s.moreBtn = s.object.find('.vacancy__infoBtn');
-	s.disc = $('.vacancyDisc');
-	s.closeBtn = s.disc.find('.vacancyDisc__closeBtn');
+	s.moreBtn = s.object.find('.info__btn');
+	s.disc = $('.info');
+	s.closeBtn = s.disc.find('.info__closeBtn');
 
 	s.t = 0.15;
 	s.pos = 0;
