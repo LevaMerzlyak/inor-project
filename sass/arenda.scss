@@ -9,13 +9,10 @@
 		color: $txtMain;
 	}
 	.navDropdown {
+		background-color: $txt;
 		&:before {
 			background-color: $txt;
 		}
-	}
-	.navDropdown__item {
-		background-color: $txt;
-		border-bottom: 1px solid $red;
 	}
 	.navDropdown__link {
 		color: $txtMain;

@@ -8,11 +8,10 @@
     color: #fff; }
   .nav__wrap_arenda .nav__link_active {
     color: #fff; }
-  .nav__wrap_arenda .navDropdown:before {
+  .nav__wrap_arenda .navDropdown {
     background-color: #333333; }
-  .nav__wrap_arenda .navDropdown__item {
-    background-color: #333333;
-    border-bottom: 1px solid #cc2a3a; }
+    .nav__wrap_arenda .navDropdown:before {
+      background-color: #333333; }
   .nav__wrap_arenda .navDropdown__link {
     color: #fff;
     font-weight: 400; }

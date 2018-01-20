@@ -160,23 +160,37 @@ section {
 
 /*----- DropDown Menu -----*/
 .navDropdown {
+  display: block;
   list-style: none;
   padding: 0;
-  background-color: transparent;
+  background-color: #f4f3f3;
   position: absolute;
   right: 0;
   top: 0;
   padding-top: 9vh;
   min-width: 210px;
-  visibility: hidden;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease 0.5s;
+  transition: -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease 0.5s;
+  -o-transition: transform 0.5s ease, box-shadow 0.5s ease 0.5s;
+  transition: transform 0.5s ease, box-shadow 0.5s ease 0.5s;
+  transition: transform 0.5s ease, box-shadow 0.5s ease 0.5s, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease 0.5s;
   z-index: -1; }
   .navDropdown:before {
     content: "";
     display: block;
     position: absolute;
-    top: 0;
-    width: 100%;
-    height: 9vh;
+    top: -6vh;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 110%;
+    height: 15vh;
     background-color: #f4f3f3;
     z-index: 51;
     -webkit-transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0s;
@@ -191,50 +205,10 @@ section {
 
 .navDropdown__item {
   position: relative;
-  background-color: #f4f3f3;
-  border-bottom: 1px solid #cc2a3a;
-  -webkit-transition: top 0.2s ease-in-out;
-  -o-transition: top 0.2s ease-in-out;
-  transition: top 0.2s ease-in-out;
+  opacity: 0;
   -webkit-transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0s;
   -o-transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0s;
   transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0s; }
-  .navDropdown__item:nth-of-type(1) {
-    top: -37px;
-    z-index: 49; }
-  .navDropdown__item:nth-of-type(2) {
-    top: -74px;
-    z-index: 48; }
-  .navDropdown__item:nth-of-type(3) {
-    top: -111px;
-    z-index: 47; }
-  .navDropdown__item:nth-of-type(4) {
-    top: -148px;
-    z-index: 46; }
-  .navDropdown__item:nth-of-type(5) {
-    top: -185px;
-    z-index: 45; }
-  .navDropdown__item:nth-of-type(6) {
-    top: -222px;
-    z-index: 44; }
-  .navDropdown__item:nth-of-type(7) {
-    top: -259px;
-    z-index: 43; }
-  .navDropdown__item:nth-of-type(8) {
-    top: -296px;
-    z-index: 42; }
-  .navDropdown__item:nth-of-type(9) {
-    top: -333px;
-    z-index: 41; }
-  .navDropdown__item:nth-of-type(10) {
-    top: -370px;
-    z-index: 40; }
-  .navDropdown__item:nth-of-type(11) {
-    top: -407px;
-    z-index: 39; }
-  .navDropdown__item:nth-of-type(12) {
-    top: -444px;
-    z-index: 38; }
 
 .navDropdown__link {
   display: block;
@@ -250,71 +224,68 @@ section {
     color: #333333; }
 
 .navDropdown_opened {
-  visibility: visible;
-  z-index: 1; }
+  /*visibility: visible;*/
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  -webkit-transition: -webkit-transform 1.5s ease 0s, -webkit-box-shadow 0.5s ease 1.3s;
+  transition: -webkit-transform 1.5s ease 0s, -webkit-box-shadow 0.5s ease 1.3s;
+  -o-transition: transform 1.5s ease 0s, box-shadow 0.5s ease 1.3s;
+  transition: transform 1.5s ease 0s, box-shadow 0.5s ease 1.3s;
+  transition: transform 1.5s ease 0s, box-shadow 0.5s ease 1.3s, -webkit-transform 1.5s ease 0s, -webkit-box-shadow 0.5s ease 1.3s; }
   .navDropdown_opened .navDropdown__item {
-    -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); }
+    opacity: 1; }
     .navDropdown_opened .navDropdown__item:nth-of-type(1) {
-      top: 0;
-      -webkit-transition-delay: 0.1s;
-      -o-transition-delay: 0.1s;
-      transition-delay: 0.1s; }
-    .navDropdown_opened .navDropdown__item:nth-of-type(2) {
-      top: 0;
-      -webkit-transition-delay: 0.2s;
-      -o-transition-delay: 0.2s;
-      transition-delay: 0.2s; }
-    .navDropdown_opened .navDropdown__item:nth-of-type(3) {
-      top: 0;
-      -webkit-transition-delay: 0.3s;
-      -o-transition-delay: 0.3s;
-      transition-delay: 0.3s; }
-    .navDropdown_opened .navDropdown__item:nth-of-type(4) {
-      top: 0;
-      -webkit-transition-delay: 0.4s;
-      -o-transition-delay: 0.4s;
-      transition-delay: 0.4s; }
-    .navDropdown_opened .navDropdown__item:nth-of-type(5) {
-      top: 0;
-      -webkit-transition-delay: 0.5s;
-      -o-transition-delay: 0.5s;
-      transition-delay: 0.5s; }
-    .navDropdown_opened .navDropdown__item:nth-of-type(6) {
-      top: 0;
-      -webkit-transition-delay: 0.6s;
-      -o-transition-delay: 0.6s;
-      transition-delay: 0.6s; }
-    .navDropdown_opened .navDropdown__item:nth-of-type(7) {
-      top: 0;
-      -webkit-transition-delay: 0.7s;
-      -o-transition-delay: 0.7s;
-      transition-delay: 0.7s; }
-    .navDropdown_opened .navDropdown__item:nth-of-type(8) {
-      top: 0;
-      -webkit-transition-delay: 0.8s;
-      -o-transition-delay: 0.8s;
-      transition-delay: 0.8s; }
-    .navDropdown_opened .navDropdown__item:nth-of-type(9) {
-      top: 0;
-      -webkit-transition-delay: 0.9s;
-      -o-transition-delay: 0.9s;
-      transition-delay: 0.9s; }
-    .navDropdown_opened .navDropdown__item:nth-of-type(10) {
-      top: 0;
-      -webkit-transition-delay: 1s;
-      -o-transition-delay: 1s;
-      transition-delay: 1s; }
-    .navDropdown_opened .navDropdown__item:nth-of-type(11) {
-      top: 0;
       -webkit-transition-delay: 1.1s;
       -o-transition-delay: 1.1s;
       transition-delay: 1.1s; }
-    .navDropdown_opened .navDropdown__item:nth-of-type(12) {
-      top: 0;
+    .navDropdown_opened .navDropdown__item:nth-of-type(2) {
       -webkit-transition-delay: 1.2s;
       -o-transition-delay: 1.2s;
       transition-delay: 1.2s; }
+    .navDropdown_opened .navDropdown__item:nth-of-type(3) {
+      -webkit-transition-delay: 1.3s;
+      -o-transition-delay: 1.3s;
+      transition-delay: 1.3s; }
+    .navDropdown_opened .navDropdown__item:nth-of-type(4) {
+      -webkit-transition-delay: 1.4s;
+      -o-transition-delay: 1.4s;
+      transition-delay: 1.4s; }
+    .navDropdown_opened .navDropdown__item:nth-of-type(5) {
+      -webkit-transition-delay: 1.5s;
+      -o-transition-delay: 1.5s;
+      transition-delay: 1.5s; }
+    .navDropdown_opened .navDropdown__item:nth-of-type(6) {
+      -webkit-transition-delay: 1.6s;
+      -o-transition-delay: 1.6s;
+      transition-delay: 1.6s; }
+    .navDropdown_opened .navDropdown__item:nth-of-type(7) {
+      -webkit-transition-delay: 1.7s;
+      -o-transition-delay: 1.7s;
+      transition-delay: 1.7s; }
+    .navDropdown_opened .navDropdown__item:nth-of-type(8) {
+      -webkit-transition-delay: 1.8s;
+      -o-transition-delay: 1.8s;
+      transition-delay: 1.8s; }
+    .navDropdown_opened .navDropdown__item:nth-of-type(9) {
+      -webkit-transition-delay: 1.9s;
+      -o-transition-delay: 1.9s;
+      transition-delay: 1.9s; }
+    .navDropdown_opened .navDropdown__item:nth-of-type(10) {
+      -webkit-transition-delay: 2s;
+      -o-transition-delay: 2s;
+      transition-delay: 2s; }
+    .navDropdown_opened .navDropdown__item:nth-of-type(11) {
+      -webkit-transition-delay: 2.1s;
+      -o-transition-delay: 2.1s;
+      transition-delay: 2.1s; }
+    .navDropdown_opened .navDropdown__item:nth-of-type(12) {
+      -webkit-transition-delay: 2.2s;
+      -o-transition-delay: 2.2s;
+      transition-delay: 2.2s; }
 
 /*----- /DropDown Menu -----*/
 /*----- Main Menu -----*/
@@ -328,11 +299,10 @@ section {
       background-color: #fff; }
   .nav__wrap_main .nav__link_active {
     color: #fff; }
-  .nav__wrap_main .navDropdown:before {
+  .nav__wrap_main .navDropdown {
     background-color: #cc2a3a; }
-  .nav__wrap_main .navDropdown__item {
-    background-color: #cc2a3a;
-    border-bottom: 1px solid #f4f3f3; }
+    .nav__wrap_main .navDropdown:before {
+      background-color: #cc2a3a; }
   .nav__wrap_main .navDropdown__link {
     color: #fff;
     font-weight: 400; }
