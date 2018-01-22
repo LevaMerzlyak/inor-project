@@ -359,6 +359,24 @@
 		    			$('.pagination').removeClass('pagination_main');
     					$('.nav__wrap').removeClass('nav__wrap_main');
 		    		}
+		    		if (ref === 'about') {
+		    			$('.about__num').each(function () {
+						    $(this).prop('Counter',0).animate({
+						        Counter: $(this).text()
+						    }, {
+						        duration: 1000,
+						        easing: 'swing',
+						        step: function (now) {
+							        if (now < 10 ) {
+								        $(this).text('0' + Math.ceil(now));
+							        } else {
+								        $(this).text(Math.ceil(now));
+							        }
+						            
+						        }
+						    });
+						});
+		    		}
 		    		if(ref === 'gallery360') {
 		    			scrollBtn.addClass('scrollBtn_hidden');
 		    			$('.pagination a.pag__arrow.arrow_down').hide();
