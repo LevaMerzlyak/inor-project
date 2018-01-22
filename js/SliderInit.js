@@ -17,6 +17,9 @@ function SliderInit(sSelector) {
     i.prev = i.objects.find('.slideNav__btn_prev');
     i.next = i.objects.find('.slideNav__btn_next');
 
+    i.pag = i.objects.find('.sliderPag__item');
+    i.pagMob = i.objects.find('.slider__mobControls').find('.sliderPag__item');
+
     //Slides init
     i.init = function () {
 
@@ -74,5 +77,15 @@ function SliderInit(sSelector) {
             i.hideSlide();
         }
     });
+
+    i.change = function (event) {
+        
+        var item = event.item.index;
+
+        i.pag.removeClass('sliderPag__item_active');
+        i.pag.eq(item).addClass('sliderPag__item_active');
+        i.pagMob.eq(item).addClass('sliderPag__item_active');
+
+    }
 
 };
