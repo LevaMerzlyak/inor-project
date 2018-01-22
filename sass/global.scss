@@ -989,15 +989,14 @@ section {
 			padding-top: 0;
 			transition: all .4s;
 			overflow: hidden;
+			box-shadow: none;
+			transform: none;
 			&:before {
 				height: 0;
 			}
 		}
 		.navDropdown_opened {
 			height: 100%;
-		}
-		.navDropdown__item {
-			border-bottom: none;
 		}
 	}
 	.nav__link_mobile {

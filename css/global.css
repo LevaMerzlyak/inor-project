@@ -1118,13 +1118,16 @@ section {
       -webkit-transition: all .4s;
       -o-transition: all .4s;
       transition: all .4s;
-      overflow: hidden; }
+      overflow: hidden;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none; }
       .nav__item_mobile .navDropdown:before {
         height: 0; }
     .nav__item_mobile .navDropdown_opened {
       height: 100%; }
-    .nav__item_mobile .navDropdown__item {
-      border-bottom: none; }
   .nav__link_mobile {
     margin: 0 auto; }
   .mobile__lang {
