@@ -43,19 +43,7 @@
 	width: 50%;
 	box-sizing: border-box;
 }
-.about__head {
-	display: inline-block;
-	color: $svgTxt;
-	font-size: 8.9em;
-	font-weight: 800;
-	text-transform: uppercase;
-	margin: 0;
-}
-.about__txt {
-	color: $txt;
-	font-size: 1.25em;
-	font-weight: 400;
-	line-height: 1.5em;
+.main__txt_about {
 	padding: 0 10%;
 }
 .aboutNums__wrap {
@@ -82,14 +70,14 @@
 	font-size: 6.25em;
 	font-weight: 800;
 	line-height: 1em;
-	margin: 0 3% 0 0;
+	margin: 0;
+	width: 1.3em;
 }
 .aboutNum__txt {
 	color: $head;
-	font-family: 'Code Pro';
 	font-size: 1.9em;
 	line-height: 1em;
-	font-weight: 800;
+	font-weight: 700;
 	text-transform: uppercase;
 	margin: 0;
 }
@@ -144,8 +132,8 @@
 	}
 }
 @media only screen and (max-width: 1400px) and (max-height: 799px) {
-	.about__txt {
-		font-size: 1.1em;
+	.main__txt_about {
+		font-size: 1.11em;
 	}
 }
 @media only screen and (max-width: 1300px) {
@@ -191,9 +179,9 @@
 		padding-right: 0;
 		width: 100%;
 	}
-	.about__txt {
+	.main__txt_about {
 		padding: 0;
-		font-size: 1.25em;
+		font-size: 1.11em;
 	}
 	.aboutNums__wrap {
 		width: 100%;
@@ -207,7 +195,6 @@
 		padding: 5% 5%;
 	}
 	.about__num {
-		margin: 0 5% 0 0;
 		font-size: 6.25em
 	}
 	.aboutNum__txt {

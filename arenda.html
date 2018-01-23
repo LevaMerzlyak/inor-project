@@ -350,7 +350,7 @@
 		</div>
 		<div class="close__btn fa fa-times"></div>
 	</div>
-	<div class="scroll__btn"><a href="#" class="scrollBtn">scroll</a></div>
+	
 	
 	
 	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
@@ -367,8 +367,6 @@
 	<script src="js/jquery.scrollify.js" type="text/javascript"></script>
 	<script>
 		$(function() {
-			var scrollBtn = $('.scrollBtn')
-				;
 
 			$.scrollify({
 				section : ".scrollifyClass",
@@ -385,11 +383,9 @@
     					$('.nav__wrap').addClass('nav__wrap_arenda');
     					$('.arendaSvg').removeClass('arendaSvg_shown');
     					$('.arenda__txt').removeClass('arenda__txt_scroll');
-		                scrollBtn.removeClass('scrollBtn_hidden');
     					$('.pagination a.pag__arrow.arrow_down').show();
 		                $('.pagination a.pag__arrow.arrow_up').hide();
 		    		} else {
-		    			scrollBtn.addClass('scrollBtn_hidden');
 		    			$('.pagination a.pag__arrow.arrow_down').hide();
     					$('.pagination a.pag__arrow.arrow_up').show();
 		    			$('.pagination').removeClass('pagination_arenda');

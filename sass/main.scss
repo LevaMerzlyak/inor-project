@@ -215,6 +215,7 @@
 	color : $txtMain;
 	text-transform: uppercase;
 	font-size: 2.5em;
+	font-weight: 400;
 	transform: translateY(160%);
 	transition: transform 0.75s $timing-one 0.3s;
 }
@@ -243,7 +244,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	color: $txt;
+	color: $head;
 	background: #fff;
 	z-index: 99999;
 	opacity: 0;
@@ -268,6 +269,7 @@
 	padding-bottom: 2%;
 	text-transform: uppercase;
 	font-size: 2em;
+	font-weight: 400;
 }
 .main__txt_slide {
 	width: 50%;

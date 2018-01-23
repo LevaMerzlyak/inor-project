@@ -226,6 +226,7 @@
   color: #fff;
   text-transform: uppercase;
   font-size: 2.5em;
+  font-weight: 400;
   -webkit-transform: translateY(160%);
   -ms-transform: translateY(160%);
   transform: translateY(160%);
@@ -256,7 +257,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  color: #333333;
+  color: #434242;
   background: #fff;
   z-index: 99999;
   opacity: 0;
@@ -282,7 +283,8 @@
   padding-top: 5%;
   padding-bottom: 2%;
   text-transform: uppercase;
-  font-size: 2em; }
+  font-size: 2em;
+  font-weight: 400; }
 
 .main__txt_slide {
   width: 50%;

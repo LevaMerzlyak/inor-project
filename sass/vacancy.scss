@@ -52,7 +52,7 @@
 	display: flex;
 	align-items: center;
 }
-.main__head {
+.main__head_main {
 	color: $txt;
 	font-size: 6em;
 	width: 42%;
@@ -174,11 +174,11 @@
 	background-color: $txtMain;
 	@include boxShadow();
 }
-.info__head {
+.main__head_info {
 	color: $discHead;
 	font-size: 1.7em;
-	font-weight: 700;
 	line-height: 0.9em;
+	text-transform: none;
 }
 .info__subHead {
 	color: $discHead;
@@ -187,10 +187,9 @@
 	line-height: 1.25em;
 	text-transform: uppercase;
 }
-.info__txt {
+.main__txt_info {
 	color: $discTxt;
 	font-size: 1em;
-	font-weight: 400;
 	line-height: 1.25em;
 }
 .info__listWrap {
@@ -202,7 +201,7 @@
 	li {
 		color: $discTxt;
 		font-size: 1em;
-		font-weight: 400;
+		font-weight: 300;
 		line-height: 1.25em;
 	}
 }
@@ -232,27 +231,27 @@
 	}
 }
 @media only screen and (max-width: 1700px) {
-	.main__head {
+	.main__head_main {
 		font-size: 5.5em;
 	}
 }
 @media only screen and (max-width: 1600px) {
-	.main__head {
+	.main__head_main {
 		font-size: 5em;
 	}
 }
 @media only screen and (max-width: 1500px) {
-	.main__head {
+	.main__head_main {
 		font-size: 4.5em;
 	}
 }
 @media only screen and (max-width: 1300px) {
-	.main__head {
+	.main__head_main {
 		font-size: 4em;
 	}
 }
 @media only screen and (max-width: 1200px) {
-	.main__head {
+	.main__head_main {
 		box-sizing: border-box;
 		padding-left: 2%;
 		font-size: 3.6em;
@@ -280,7 +279,7 @@
 		flex-wrap: wrap;
 		margin-bottom: 0;
 	}
-	.main__head {
+	.main__head_main {
 		width: 100%;
 		padding-left: 0;
 		text-align: center;
@@ -359,7 +358,7 @@
 	.mainTxt {
 		font-size: 1.1em;
 	}
-	.main__head {
+	.main__head_main {
 		font-size: 3.5em;
 	}
 	.vacancy__num {
@@ -373,7 +372,7 @@
 	.mainTxt__wrap {
 		height: 60vh;
 	}
-	.main__head {
+	.main__head_main {
 		font-size: 3em;
 	}
 	.vacancy__num {

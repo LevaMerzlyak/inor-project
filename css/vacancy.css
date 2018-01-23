@@ -49,7 +49,7 @@
   -ms-flex-align: center;
   align-items: center; }
 
-.main__head {
+.main__head_main {
   color: #333333;
   font-size: 6em;
   width: 42%; }
@@ -190,11 +190,11 @@
   -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3); }
 
-.info__head {
+.main__head_info {
   color: #121212;
   font-size: 1.7em;
-  font-weight: 700;
-  line-height: 0.9em; }
+  line-height: 0.9em;
+  text-transform: none; }
 
 .info__subHead {
   color: #121212;
@@ -203,10 +203,9 @@
   line-height: 1.25em;
   text-transform: uppercase; }
 
-.info__txt {
+.main__txt_info {
   color: #989898;
   font-size: 1em;
-  font-weight: 400;
   line-height: 1.25em; }
 
 .info__listWrap {
@@ -218,7 +217,7 @@
   .info__list li {
     color: #989898;
     font-size: 1em;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.25em; }
 
 .info__closeBtn {
@@ -249,23 +248,23 @@
     color: #cc2a3a; }
 
 @media only screen and (max-width: 1700px) {
-  .main__head {
+  .main__head_main {
     font-size: 5.5em; } }
 
 @media only screen and (max-width: 1600px) {
-  .main__head {
+  .main__head_main {
     font-size: 5em; } }
 
 @media only screen and (max-width: 1500px) {
-  .main__head {
+  .main__head_main {
     font-size: 4.5em; } }
 
 @media only screen and (max-width: 1300px) {
-  .main__head {
+  .main__head_main {
     font-size: 4em; } }
 
 @media only screen and (max-width: 1200px) {
-  .main__head {
+  .main__head_main {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 2%;
@@ -289,7 +288,7 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-bottom: 0; }
-  .main__head {
+  .main__head_main {
     width: 100%;
     padding-left: 0;
     text-align: center;
@@ -356,7 +355,7 @@
 @media only screen and (max-width: 380px) {
   .mainTxt {
     font-size: 1.1em; }
-  .main__head {
+  .main__head_main {
     font-size: 3.5em; }
   .vacancy__num {
     font-size: 5em; }
@@ -366,7 +365,7 @@
 @media only screen and (max-width: 330px) {
   .mainTxt__wrap {
     height: 60vh; }
-  .main__head {
+  .main__head_main {
     font-size: 3em; }
   .vacancy__num {
     font-size: 4em;

@@ -26,18 +26,16 @@ section {
 .main__txt {
 	font-size: 1.11em;
 	line-height: 1.5em;
-	color: $txt;
-	font-weight: 400;
+	color: $head;
+	font-weight: 300;
 }
 .main__head {
-	font-family: 'Code Pro', sans-serif;
 	font-size: 3.6em;
 	font-weight: 400;
 	color: $head;
 	text-transform: uppercase;
 	margin: 0;
 	line-height: 1em;
-	letter-spacing: 0.1em;
 }
 .main__head_gallery {
 	color: $txtMain;
@@ -107,8 +105,8 @@ section {
 .nav__link {
 	text-decoration: none;
 	text-transform: uppercase;
-	color: $txtSub;
-	font-weight: 700;
+	color: $head;
+	font-weight: 400;
 	font-size: 0.9em;
 	position: relative;
 	overflow: hidden;
@@ -147,7 +145,7 @@ section {
 	}
 }
 .nav__link_active {
-	color: $txt;
+	color: $head;
 	&:after {
 		left: 60%;
 	}
@@ -345,7 +343,7 @@ section {
 .pag__link {
 	display: inline-block;	
 	font-size: 0.9em;
-	color: $txtSub;
+	color: $head;
 	font-weight: 700;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -506,7 +504,7 @@ section {
 .footer__contacts {
 }
 .contact__head {
-	font-weight: 700;
+	font-weight: 400;
 	font-size: 1.5em;
 	line-height: 1.5em;
 	color: $txt;
@@ -515,33 +513,11 @@ section {
 }
 .contact__txt {
 	display: inline-block;
-	font-weight: 700;
+	font-weight: 400;
 	font-size: 1.1em;
 	line-height: 1em;
 	color: $txtSub;
 	margin: 0;
-}
-.footer__nav {
-	padding-top: 5%;
-	padding-bottom: 5%;
-}
-.footerNav {
-	padding: 0;
-	display: flex;	
-	justify-content: space-between;
-}
-.footerNav__item {
-	list-style: none;
-}
-.footerNav__link {
-	font-weight: 700;
-	font-size: 0.9em;
-	color: $txtSub;
-	text-decoration: none;
-	transition: all .4s;
-	&:hover {
-		color: $txt;
-	}
 }
 /*----- /Footer ------*/
 .scroll__btn {
@@ -1066,11 +1042,6 @@ section {
 		.map {
 			height: 70vh;
 		}
-	}
-}
-@media only screen and (max-width: 600px) {
-	.footer__nav {
-		display: none;
 	}
 }
 @media only screen and (max-width: 1025px) {

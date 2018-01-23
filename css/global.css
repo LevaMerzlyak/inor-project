@@ -26,18 +26,16 @@ section {
 .main__txt {
   font-size: 1.11em;
   line-height: 1.5em;
-  color: #333333;
-  font-weight: 400; }
+  color: #434242;
+  font-weight: 300; }
 
 .main__head {
-  font-family: 'Code Pro', sans-serif;
   font-size: 3.6em;
   font-weight: 400;
   color: #434242;
   text-transform: uppercase;
   margin: 0;
-  line-height: 1em;
-  letter-spacing: 0.1em; }
+  line-height: 1em; }
 
 .main__head_gallery {
   color: #fff; }
@@ -112,8 +110,8 @@ section {
 .nav__link {
   text-decoration: none;
   text-transform: uppercase;
-  color: #9b9b9b;
-  font-weight: 700;
+  color: #434242;
+  font-weight: 400;
   font-size: 0.9em;
   position: relative;
   overflow: hidden;
@@ -154,7 +152,7 @@ section {
     left: 60%; }
 
 .nav__link_active {
-  color: #333333; }
+  color: #434242; }
   .nav__link_active:after {
     left: 60%; }
 
@@ -401,7 +399,7 @@ section {
 .pag__link {
   display: inline-block;
   font-size: 0.9em;
-  color: #9b9b9b;
+  color: #434242;
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
@@ -583,7 +581,7 @@ section {
   height: 15vh; }
 
 .contact__head {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1.5em;
   line-height: 1.5em;
   color: #333333;
@@ -592,38 +590,11 @@ section {
 
 .contact__txt {
   display: inline-block;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1.1em;
   line-height: 1em;
   color: #9b9b9b;
   margin: 0; }
-
-.footer__nav {
-  padding-top: 5%;
-  padding-bottom: 5%; }
-
-.footerNav {
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
-
-.footerNav__item {
-  list-style: none; }
-
-.footerNav__link {
-  font-weight: 700;
-  font-size: 0.9em;
-  color: #9b9b9b;
-  text-decoration: none;
-  -webkit-transition: all .4s;
-  -o-transition: all .4s;
-  transition: all .4s; }
-  .footerNav__link:hover {
-    color: #333333; }
 
 /*----- /Footer ------*/
 .scroll__btn {
@@ -1209,10 +1180,6 @@ section {
 @media only screen and (max-width: 740px) and (orientation: landscape) {
   .mainMap .map {
     height: 70vh; } }
-
-@media only screen and (max-width: 600px) {
-  .footer__nav {
-    display: none; } }
 
 @media only screen and (max-width: 1025px) {
   .video__container {

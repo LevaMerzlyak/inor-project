@@ -23,11 +23,13 @@ function ShowDisc(sSelector) {
 		event.preventDefault();
 		console.log("btn");
 		s.updatePosition();
-		s.disc.show();		
+		s.disc.show();
+		$('.scroll__btn').hide();
 	});
 	s.closeBtn.click(function (event) {
 		event.preventDefault();
 		s.disc.hide();
+		$('.scroll__btn').show();
 	});
 	$(window).resize(s.getPosition);
 	$(document).ready(s.getPosition);

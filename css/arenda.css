@@ -21,10 +21,14 @@
 .pagination_arenda {
   height: 70vh; }
   .pagination_arenda .pag__bg {
-    height: 71vh;
+    height: 86vh;
     background-color: #333333; }
 
-.arenda,
+.arenda {
+  position: relative;
+  top: 15vh;
+  height: 85vh; }
+
 .rooms {
   position: relative;
   top: 15vh;
@@ -36,7 +40,7 @@
 
 .arenda__video {
   position: relative;
-  height: 60vh;
+  height: 70vh;
   overflow: hidden; }
 
 .arendaVideo__cover {
