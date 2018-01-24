@@ -65,16 +65,8 @@
 .main__head_object {
 	color: $txt;
 }
-.object__txt {
+.main__txt_object {
 	color: $head;
-	font-size: 1.25em;
-	line-height: 1.5em;
-	font-weight: 300;
-}
-.object__txt_sup {
-	font-size: 1.5em;
-	line-height: 1.25em;
-	font-weight: 700;
 }
 .info__btn {
 	text-decoration: none;
@@ -142,7 +134,7 @@
 	position: relative;
 }
 .galleryHead__wrap {
-	width: 50%;
+	width: 45%;
 	padding: 5% 0 5% 5%;
 	box-sizing: border-box;
 	position: relative;
@@ -161,8 +153,6 @@
 }
 .main__head_info {
 	color: $txt;
-	font-size: 3.6em;
-	line-height: 0.9em;
 	margin-bottom: 0.67em;
 }
 .info__subHead {
@@ -174,11 +164,8 @@
 }
 .main__txt_info {
 	color: $txt;
-	font-size: 1.25em;
-	line-height: 1.5em;
 	margin-top: 0;
 }
-
 .info__closeBtn {
 	position: absolute;
 	top: 0;

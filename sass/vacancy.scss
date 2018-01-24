@@ -177,7 +177,6 @@
 .main__head_info {
 	color: $discHead;
 	font-size: 1.7em;
-	line-height: 0.9em;
 	text-transform: none;
 }
 .info__subHead {
@@ -189,8 +188,6 @@
 }
 .main__txt_info {
 	color: $discTxt;
-	font-size: 1em;
-	line-height: 1.25em;
 }
 .info__listWrap {
 	width: 82%;
@@ -200,9 +197,9 @@
 	padding: 0;
 	li {
 		color: $discTxt;
-		font-size: 1em;
+		font-size: 1.11em;
 		font-weight: 300;
-		line-height: 1.25em;
+		line-height: 1.5em;
 	}
 }
 .info__closeBtn {

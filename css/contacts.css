@@ -35,7 +35,7 @@
 
 .mainTxt__head {
   color: #fff;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1.7em;
   text-transform: uppercase;
   margin: 0; }
@@ -58,7 +58,7 @@
 
 .form__head {
   color: #494848;
-  font-weight: 800;
+  font-weight: 400;
   font-size: 1.7em;
   text-transform: uppercase;
   margin: 0;
@@ -70,39 +70,75 @@
 .main__form textarea {
   margin-top: 1em;
   color: #333333;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1em;
   line-height: 1.2em;
   background-color: #494848;
   border: none;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0.5em 1em; }
-  .main__form input[type=text]:focus,
-  .main__form input[type=email]:focus,
-  .main__form input[type=submit]:focus,
-  .main__form textarea:focus {
-    outline: none; }
+  padding: 0.5em 1em;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
   .main__form input[type=text]::-webkit-input-placeholder,
   .main__form input[type=email]::-webkit-input-placeholder,
   .main__form input[type=submit]::-webkit-input-placeholder,
   .main__form textarea::-webkit-input-placeholder {
-    color: #333333; }
+    color: #333333;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
   .main__form input[type=text]:-ms-input-placeholder,
   .main__form input[type=email]:-ms-input-placeholder,
   .main__form input[type=submit]:-ms-input-placeholder,
   .main__form textarea:-ms-input-placeholder {
-    color: #333333; }
+    color: #333333;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
   .main__form input[type=text]::-ms-input-placeholder,
   .main__form input[type=email]::-ms-input-placeholder,
   .main__form input[type=submit]::-ms-input-placeholder,
   .main__form textarea::-ms-input-placeholder {
-    color: #333333; }
+    color: #333333;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
   .main__form input[type=text]::placeholder,
   .main__form input[type=email]::placeholder,
   .main__form input[type=submit]::placeholder,
   .main__form textarea::placeholder {
-    color: #333333; }
+    color: #333333;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+  .main__form input[type=text]:focus,
+  .main__form input[type=email]:focus,
+  .main__form input[type=submit]:focus,
+  .main__form textarea:focus {
+    outline: none;
+    background-color: #f4f3f3; }
+    .main__form input[type=text]:focus::-webkit-input-placeholder,
+    .main__form input[type=email]:focus::-webkit-input-placeholder,
+    .main__form input[type=submit]:focus::-webkit-input-placeholder,
+    .main__form textarea:focus::-webkit-input-placeholder {
+      color: #f4f3f3; }
+    .main__form input[type=text]:focus:-ms-input-placeholder,
+    .main__form input[type=email]:focus:-ms-input-placeholder,
+    .main__form input[type=submit]:focus:-ms-input-placeholder,
+    .main__form textarea:focus:-ms-input-placeholder {
+      color: #f4f3f3; }
+    .main__form input[type=text]:focus::-ms-input-placeholder,
+    .main__form input[type=email]:focus::-ms-input-placeholder,
+    .main__form input[type=submit]:focus::-ms-input-placeholder,
+    .main__form textarea:focus::-ms-input-placeholder {
+      color: #f4f3f3; }
+    .main__form input[type=text]:focus::placeholder,
+    .main__form input[type=email]:focus::placeholder,
+    .main__form input[type=submit]:focus::placeholder,
+    .main__form textarea:focus::placeholder {
+      color: #f4f3f3; }
 
 .main__form input[type=text],
 .main__form input[type=email] {

@@ -38,7 +38,10 @@ section {
 	line-height: 1em;
 }
 .main__head_gallery {
-	color: $txtMain;
+	color: $bg;
+}
+.main__txt_sup {
+	font-weight: 700;
 }
 .bg_overlay {
 	&:before {
@@ -160,6 +163,7 @@ section {
 	right: 0;		
 	top: 0;
 	padding-top: 9vh;
+	padding-bottom: 0.5em;
 	min-width: 210px;
 	box-shadow: none;	
 	transform: translateY(-100%);
@@ -216,7 +220,7 @@ section {
 		opacity: 1;
        	@for $i from 1 through 12 {
           	&:nth-of-type(#{$i}) {
-             	transition-delay: 1s + ($i*0.1s);
+             	transition-delay: 0.8s + ($i*0.1s);
             }
         }
 	}
@@ -534,7 +538,7 @@ section {
 	text-decoration: none;
 	color: $txtSub;
 	font-size: 1.25em;
-	font-weight: 700;
+	font-weight: 400;
 	opacity: 1;
 	transition: all 0.25s;
 	&:before {
@@ -544,7 +548,7 @@ section {
 		top: -1em;
 		left: 50%;
 		transform: translateX(-50%);
-		width: 2px;
+		width: 1px;
 		height: 1em;
 		background-color: $txtSub;
 		transition: all 0.25s;

@@ -193,7 +193,6 @@
 .main__head_info {
   color: #121212;
   font-size: 1.7em;
-  line-height: 0.9em;
   text-transform: none; }
 
 .info__subHead {
@@ -204,9 +203,7 @@
   text-transform: uppercase; }
 
 .main__txt_info {
-  color: #989898;
-  font-size: 1em;
-  line-height: 1.25em; }
+  color: #989898; }
 
 .info__listWrap {
   width: 82%; }
@@ -216,9 +213,9 @@
   padding: 0; }
   .info__list li {
     color: #989898;
-    font-size: 1em;
+    font-size: 1.11em;
     font-weight: 300;
-    line-height: 1.25em; }
+    line-height: 1.5em; }
 
 .info__closeBtn {
   position: absolute;

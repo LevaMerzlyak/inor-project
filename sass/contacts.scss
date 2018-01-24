@@ -30,7 +30,7 @@
 }
 .mainTxt__head {
 	color: $txtMain;
-	font-weight: 700;
+	font-weight: 400;
 	font-size: 1.7em;
 	text-transform: uppercase;
 	margin: 0;
@@ -55,7 +55,7 @@
 }
 .form__head {
 	color: $formHead;
-	font-weight: 800;
+	font-weight: 400;
 	font-size: 1.7em;
 	text-transform: uppercase;
 	margin: 0;
@@ -68,18 +68,24 @@
 	textarea {
 		margin-top: 1em;
 		color: $txt;
-		font-weight: 700;
+		font-weight: 400;
 		font-size: 1em;
 		line-height: 1.2em;
 		background-color: $formHead;
 		border: none;
 		box-sizing: border-box;
 		padding: 0.5em 1em;
-		&:focus {
-			outline: none;
-		}
+		transition: all 0.2s ease;
 		&::placeholder {
 			color: $txt;
+			transition: all 0.2s ease;
+		}
+		&:focus {
+			outline: none;
+			background-color: $bg;
+			&::placeholder {
+				color: $bg;
+			}
 		}
 	}
 	input[type=text],

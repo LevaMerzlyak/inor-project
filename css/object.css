@@ -63,16 +63,8 @@
 .main__head_object {
   color: #333333; }
 
-.object__txt {
-  color: #434242;
-  font-size: 1.25em;
-  line-height: 1.5em;
-  font-weight: 300; }
-
-.object__txt_sup {
-  font-size: 1.5em;
-  line-height: 1.25em;
-  font-weight: 700; }
+.main__txt_object {
+  color: #434242; }
 
 .info__btn {
   text-decoration: none;
@@ -144,7 +136,7 @@
   position: relative; }
 
 .galleryHead__wrap {
-  width: 50%;
+  width: 45%;
   padding: 5% 0 5% 5%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -166,8 +158,6 @@
 
 .main__head_info {
   color: #333333;
-  font-size: 3.6em;
-  line-height: 0.9em;
   margin-bottom: 0.67em; }
 
 .info__subHead {
@@ -179,8 +169,6 @@
 
 .main__txt_info {
   color: #333333;
-  font-size: 1.25em;
-  line-height: 1.5em;
   margin-top: 0; }
 
 .info__closeBtn {
