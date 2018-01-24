@@ -29,7 +29,7 @@ function Gallery(sSelector) {
 	g.pagNum = 4;
 	g.pagWidth = 26;
 
-	var src = $(g.pans[0]).find('.gallery__img').attr('src').replace('_small', '');
+	var src = $(g.pans[0]).find('.gallery__img').attr('data-big');
 
 		
 	var PSV = new PhotoSphereViewer({
@@ -70,7 +70,7 @@ function Gallery(sSelector) {
 		
 		g.pag.each(function () {
 			
-			var src = $(this).find('.gallery__img').attr('src').replace('_small', '');
+			var src = $(this).find('.gallery__img').attr('data-big');
 
 			$(this).css({'background-image': 'url(' + src + ')'});
 
@@ -144,7 +144,7 @@ function Gallery(sSelector) {
 
 
 		var img = pag.find('.gallery__img')
-				,src = img.attr('src').replace('_small', '')
+				,src = img.attr('data-big')
 				,w = img.get(0).naturalWidth
 				,h = img.get(0).naturalHeight
 				;
@@ -174,7 +174,7 @@ function Gallery(sSelector) {
 		current.removeClass('galleryPag__item_current');
 		pag.addClass('galleryPag__item_current');
 			
-		var src = pag.find('.gallery__img').attr('src').replace('_small', '');
+		var src = pag.find('.gallery__img').attr('data-big');
 
 		g.imgPreview.attr('src', '');
 
@@ -194,7 +194,7 @@ function Gallery(sSelector) {
 	g.iosShow = function () {
 		var current = g.gallery.find('.galleryPag__item_current')
 			,img = current.find('.gallery__img')
-			,src = img.attr('src').replace('_small', '')
+			,src = img.attr('data-big')
 			;
 		
 		g.iosFullScrn.addClass('fullScreen__wrap_open');
