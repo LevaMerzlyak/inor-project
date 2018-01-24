@@ -162,7 +162,7 @@
   color: #9b9b9b;
   font-size: 1.5em;
   line-height: 1.5em;
-  font-weight: 700;
+  font-weight: 400;
   text-decoration: none;
   position: relative;
   padding-left: 1em;
@@ -177,7 +177,7 @@
 
 .sliderPag__item_active {
   color: #434242;
-  font-weight: 800; }
+  font-weight: 700; }
   .sliderPag__item_active:before {
     content: "";
     display: block;
@@ -431,7 +431,7 @@
 .info__btn {
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
   color: #fff;
   line-height: 1.5em;
   font-size: 0.8em;

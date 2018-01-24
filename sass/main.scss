@@ -151,7 +151,7 @@
 	color: $txtSub;
 	font-size: 1.5em;
 	line-height: 1.5em;
-	font-weight: 700;
+	font-weight: 400;
 	text-decoration: none;
 	position: relative;
 	padding-left: 1em;
@@ -166,7 +166,7 @@
 }
 .sliderPag__item_active {
 	color: $head;
-	font-weight: 800;
+	font-weight: 700;
 	&:before {
 		content: "";
 		display: block;
@@ -388,7 +388,7 @@
 .info__btn {
 	text-decoration: none;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 400;
 	color: $txtMain;
 	line-height: 1.5em;
 	font-size: 0.8em;
