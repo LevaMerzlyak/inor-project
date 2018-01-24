@@ -21,15 +21,23 @@ function ShowDisc(sSelector) {
 
 	s.moreBtn.click(function (event) {
 		event.preventDefault();
-		console.log("btn");
 		s.updatePosition();
 		s.disc.show();
 		$('.scroll__btn').hide();
+		if(!$.scrollify.isDisabled()) {
+			$.scrollify.disable();
+		}
 	});
 	s.closeBtn.click(function (event) {
 		event.preventDefault();
 		s.disc.hide();
-		$('.scroll__btn').show();
+		var width = $(window).width();
+		if(width < 1199 && !$.scrollify.isDisabled()) {
+			$.scrollify.disable();
+		} else if(width >= 1199 && $.scrollify.isDisabled()) {
+			$.scrollify.enable();
+			$('.scroll__btn').show();
+		}
 	});
 	$(window).resize(s.getPosition);
 	$(document).ready(s.getPosition);
