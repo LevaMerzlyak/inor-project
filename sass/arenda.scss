@@ -116,11 +116,42 @@
 	font-size: 1em;
 	font-weight: 400;
 	line-height: 1.3em;
-	width: 33%;
+	width: 33.3%;
 	box-sizing: border-box;
 	border-right: 1px solid $svgTxt;
 	&:first-child {
 		border-left: 1px solid $svgTxt;
+	}
+	.room__rented {
+		display: none;
+	}
+}
+.room__wrap_rented {
+	&:before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: rgba(12,12,12,0.7);
+		z-index: 1;
+	}
+	.room__rented {
+		display: block;
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		margin: 0;
+		font-size: 1.5em;
+		line-height: 1em;
+		font-weight: 400;
+		color: $bg;
+		text-align: center;
+		text-transform: uppercase;
+		z-index: 1;
 	}
 }
 .room__num {
@@ -198,7 +229,7 @@
 	writing-mode: tb;
 	glyph-orientation-vertical: 0;
 }
-@media only screen and (max-width: 1530px) {
+@media only screen and (max-width: 1300px) {
 	.main__head_gallery {
 		font-size: 3em;
 	}
@@ -208,6 +239,7 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
+		padding-bottom: 0;
 	}
 	.rooms {
 		height: auto;
@@ -313,6 +345,8 @@
 	.arenda__txt {
 		padding-left: 5%;
 		padding-right: 5%;
+		padding-top: 10%;
+		padding-bottom: 10%;
 	}
 	.room__wrap {
 		padding-bottom: 5%;
