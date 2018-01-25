@@ -75,7 +75,7 @@
 }
 .aboutNum__txt {
 	color: $head;
-	font-size: 1.9em;
+	font-size: 1.7em;
 	line-height: 1em;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -98,6 +98,11 @@
 	box-sizing: border-box;
 	position: relative;
 }
+@media only screen and (max-width: 1900px) {
+	.aboutNum__txt {
+		font-size: 1.5em;
+	}
+}
 @media only screen and (max-width: 1700px) {
 	.about__num {
 		font-size: 5em;
@@ -105,6 +110,21 @@
 	.aboutNum__txt {
 		font-size: 1.5em;
 	}
+}
+@media only screen and (max-width: 1670px) {	
+	.main__head_gallery {
+		font-size: 3.4em;
+	}
+}
+@media only screen and (max-width: 1620px) {
+	.about__num {
+		font-size: 4.8em;
+	}
+	.aboutNum__txt {
+		font-size: 1.3em;
+	}
+}
+@media only screen and (max-width: 1600px) {	
 	.main__head_gallery {
 		font-size: 3.2em;
 	}
@@ -117,7 +137,7 @@
 		font-size: 1.3em;
 	}
 	.main__head_gallery {
-		font-size: 2.8em;
+		font-size: 3em;
 	}
 }
 @media only screen and (max-width: 1400px) {
@@ -128,21 +148,18 @@
 		font-size: 1.2em;
 	}
 	.main__head_gallery {
-		font-size: 2.6em;
+		font-size: 2.8em;
 	}
 }
-@media only screen and (max-width: 1400px) and (max-height: 799px) {
-	.main__txt_about {
-		font-size: 1.11em;
-	}
-}
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1350px) {
 	.about__num {
 		font-size: 4.5em;
 	}
 	.aboutNum__txt {
-		font-size: 1.15em;
+		font-size: 1.1em;
 	}
+}
+@media only screen and (max-width: 1300px) {
 	.main__head_gallery {
 		font-size: 2.5em;
 	}
@@ -201,7 +218,7 @@
 		font-size: 1.9em;
 	}
 	.aboutGallery__wrap {
-		padding: 4% 3%;
+		padding: 7% 3%;
 		flex-wrap: wrap;
 		flex-direction: column-reverse;
 	}
@@ -223,7 +240,7 @@
 		font-size: 6em;
 	}
 	.aboutNum__txt {
-		font-size: 1.5em;
+		font-size: 1.4em;
 	}
 	.aboutNum__item {
 		padding: 4% 5%;
@@ -277,7 +294,7 @@
 		font-size: 4.5em;
 	}
 	.aboutNum__txt {
-		font-size: 1.45em;
+		font-size: 1.3em;
 	}
 	.aboutGallery {
 		width: 65%;
@@ -300,7 +317,7 @@
 		font-size: 6.25em;
 	}
 	.aboutNum__txt {
-		font-size: 1.9em;
+		font-size: 1.7em;
 	}
 	.main__head_gallery {
 		font-size: 2.5em;
@@ -321,9 +338,6 @@
 	.about__num {
 		font-size: 5em;
 	}
-	.aboutNum__txt {
-		font-size: 1.8em;
-	}
 	.main__head_gallery {
 		font-size: 2.1em;
 	}
@@ -342,5 +356,8 @@
 	}
 	.main__head_gallery {
 		font-size: 1.8em;
+	}
+	.aboutNum__txt {
+		font-size: 1.3em;
 	}
 }

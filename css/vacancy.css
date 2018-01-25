@@ -51,7 +51,6 @@
 
 .main__head_main {
   color: #333333;
-  font-size: 6em;
   width: 42%; }
 
 .mainTxt__wrap {
@@ -244,28 +243,11 @@
     background-color: #333333;
     color: #cc2a3a; }
 
-@media only screen and (max-width: 1700px) {
-  .main__head_main {
-    font-size: 5.5em; } }
-
-@media only screen and (max-width: 1600px) {
-  .main__head_main {
-    font-size: 5em; } }
-
-@media only screen and (max-width: 1500px) {
-  .main__head_main {
-    font-size: 4.5em; } }
-
-@media only screen and (max-width: 1300px) {
-  .main__head_main {
-    font-size: 4em; } }
-
 @media only screen and (max-width: 1200px) {
   .main__head_main {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding-left: 2%;
-    font-size: 3.6em; }
+    padding-left: 2%; }
   .vacancies__wrap {
     width: 90%;
     margin: 0 auto; }

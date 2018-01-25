@@ -24,9 +24,19 @@
   width: 50%; }
 
 .roomTxt {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   width: 50%;
+  height: 100%;
+  max-height: 60vh;
+  overflow: hidden;
+  position: relative; }
+
+.roomTxt__wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: -18px;
+  overflow-y: scroll;
   padding-left: 7%; }
 
 .room__head {
@@ -132,9 +142,13 @@
   .roomGallery {
     width: 90%; }
   .roomTxt {
+    max-height: none;
     width: 100%;
-    margin-top: 10%;
-    padding-left: 0; } }
+    margin-top: 10%; }
+  .roomTxt__wrap {
+    padding-left: 0;
+    position: relative;
+    right: 0; } }
 
 @media only screen and (max-width: 820px) and (orientation: landscape) {
   .room {
