@@ -8,7 +8,7 @@
   margin-bottom: 15vh;
   overflow: hidden;
   position: relative;
-  top: 15vh; }
+  padding-top: 15vh; }
 
 .main__bg {
   background-image: url("../images/bud1.jpg");
@@ -23,14 +23,15 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  margin-top: 7.5vh; }
 
 /*----- /Play Button ------*/
 /*----- /Main -----*/
 .about,
 .gallery {
   position: relative;
-  top: 15vh;
+  padding-top: 15vh;
   height: 70vh;
   margin-bottom: 15vh; }
 
@@ -184,6 +185,9 @@
   .main,
   .main__bg {
     height: 85vh; }
+  .about,
+  .gallery {
+    padding-top: 0; }
   .about {
     width: 94%;
     margin: 0 auto; }
@@ -245,16 +249,13 @@
 @media only screen and (max-width: 770px) and (orientation: portrait) {
   .main {
     margin-bottom: 10vh;
-    top: 8vh;
+    padding-top: 8vh;
     height: 82vh;
     width: 94%;
     margin-left: 3%;
     margin-right: 3%; }
   .main__bg {
     height: 82vh; }
-  .about,
-  .gallery {
-    top: 0; }
   .aboutTxt .main__head {
     padding-top: 1%; }
   .aboutGallery {

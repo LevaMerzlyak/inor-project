@@ -26,12 +26,12 @@
 
 .arenda {
   position: relative;
-  top: 15vh;
+  padding-top: 15vh;
   height: 85vh; }
 
 .rooms {
   position: relative;
-  top: 15vh;
+  padding-top: 15vh;
   height: 70vh;
   margin-bottom: 15vh; }
 
@@ -282,6 +282,8 @@
     -webkit-transform: translateY(0%);
     -ms-transform: translateY(0%);
     transform: translateY(0%); }
+  .rooms {
+    padding-top: 0; }
   .main__head_gallery {
     font-size: 3.6em; }
   .room__num,
@@ -343,9 +345,8 @@
     padding-bottom: 5%; } }
 
 @media only screen and (max-width: 770px) and (orientation: portrait) {
-  .arenda,
-  .rooms {
-    top: 8vh; } }
+  .arenda {
+    padding-top: 8vh; } }
 
 @media only screen and (max-width: 380px) {
   .main__head_gallery {

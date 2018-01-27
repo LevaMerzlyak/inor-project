@@ -31,12 +31,12 @@
 }
 .arenda {
 	position: relative;
-	top: 15vh;
+	padding-top: 15vh;
 	height: 85vh;
 }
 .rooms {
 	position: relative;
-	top: 15vh;
+	padding-top: 15vh;
 	height: 70vh;
 	margin-bottom: 15vh;
 }
@@ -278,6 +278,10 @@
 		top: 0;
 		transform: translateY(0%);
 	}
+	
+	.rooms {
+		padding-top: 0;
+	}
 	.main__head_gallery {
 		font-size: 3.6em;
 	}
@@ -353,9 +357,8 @@
 	}
 }
 @media only screen and (max-width: 770px) and (orientation: portrait) {
-	.arenda,
-	.rooms {
-		top: 8vh;
+	.arenda {
+		padding-top: 8vh;
 	}
 }
 @media only screen and (max-width: 380px) {

@@ -56,7 +56,7 @@ function Gallery(sSelector) {
 
 	g.pagInit = function () {
 
-		if(g.current.hasClass('galleryPag__item_360')) {
+		if (g.current.hasClass('galleryPag__item_360')) {
 
 			g.show360(g.current);
 			
@@ -66,15 +66,6 @@ function Gallery(sSelector) {
 			g.showImage(g.current);
 			
 		}
-
-		
-		g.pag.each(function () {
-			
-			var src = $(this).find('.gallery__img').attr('data-big');
-
-			$(this).css({'background-image': 'url(' + src + ')'});
-
-		});
 
 		g.pagCntrl();
 		

@@ -41,7 +41,7 @@
   margin-bottom: 15vh;
   overflow: hidden;
   position: relative;
-  top: 15vh;
+  padding-top: 15vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,7 +75,7 @@
 
 .vacancies {
   position: relative;
-  top: 15vh;
+  padding-top: 15vh;
   margin-bottom: 15vh; }
 
 .vacancies__wrap {
@@ -259,7 +259,9 @@
 
 @media only screen and (max-width: 1025px) {
   .main {
-    height: 60vh; } }
+    height: 60vh; }
+  .vacancies {
+    padding-top: 0; } }
 
 @media only screen and (max-width: 820px) {
   .main {
@@ -308,7 +310,7 @@
 
 @media only screen and (max-width: 770px) and (orientation: portrait) {
   .main {
-    top: 8vh; } }
+    padding-top: 8vh; } }
 
 @media only screen and (max-width: 740px) and (orientation: landscape) {
   .mainTxt__wrap {
