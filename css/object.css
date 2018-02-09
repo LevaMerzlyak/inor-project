@@ -25,7 +25,7 @@
 .playBtn__txt {
   display: inline-block;
   position: absolute;
-  top: 50%;
+  top: 55%;
   margin: 0;
   margin-left: 10%;
   padding-left: 105px;
@@ -36,7 +36,7 @@
   text-shadow: 0px 0px 5px #9b9b9b; }
 
 .play__btn_main {
-  top: 50%;
+  top: 55%;
   margin-left: 10%; }
 
 /*----- /Play Button ------*/
